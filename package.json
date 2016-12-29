@@ -4,7 +4,8 @@
   "description": "Convert NBA Last Two Minute Report to CSV",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "get-games": "node scripts/get-games.js",
+    "parse-games": "node scripts/parse-games.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "russell goldenberg",
