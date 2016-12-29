@@ -14,9 +14,10 @@ const teamNameLookup = {'ATL': 'Hawks','BKN': 'Nets','BOS': 'Celtics','CHA': 'Ho
 */
 
 function init() {
-	// const command = `curl -o archive.html http://official.nba.com/nba-last-two-minute-reports-archive/`
-	// shell.exec(command)
-	// how many games to go back
+	const command = `curl -o archive.html http://official.nba.com/nba-last-two-minute-reports-archive/`
+	shell.exec(command)
+	
+	// TODO how many games to go back 
 	let maxGames = 9999
 	if(process.argv.length > 2 && !isNaN(+process.argv[2])) maxGames = +process.argv[2]
 	
