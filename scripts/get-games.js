@@ -14,10 +14,13 @@ function init() {
 	let maxGames = 99999
 	if(process.argv.length > 2 && !isNaN(+process.argv[2])) maxGames = +process.argv[2]
 	
-	// const urls = scrapeGameLinks(maxGames)
-	// savePDFs(urls, () => convertPDFs())
-	convertPDFs()
-
+	const urls = scrapeGameLinks(maxGames)
+	savePDFs(urls, () => {
+		convertToText()
+		convertToHTML()	
+	})
+	// convertToText()
+	// convertToHTML()
 }
 
 // scrape archive and get links to each game's pdf
@@ -46,8 +49,13 @@ function savePDFs(urls, cb) {
 	next()
 }
 
-function convertPDFs() {
+function convertToText() {
 	const command = `cd pdf; for file in *.pdf; do pdftotext -layout -nopgbrk "$file" "../text/$file.txt"; done`
+	shell.exec(command)
+}
+
+function convertToHTML() {
+	const command = `cd pdf; for file in *.pdf; do pdftohtml -s -i -nomerge -noframes "$file" "../html/$file.html"; done`
 	shell.exec(command)
 }
 

@@ -12,6 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "cheerio": "^0.22.0",
+    "d3": "^4.4.0",
     "fast-csv": "^2.3.0",
     "request": "^2.79.0",
     "shelljs": "^0.7.5"
