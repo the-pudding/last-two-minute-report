@@ -3,11 +3,13 @@
 */
 
 const fs = require('fs')
-const request = require('request')
+const shell = require('shelljs')
 const cheerio = require('cheerio')
 const d3 = require('d3')
 const cwd = process.cwd()
 const teamLookup = require(`${cwd}/scripts/team-lookup.js`)
+
+const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
 
 function cleanLines(lines) {
 	return lines
@@ -16,35 +18,28 @@ function cleanLines(lines) {
 			// trim and remove empties
 			return line.split(/\s{2,}/)
 				.map(chunk => chunk.trim())
-				.filter(chunk => chunk.length)
+				.filter(chunk => chunk.length > 1)
 		})
 		.filter(line => line.length)
 }
 
 function parseAwayTeam(str) {
-	// 'Trail Blazers '
-	// 'Trail Blazers (109) '
 	return str.split('(')[0].trim()
 }
 
 function parseHomeTeam(str) {
-	// ' Trail Blazers (Nov 11, 2016)'
-	// ' Trail Blazers (108) (Dec 23, 2016)'
 	return str.split('(')[0].trim()
 }
 
 function parseDate(str) {
-	// ' Trail Blazers (Nov 11, 2016)'
-	// ' Trail Blazers (108) (Dec 23, 2016)'
 	return str.replace(/\)/g, '').split('(').pop().trim()
 }
 
 
 function extractGameInfo(lines) {
+	// nba uses two versions...
 	// eg 1: Pacers @ 76ers (Nov 11, 2016)
 	// eg 2: Knicks (98) @ Hawks (102) (Dec 28, 2016)
-
-	// just enough to get the home team and date so we can use basketballreference
 
 	const match = lines
 		.map(line => line.join(' '))
@@ -57,12 +52,12 @@ function extractGameInfo(lines) {
 	
 	if (match) {
 		const split = match.split('@')
-		// [ 'Pacers ', ' 76ers (Nov 11, 2016)' ]
-		// [ 'Hawks (109) ', ' Nuggets (108) (Dec 23, 2016)' ]
+		
 		const away = parseAwayTeam(split[0])
 		const home = parseHomeTeam(split[1])
 		const date = parseDate(split[1])
 		
+		// nba uses full month and abbr sometimes...
 		const month = date.split(' ')[0]
 		const monthFormat = month.length === 3 ? 'b' : 'B'
 		const parsedDate = d3.timeParse(`%${monthFormat} %d, %Y`)(date)
@@ -71,9 +66,11 @@ function extractGameInfo(lines) {
 		const awayAbbr = teamLookup.abbr[away]
 		const homeAbbr = teamLookup.abbr[home]
 
+		// create basketball reference link from date + home team
 		const bballRefAbbr = teamLookup.abbrBasketballReference[home]
-		const boxscoreURL = `http://www.basketball-reference.com/boxscores/${formattedDate}0${bballRefAbbr}.html`
+		const boxscoreURL = `${formattedDate}0${bballRefAbbr}.html`
 
+		// generate a unique id for the game
 		const id = `${formattedDate}${awayAbbr}${homeAbbr}`
 		return { id, away: awayAbbr, home: homeAbbr, date: formattedDate, boxscore_url: boxscoreURL }
 	} 
@@ -99,15 +96,71 @@ function getTeamFromComment({ player, comment }) {
 			const team = comment.substring(start, start + 3)
 			return team
 		} else if (comment.indexOf(lastName) > -1) {
-			// return 'error: player found in comment with no team'
 			return null
 		} else {
-			// return 'error: no reference to player in comment'
 			return null
 		}
 	}
 
 	return null
+}
+
+function getCommittingPlayer(d) {
+	const MAX = 7
+	// check to see if there is a review decision
+	const joined = d.join(' ')
+	let review = false
+	REVIEW_TYPES.forEach(r => {
+		if (joined.indexOf(r) > -1) review = true
+	})
+
+	if (d.length === MAX) return d[3]
+	else if (d.length === MAX - 1) {
+		return d[3]
+	}
+	else if (d.length === MAX - 2) {
+		if (review) return null
+		else return d[3]
+	} else {
+		return null
+	}
+}
+
+function getDisdvantagedPlayer(d) {
+	const MAX = 7
+	// check to see if there is a review decision
+	const joined = d.join(' ')
+	let review = false
+	REVIEW_TYPES.forEach(r => {
+		if (joined.indexOf(r) > -1) review = true
+	})
+
+	if (d.length === MAX) return d[4]
+	else if (d.length === 6 && !review) return d[4]
+	else return null
+}
+
+function getReviewDecision(d) {
+	const MAX = 7
+	// check to see if there is a review decision
+	const joined = d.join(' ')
+	let review = false
+	REVIEW_TYPES.forEach(r => {
+		if (joined.indexOf(r) > -1) review = true
+	})
+
+	if (d.length === MAX) return d[5]
+	else if (d.length === 6 && review) return d[4]
+	else if (d.length === 5 && review) return d[3]
+	else return null
+}
+
+function getSeconds(str) {
+	const split = str.split(':')
+	const min = +split[0]
+	const sec = +split[1]
+	
+	return min * 60 + sec
 }
 
 function extractReviews({ lines, videoURLs }) {
@@ -117,10 +170,11 @@ function extractReviews({ lines, videoURLs }) {
 		return {
 			period: d[0],
 			time: d[1],
+			seconds_left: getSeconds(d[1]),
 			call_type: d[2],
-			committing_player: d.length >= 6 && d[3].length > 1 ? d[3] : null,
-			disadvantaged_player: d.length === 7 && d[4].length > 1 ? d[4] : null,
-			review_decision: d.length >= 5 ? d[d.length - 2] : null,
+			committing_player: getCommittingPlayer(d),
+			disadvantaged_player: getDisdvantagedPlayer(d),
+			review_decision: getReviewDecision(d),
 			comment: comments[i][1],
 			video: videoURLs[i],
 		}
@@ -132,9 +186,8 @@ function extractReviews({ lines, videoURLs }) {
 		d.disadvantaged_team = getTeamFromComment({ player: d.disadvantaged_player, comment: d.comment })
 	})
 
-	// add in * for assisted reviews
+	// remove *
 	reviews.forEach(d => {
-		d.assisted_review = d.review_decision ? d.review_decision.indexOf('*') > -1 : false
 		d.review_decision = d.review_decision ? d.review_decision.replace('*', '') : d.review_decision
 	})
 
@@ -175,30 +228,38 @@ function extractScore($) {
 function getBoxscoreInfo(info, cb) {
 	let refs
 	let score
-	request(info.boxscore_url, (error, response, body) => {
-		if (!error && response.statusCode == 200) {
-			const $ = cheerio.load(body)
-			refs = extractRefs($)
-			score = extractScore($)
-		}
-		cb({ refs, score })
-	})
+
+	const file = `${cwd}/boxscore/${info.boxscore_url}`
+	const local = fs.existsSync(file)
+
+	// cache bball reference page
+	if (!local) {
+		const command = `curl -o boxscore/${info.boxscore_url} http://www.basketball-reference.com/boxscores/${info.boxscore_url}`
+		shell.exec(command, { silent: true })
+	}
+
+	const $ = cheerio.load(fs.readFileSync(file))
+	refs = extractRefs($)
+	score = extractScore($)
+	cb({ refs, score })
 }
 
 function parse(file, cb) {
-	// load txt file into array for of lines
+	// load txt file into array of lines
 	const lines = fs.readFileSync(`${cwd}/text/${file}.txt`)
 		.toString()
 		.split('\n')
 	
+	// load html file so we can get video links
 	const $ = cheerio.load(fs.readFileSync(`${cwd}/html/${file}.html`))
 
 	// clean each line
 	const clean = cleanLines(lines)
 
-	// extract links from html
+	// extract video links from html
 	const videoURLs = extractVideoURLs($)
 
+	// make clean objects for each review data
 	const reviews = extractReviews({ lines: clean, videoURLs: videoURLs })
 
 	// grab the teams and date
@@ -216,8 +277,10 @@ function parse(file, cb) {
 			row.ref_3 = refs[2]
 			row.score_away = score[0]
 			row.score_home = score[1]
+			row.original_pdf = `${file}.pdf`
 		})
 
+		// write out data
 		const csvOut = d3.csvFormat(reviews)
 		fs.writeFileSync(`${cwd}/csv/${info.id}.csv`, csvOut)
 		cb()
@@ -226,7 +289,7 @@ function parse(file, cb) {
 
 function init() {
 	// const files = fs.readdirSync(`${cwd}/text`).filter(file => file.endsWith('.txt'))
-	const files = ['L2M-HOU-ATL-3-3-15.pdf.txt']
+	const files = ['L2M-BKN-CHI-12-28-16.pdf.txt']
 
 	const len = files.length
 	let i = 0
