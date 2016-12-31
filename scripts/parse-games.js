@@ -51,7 +51,7 @@ function extractGameInfo(lines) {
 		.filter(line => line.indexOf('@') > -1)
 		.find(line => {
 			const afterAt = line.split('@')[1].trim()
-			const possibleTeam = afterAt.split(' ')[0]
+			const possibleTeam = afterAt.split('(')[0].trim()
 			return teamLookup.abbr[possibleTeam]
 		})
 	
@@ -63,11 +63,16 @@ function extractGameInfo(lines) {
 		const home = parseHomeTeam(split[1])
 		const date = parseDate(split[1])
 		
-		const parsedDate = d3.timeParse('%b %d, %Y')(date)
+		const month = date.split(' ')[0]
+		const monthFormat = month.length === 3 ? 'b' : 'B'
+		const parsedDate = d3.timeParse(`%${monthFormat} %d, %Y`)(date)
 		const formattedDate = d3.timeFormat('%Y%m%d')(parsedDate)
+
 		const awayAbbr = teamLookup.abbr[away]
 		const homeAbbr = teamLookup.abbr[home]
-		const boxscoreURL = `http://www.basketball-reference.com/boxscores/${formattedDate}0${homeAbbr}.html`
+
+		const bballRefAbbr = teamLookup.abbrBasketballReference[home]
+		const boxscoreURL = `http://www.basketball-reference.com/boxscores/${formattedDate}0${bballRefAbbr}.html`
 
 		const id = `${formattedDate}${awayAbbr}${homeAbbr}`
 		return { id, away: awayAbbr, home: homeAbbr, date: formattedDate, boxscore_url: boxscoreURL }
@@ -93,10 +98,12 @@ function getTeamFromComment({ player, comment }) {
 			const start = nameWithTeamIndex + nameLength + 1
 			const team = comment.substring(start, start + 3)
 			return team
-		} else if(comment.indexOf(lastName) > -1) {
-			return 'error: player found in comment with no team'
+		} else if (comment.indexOf(lastName) > -1) {
+			// return 'error: player found in comment with no team'
+			return null
 		} else {
-			return 'error: no reference to player in comment'
+			// return 'error: no reference to player in comment'
+			return null
 		}
 	}
 
@@ -111,9 +118,9 @@ function extractReviews({ lines, videoURLs }) {
 			period: d[0],
 			time: d[1],
 			call_type: d[2],
-			committing_player: d[3],
-			disadvantaged_player: d.length === 7 ? d[4] : null,
-			review_decision: d.length >= 6 ? d[d.length - 2] : null,
+			committing_player: d.length >= 6 && d[3].length > 1 ? d[3] : null,
+			disadvantaged_player: d.length === 7 && d[4].length > 1 ? d[4] : null,
+			review_decision: d.length >= 5 ? d[d.length - 2] : null,
 			comment: comments[i][1],
 			video: videoURLs[i],
 		}
@@ -125,6 +132,11 @@ function extractReviews({ lines, videoURLs }) {
 		d.disadvantaged_team = getTeamFromComment({ player: d.disadvantaged_player, comment: d.comment })
 	})
 
+	// add in * for assisted reviews
+	reviews.forEach(d => {
+		d.assisted_review = d.review_decision ? d.review_decision.indexOf('*') > -1 : false
+		d.review_decision = d.review_decision ? d.review_decision.replace('*', '') : d.review_decision
+	})
 
 	return reviews
 }
@@ -173,7 +185,7 @@ function getBoxscoreInfo(info, cb) {
 	})
 }
 
-function parse(file) {
+function parse(file, cb) {
 	// load txt file into array for of lines
 	const lines = fs.readFileSync(`${cwd}/text/${file}.txt`)
 		.toString()
@@ -208,12 +220,27 @@ function parse(file) {
 
 		const csvOut = d3.csvFormat(reviews)
 		fs.writeFileSync(`${cwd}/csv/${info.id}.csv`, csvOut)
+		cb()
 	})
 }
 
 function init() {
-	const files = fs.readdirSync(`${cwd}/text`)
-	console.log(files)
+	// const files = fs.readdirSync(`${cwd}/text`).filter(file => file.endsWith('.txt'))
+	const files = ['L2M-HOU-ATL-3-3-15.pdf.txt']
+
+	const len = files.length
+	let i = 0
+
+	const next = () => {
+		const file = files[i].replace('.txt', '')
+		console.log(i, file)
+		parse(file, () => {
+			i++
+			if (i < len) next()
+		})
+	}
+
+	if (len > 0) next()
 }
 
 
