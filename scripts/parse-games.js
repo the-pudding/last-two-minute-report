@@ -277,7 +277,7 @@ function parse(file, cb) {
 			row.ref_3 = refs[2]
 			row.score_away = score[0]
 			row.score_home = score[1]
-			row.original_pdf = `${file}.pdf`
+			row.original_pdf = `${file}`
 		})
 
 		// write out data
