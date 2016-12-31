@@ -16,3 +16,6 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 
 #### Concat to single csv
 `csvstack csv/* > all_games.csv`
+
+## Manual fixes
+* conversion of pdf to text for `L2M-BKN-ORL-12-16-16.pdf` resulted in a period + line break for the last entry

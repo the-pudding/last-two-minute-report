@@ -288,8 +288,8 @@ function parse(file, cb) {
 }
 
 function init() {
-	// const files = fs.readdirSync(`${cwd}/text`).filter(file => file.endsWith('.txt'))
-	const files = ['L2M-BKN-CHI-12-28-16.pdf.txt']
+	const files = fs.readdirSync(`${cwd}/text`).filter(file => file.endsWith('.txt'))
+	// const files = ['L2M-BKN-ORL-12-16-16.pdf']
 
 	const len = files.length
 	let i = 0
