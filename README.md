@@ -3,6 +3,10 @@ Converts all PDFs released by the NBA's [Last Two Minute Report](http://official
 
 The code is a bit involved because the NBA doesn't stick to a consistent format! Converting all the games at once takes a while since it needs to fetch supplemental data from [Basketball Reference](https://basketball-reference.com).
 
+## Requirements
+* [node](https://node.js.org)
+* [csvkit](https://csvkit.readthedocs.org)
+
 ## Setup
 * Clone repo and run `npm i`
 * Create two folders in root, `pdf` and `text`
@@ -15,7 +19,7 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 `npm run parse-games`
 
 #### Concat to single csv
-`csvstack csv/* > all_games.csv`
+`make concat`
 
 ## Manual fixes
 * conversion of pdf to text for `L2M-BKN-ORL-12-16-16.pdf` resulted in a period + line break for the last entry
