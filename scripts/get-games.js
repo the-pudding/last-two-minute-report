@@ -18,6 +18,7 @@ function init() {
 	savePDFs(urls, () => {
 		convertToText()
 		convertToHTML()	
+		removePDFs()
 	})
 	// convertToText()
 	// convertToHTML()
@@ -57,6 +58,11 @@ function convertToText() {
 function convertToHTML() {
 	const command = `cd pdf; for file in *.pdf; do pdftohtml -s -i -nomerge -noframes "$file" "../html/$file.html"; done`
 	shell.exec(command)
+}
+
+function removePDfs() {
+	const command = `rm pdf/*.pdf`
+	shell.exec(command)	
 }
 
 init()
