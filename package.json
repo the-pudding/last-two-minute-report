@@ -13,6 +13,9 @@
   "devDependencies": {
     "cheerio": "^0.22.0",
     "d3": "^4.4.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
     "fast-csv": "^2.3.0",
     "request": "^2.79.0",
     "shelljs": "^0.7.5"

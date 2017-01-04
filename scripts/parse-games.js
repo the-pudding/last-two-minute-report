@@ -1,25 +1,26 @@
-/* 
-	convert text files to csv
+/*
+convert text files to csv
 */
+
+const cwd = process.cwd()
 
 const fs = require('fs')
 const shell = require('shelljs')
 const cheerio = require('cheerio')
 const d3 = require('d3')
-const cwd = process.cwd()
-const teamLookup = require(`${cwd}/scripts/team-lookup.js`)
+const teamLookup = require('scripts/team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
 
 function cleanLines(lines) {
 	return lines
-		.map(line => {
+		.map(line =>
 			// split each line by 2+ whitespace (tabs between columns)
 			// trim and remove empties
-			return line.split(/\s{2,}/)
+			line.split(/\s{2,}/)
 				.map(chunk => chunk.trim())
-				.filter(chunk => chunk.length > 1)
-		})
+				.filter(chunk => chunk.length > 1),
+		)
 		.filter(line => line.length)
 }
 
@@ -44,19 +45,19 @@ function extractGameInfo(lines) {
 	const match = lines
 		.map(line => line.join(' '))
 		.filter(line => line.indexOf('@') > -1)
-		.find(line => {
+		.find((line) => {
 			const afterAt = line.split('@')[1].trim()
 			const possibleTeam = afterAt.split('(')[0].trim()
 			return teamLookup.abbr[possibleTeam]
 		})
-	
+
 	if (match) {
 		const split = match.split('@')
-		
+
 		const away = parseAwayTeam(split[0])
 		const home = parseHomeTeam(split[1])
 		const date = parseDate(split[1])
-		
+
 		// nba uses full month and abbr sometimes...
 		const month = date.split(' ')[0]
 		const monthFormat = month.length === 3 ? 'b' : 'B'
@@ -73,33 +74,32 @@ function extractGameInfo(lines) {
 		// generate a unique id for the game
 		const id = `${formattedDate}${awayAbbr}${homeAbbr}`
 		return { id, away: awayAbbr, home: homeAbbr, date: formattedDate, boxscore_url: boxscoreURL }
-	} 
+	}
 
 	return null
 }
 
 function getTeamFromComment({ player, comment }) {
 	if (player && comment) {
-		//just last name
+		// just last name
 		const startLastName = player.lastIndexOf(' ')
 		const lastName = player.substring(startLastName + 1, player.length)
 		const nameLength = lastName.length
 
-		//strip whitespace and deal with 's and what not
-		comment = comment.replace(/\'s/g, '').replace(/\' /g, ' ').replace(/ /g, '')
+		// strip whitespace and deal with 's and what not
+		const cleanComment = comment.replace(/'s/g, '').replace(/' /g, ' ').replace(/ /g, '')
 
-		const nameWithTeamIndex = comment.indexOf(lastName + '(')
-		
-		if( nameWithTeamIndex > -1) {
-			//+1 for the (
+		const nameWithTeamIndex = cleanComment.indexOf(`${lastName} (`)
+
+		if (nameWithTeamIndex > -1) {
+			//	+1 for the (
 			const start = nameWithTeamIndex + nameLength + 1
-			const team = comment.substring(start, start + 3)
+			const team = cleanComment.substring(start, start + 3)
 			return team
-		} else if (comment.indexOf(lastName) > -1) {
-			return null
-		} else {
+		} else if (cleanComment.indexOf(lastName) > -1) {
 			return null
 		}
+		return null
 	}
 
 	return null
@@ -110,20 +110,14 @@ function getCommittingPlayer(d) {
 	// check to see if there is a review decision
 	const joined = d.join(' ')
 	let review = false
-	REVIEW_TYPES.forEach(r => {
+	REVIEW_TYPES.forEach((r) => {
 		if (joined.indexOf(r) > -1) review = true
 	})
 
 	if (d.length === MAX) return d[3]
-	else if (d.length === MAX - 1) {
-		return d[3]
-	}
-	else if (d.length === MAX - 2) {
-		if (review) return null
-		else return d[3]
-	} else {
-		return null
-	}
+	else if (d.length === MAX - 1) return d[3]
+	else if (d.length === MAX - 2) return review ? null : d[3]
+	return null
 }
 
 function getDisdvantagedPlayer(d) {
@@ -131,13 +125,14 @@ function getDisdvantagedPlayer(d) {
 	// check to see if there is a review decision
 	const joined = d.join(' ')
 	let review = false
-	REVIEW_TYPES.forEach(r => {
+	REVIEW_TYPES.forEach((r) => {
 		if (joined.indexOf(r) > -1) review = true
 	})
 
 	if (d.length === MAX) return d[4]
 	else if (d.length === 6 && !review) return d[4]
-	else return null
+
+	return null
 }
 
 function getReviewDecision(d) {
@@ -145,29 +140,30 @@ function getReviewDecision(d) {
 	// check to see if there is a review decision
 	const joined = d.join(' ')
 	let review = false
-	REVIEW_TYPES.forEach(r => {
+	REVIEW_TYPES.forEach((r) => {
 		if (joined.indexOf(r) > -1) review = true
 	})
 
 	if (d.length === MAX) return d[5]
 	else if (d.length === 6 && review) return d[4]
 	else if (d.length === 5 && review) return d[3]
-	else return null
+
+	return null
 }
 
 function getSeconds(str) {
 	const split = str.split(':')
 	const min = +split[0]
 	const sec = +split[1]
-	
-	return min * 60 + sec
+
+	return (min * 60) + sec
 }
 
 function extractReviews({ lines, videoURLs }) {
 	const details = lines.filter(line => line[0].match(/Q\d/) && line[0].length === 2)
 	const comments = lines.filter(line => line[0].startsWith('Comment:'))
-	const reviews = details.map((d, i) => {
-		return {
+	const reviews = details.map((d, i) =>
+		({
 			period: d[0],
 			time: d[1],
 			seconds_left: getSeconds(d[1]),
@@ -177,8 +173,7 @@ function extractReviews({ lines, videoURLs }) {
 			review_decision: getReviewDecision(d),
 			comment: comments[i][1],
 			video: videoURLs[i],
-		}
-	})
+		})
 
 	// add in team
 	reviews.forEach(d => {
