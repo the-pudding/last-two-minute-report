@@ -9,9 +9,10 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 
 ## Setup
 * Clone repo and run `npm i`
-* Create two folders in root, `pdf` and `text`
+* Run `make setup`
 
 ## Usage
+
 #### Get latest games from archive
 `npm run get-games [max]` (optionally pass a number `[max]` to only download recent games)
 

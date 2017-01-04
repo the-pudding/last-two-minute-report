@@ -224,12 +224,12 @@ function getBoxscoreInfo(info, cb) {
 	let refs
 	let score
 
-	const file = `${cwd}/boxscore/${info.boxscore_url}`
+	const file = `${cwd}/processing/boxscore/${info.boxscore_url}`
 	const local = fs.existsSync(file)
 
 	// cache bball reference page
 	if (!local) {
-		const command = `curl -o boxscore/${info.boxscore_url} http://www.basketball-reference.com/boxscores/${info.boxscore_url}`
+		const command = `curl -o processing/boxscore/${info.boxscore_url} http://www.basketball-reference.com/boxscores/${info.boxscore_url}`
 		shell.exec(command, { silent: true })
 	}
 
@@ -241,12 +241,12 @@ function getBoxscoreInfo(info, cb) {
 
 function parse(file, cb) {
 	// load txt file into array of lines
-	const lines = fs.readFileSync(`${cwd}/text/${file}.txt`)
+	const lines = fs.readFileSync(`${cwd}/processing/text/${file}.txt`)
 		.toString()
 		.split('\n')
 	
 	// load html file so we can get video links
-	const $ = cheerio.load(fs.readFileSync(`${cwd}/html/${file}.html`))
+	const $ = cheerio.load(fs.readFileSync(`${cwd}/processing/html/${file}.html`))
 
 	// clean each line
 	const clean = cleanLines(lines)
@@ -277,13 +277,13 @@ function parse(file, cb) {
 
 		// write out data
 		const csvOut = d3.csvFormat(reviews)
-		fs.writeFileSync(`${cwd}/csv/${info.id}.csv`, csvOut)
+		fs.writeFileSync(`${cwd}/processing/csv/${info.id}.csv`, csvOut)
 		cb()
 	})
 }
 
 function init() {
-	const files = fs.readdirSync(`${cwd}/text`).filter(file => file.endsWith('.txt'))
+	const files = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('.txt'))
 	// const files = ['L2M-BKN-ORL-12-16-16.pdf']
 
 	const len = files.length

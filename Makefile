@@ -1,2 +1,6 @@
+setup:
+	mkdir processing
+	cd processing; mkdir pdf text boxscore html csv output
+
 concat:
-	csvstack csv/* > all_games.csv
+	csvstack processing/csv/* > output/all_games.csv
