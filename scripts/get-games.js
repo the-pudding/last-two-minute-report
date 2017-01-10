@@ -2,11 +2,11 @@
 download pdf links from the site and convert to text files
 */
 
+const cwd = process.cwd()
+
 const fs = require('fs')
 const shell = require('shelljs')
 const cheerio = require('cheerio')
-
-const cwd = process.cwd()
 
 // scrape archive and get links to each game's pdf
 function scrapeGameLinks(maxGames) {

@@ -8,7 +8,7 @@ const fs = require('fs')
 const shell = require('shelljs')
 const cheerio = require('cheerio')
 const d3 = require('d3')
-const teamLookup = require('scripts/team-lookup.js')
+const teamLookup = require('./team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
 
@@ -19,7 +19,7 @@ function cleanLines(lines) {
 			// trim and remove empties
 			line.split(/\s{2,}/)
 				.map(chunk => chunk.trim())
-				.filter(chunk => chunk.length > 1),
+				.filter(chunk => chunk.length > 1)
 		)
 		.filter(line => line.length)
 }
@@ -139,14 +139,18 @@ function getReviewDecision(d) {
 	const MAX = 7
 	// check to see if there is a review decision
 	const joined = d.join(' ')
-	let review = false
+	let hasReview = false
 	REVIEW_TYPES.forEach((r) => {
-		if (joined.indexOf(r) > -1) review = true
+		if (joined.indexOf(r) > -1) hasReview = true
 	})
 
-	if (d.length === MAX) return d[5]
-	else if (d.length === 6 && review) return d[4]
-	else if (d.length === 5 && review) return d[3]
+	let review = ''
+
+	if (d.length === MAX) review = d[5]
+	else if (d.length === 6 && hasReview) review = d[4]
+	else if (d.length === 5 && hasReview) review = d[3]
+
+	if (review) return review.replace('*', '')
 
 	return null
 }
@@ -162,38 +166,39 @@ function getSeconds(str) {
 function extractReviews({ lines, videoURLs }) {
 	const details = lines.filter(line => line[0].match(/Q\d/) && line[0].length === 2)
 	const comments = lines.filter(line => line[0].startsWith('Comment:'))
-	const reviews = details.map((d, i) =>
-		({
-			period: d[0],
-			time: d[1],
-			seconds_left: getSeconds(d[1]),
-			call_type: d[2],
-			committing_player: getCommittingPlayer(d),
-			disadvantaged_player: getDisdvantagedPlayer(d),
-			review_decision: getReviewDecision(d),
-			comment: comments[i][1],
-			video: videoURLs[i],
-		})
+	const reviews = details.map((d, i) => ({
+		period: d[0],
+		time: d[1],
+		seconds_left: getSeconds(d[1]),
+		call_type: d[2],
+		committing_player: getCommittingPlayer(d),
+		disadvantaged_player: getDisdvantagedPlayer(d),
+		review_decision: getReviewDecision(d),
+		comment: comments[i][1],
+		video: videoURLs[i],
+	}))
 
 	// add in team
-	reviews.forEach(d => {
-		d.committing_team = getTeamFromComment({ player: d.committing_player, comment: d.comment })
-		d.disadvantaged_team = getTeamFromComment({ player: d.disadvantaged_player, comment: d.comment })
-	})
+	const reviewsWithTeam = reviews.map(d => ({
+		...d,
+		committing_team: getTeamFromComment({
+			player: d.committing_player,
+			comment: d.comment,
+		}),
+		disadvantaged_team: getTeamFromComment({
+			player: d.disadvantaged_player,
+			comment: d.comment,
+		}),
+	}))
 
-	// remove *
-	reviews.forEach(d => {
-		d.review_decision = d.review_decision ? d.review_decision.replace('*', '') : d.review_decision
-	})
-
-	return reviews
+	return reviewsWithTeam
 }
 
 function extractVideoURLs($) {
 	const urls = []
-	$('a').each(function(i, el) {
+	$('a').each((i, el) => {
 		const url = $(el).attr('href')
-		const valid = url && url.startsWith(`http://official.nba.com/`)
+		const valid = url && url.startsWith('http://official.nba.com/')
 		if (valid) urls.push(url.trim())
 	})
 	return urls
@@ -221,9 +226,6 @@ function extractScore($) {
 }
 
 function getBoxscoreInfo(info, cb) {
-	let refs
-	let score
-
 	const file = `${cwd}/processing/boxscore/${info.boxscore_url}`
 	const local = fs.existsSync(file)
 
@@ -234,8 +236,8 @@ function getBoxscoreInfo(info, cb) {
 	}
 
 	const $ = cheerio.load(fs.readFileSync(file))
-	refs = extractRefs($)
-	score = extractScore($)
+	const refs = extractRefs($)
+	const score = extractScore($)
 	cb({ refs, score })
 }
 
@@ -244,7 +246,7 @@ function parse(file, cb) {
 	const lines = fs.readFileSync(`${cwd}/processing/text/${file}.txt`)
 		.toString()
 		.split('\n')
-	
+
 	// load html file so we can get video links
 	const $ = cheerio.load(fs.readFileSync(`${cwd}/processing/html/${file}.html`))
 
@@ -255,28 +257,29 @@ function parse(file, cb) {
 	const videoURLs = extractVideoURLs($)
 
 	// make clean objects for each review data
-	const reviews = extractReviews({ lines: clean, videoURLs: videoURLs })
+	const reviews = extractReviews({ lines: clean, videoURLs })
 
 	// grab the teams and date
 	const info = extractGameInfo(clean)
-		
+
 	// get boxscore info and integrate into data rows
 	getBoxscoreInfo(info, ({ refs, score }) => {
-		reviews.forEach(row => {
-			row.id = info.id
-			row.away = info.away
-			row.home = info.home
-			row.date = info.date
-			row.ref_1 = refs[0]
-			row.ref_2 = refs[1]
-			row.ref_3 = refs[2]
-			row.score_away = score[0]
-			row.score_home = score[1]
-			row.original_pdf = `${file}`
-		})
+		const reviewsWithBoxscore = reviews.map(d => ({
+			...d,
+			id: info.id,
+			away: info.away,
+			home: info.home,
+			date: info.date,
+			ref_1: refs[0],
+			ref_2: refs[1],
+			ref_3: refs[2],
+			score_away: score[0],
+			score_home: score[1],
+			original_pdf: `${file}`,
+		}))
 
 		// write out data
-		const csvOut = d3.csvFormat(reviews)
+		const csvOut = d3.csvFormat(reviewsWithBoxscore)
 		fs.writeFileSync(`${cwd}/processing/csv/${info.id}.csv`, csvOut)
 		cb()
 	})
@@ -293,7 +296,7 @@ function init() {
 		const file = files[i].replace('.txt', '')
 		console.log(i, file)
 		parse(file, () => {
-			i++
+			i += 1
 			if (i < len) next()
 		})
 	}
