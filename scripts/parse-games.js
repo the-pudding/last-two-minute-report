@@ -11,6 +11,7 @@ const d3 = require('d3')
 const teamLookup = require('./team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
+const DEBUG = false
 
 function cleanLines(lines) {
 	return lines
@@ -80,26 +81,30 @@ function extractGameInfo(lines) {
 }
 
 function getTeamFromComment({ player, comment }) {
+	let team = null
+
 	if (player && comment) {
 		// just last name
-		const startLastName = player.lastIndexOf(' ')
-		const lastName = player.substring(startLastName + 1, player.length)
+		const startLastName = player.indexOf(' ') + 1
+		const lastName = player.substring(startLastName, player.length)
 		const nameLength = lastName.length
 
 		// strip whitespace and deal with 's and what not
-		const cleanComment = comment.replace(/'s/g, '').replace(/' /g, ' ').replace(/ /g, '')
+		const cleanComment = comment
+			.replace(/'s/g, '')
+			.replace(/' /g, ' ')
+			.replace(/ /g, '')
 
-		const nameWithTeamIndex = cleanComment.indexOf(`${lastName} (`)
+		const nameWithTeamIndex = cleanComment.indexOf(`${lastName}(`) + 1
 
-		if (nameWithTeamIndex > -1) {
-			//	+1 for the (
-			const start = nameWithTeamIndex + nameLength + 1
-			const team = cleanComment.substring(start, start + 3)
-			return team
-		} else if (cleanComment.indexOf(lastName) > -1) {
-			return null
+		// added 1 above so 0 not -1
+		if (nameWithTeamIndex > 0) {
+			const startTeam = nameWithTeamIndex + nameLength
+			team = cleanComment.substring(startTeam, startTeam + 3)
 		}
-		return null
+		// else if (cleanComment.indexOf(lastName) > -1) {
+		// 	return null
+		// }
 	}
 
 	return null
@@ -280,14 +285,14 @@ function parse(file, cb) {
 
 		// write out data
 		const csvOut = d3.csvFormat(reviewsWithBoxscore)
-		fs.writeFileSync(`${cwd}/processing/csv/${info.id}.csv`, csvOut)
+		if (!DEBUG) fs.writeFileSync(`${cwd}/processing/csv/${info.id}.csv`, csvOut)
 		cb()
 	})
 }
 
 function init() {
-	const files = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('.txt'))
-	// const files = ['L2M-BKN-ORL-12-16-16.pdf']
+	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('.txt'))
+	const files = DEBUG ? ['L2M-BKN-ORL-12-16-16.pdf'] : fileInput
 
 	const len = files.length
 	let i = 0
