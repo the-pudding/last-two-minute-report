@@ -12,10 +12,14 @@ const cheerio = require('cheerio')
 function scrapeGameLinks(maxGames) {
 	const $ = cheerio.load(fs.readFileSync(`${cwd}/processing/archive.html`))
 	const urls = []
+	let added = 0
 	$('.entry-content p a').each((i, el) => {
 		const url = $(el).attr('href').trim()
 		const valid = url.startsWith('http://official.nba.com/') && url.endsWith('.pdf')
-		if (valid && i < maxGames) urls.push(url)
+		if (valid && added < maxGames) {
+			added += 1
+			urls.push(url)
+		}
 	})
 	return urls
 }
@@ -37,17 +41,17 @@ function savePDFs(urls, cb) {
 
 function convertToText() {
 	const command = 'cd processing/pdf; for file in *.pdf; do pdftotext -layout -nopgbrk "$file" "../text/$file.txt"; done'
-	shell.exec(command)
+	shell.exec(command, { silent: true })
 }
 
 function convertToHTML() {
 	const command = 'cd processing/pdf; for file in *.pdf; do pdftohtml -s -i -nomerge -noframes "$file" "../html/$file.html"; done'
-	shell.exec(command)
+	shell.exec(command, { silent: true })
 }
 
 function removePDFs() {
 	const command = 'rm processing/pdf/*.pdf'
-	shell.exec(command)
+	shell.exec(command, { silent: true })
 }
 
 function init() {
@@ -59,6 +63,7 @@ function init() {
 
 	const urls = scrapeGameLinks(maxGames)
 	savePDFs(urls, () => {
+		console.log('Converting PDFs...')
 		convertToText()
 		convertToHTML()
 		removePDFs()
