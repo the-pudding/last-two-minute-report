@@ -74,15 +74,19 @@ function extractGameInfo(lines) {
 
 		// generate a unique id for the game
 		const id = `${formattedDate}${awayAbbr}${homeAbbr}`
-		return { id, away: awayAbbr, home: homeAbbr, date: formattedDate, boxscore_url: boxscoreURL }
+		return { 
+			game_id: id,
+			away: awayAbbr,
+			home: homeAbbr,
+			date: formattedDate,
+			boxscore_url: boxscoreURL,
+		}
 	}
 
 	return null
 }
 
 function getTeamFromComment({ player, comment }) {
-	let team = null
-
 	if (player && comment) {
 		// just last name
 		const startLastName = player.indexOf(' ') + 1
@@ -96,15 +100,12 @@ function getTeamFromComment({ player, comment }) {
 			.replace(/ /g, '')
 
 		const nameWithTeamIndex = cleanComment.indexOf(`${lastName}(`) + 1
-
 		// added 1 above so 0 not -1
 		if (nameWithTeamIndex > 0) {
 			const startTeam = nameWithTeamIndex + nameLength
-			team = cleanComment.substring(startTeam, startTeam + 3)
+			const team = cleanComment.substring(startTeam, startTeam + 3)
+			return team
 		}
-		// else if (cleanComment.indexOf(lastName) > -1) {
-		// 	return null
-		// }
 	}
 
 	return null
@@ -247,6 +248,19 @@ function getBoxscoreInfo(info, cb) {
 	cb({ refs, score, url })
 }
 
+function createPlayID(d, info) {
+	const clean = str => str ? String(str).replace(/\W/g, '') : ''
+
+	const parts = [
+		info.game_id,
+		clean(d.seconds_left),
+		clean(d.disadvantaged_player).slice(0, 3),
+		clean(d.committing_player).slice(0, 3),
+		clean(d.comment).slice(0, 3),
+	]
+	return parts.join('').toLowerCase()
+}
+
 function parse(file, cb) {
 	// load txt file into array of lines
 	const lines = fs.readFileSync(`${cwd}/processing/text/${file}.txt`)
@@ -272,7 +286,8 @@ function parse(file, cb) {
 	getBoxscoreInfo(info, ({ refs, score, url }) => {
 		const reviewsWithBoxscore = reviews.map(d => ({
 			...d,
-			id: info.id,
+			game_id: info.game_id,
+			play_id: createPlayID(d, info),
 			away: info.away,
 			home: info.home,
 			date: info.date,
@@ -287,14 +302,16 @@ function parse(file, cb) {
 
 		// write out data
 		const csvOut = d3.csvFormat(reviewsWithBoxscore)
-		if (!DEBUG) fs.writeFileSync(`${cwd}/processing/csv/${info.id}.csv`, csvOut)
+		if (DEBUG) console.log(JSON.stringify(reviewsWithBoxscore, null, 2))
+		else fs.writeFileSync(`${cwd}/processing/csv/${info.game_id}.csv`, csvOut)
 		cb()
 	})
 }
 
 function init() {
 	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('.txt'))
-	const files = DEBUG ? ['L2M-BKN-ORL-12-16-16.pdf'] : fileInput
+	// const files = DEBUG ? ['L2M-BKN-ORL-12-16-16.pdf'] : fileInput
+	const files = DEBUG ? ['Wozards-110-Hornets-107-OT.pdf'] : fileInput
 
 	const len = files.length
 	let i = 0
