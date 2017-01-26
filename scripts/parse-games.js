@@ -235,15 +235,16 @@ function getBoxscoreInfo(info, cb) {
 	const local = fs.existsSync(file)
 
 	// cache bball reference page
+	const url = `http://www.basketball-reference.com/boxscores/${info.boxscore_url}`
 	if (!local) {
-		const command = `curl -o processing/boxscore/${info.boxscore_url} http://www.basketball-reference.com/boxscores/${info.boxscore_url}`
+		const command = `curl -o processing/boxscore/${info.boxscore_url} ${url}`
 		shell.exec(command, { silent: true })
 	}
 
 	const $ = cheerio.load(fs.readFileSync(file))
 	const refs = extractRefs($)
 	const score = extractScore($)
-	cb({ refs, score })
+	cb({ refs, score, url })
 }
 
 function parse(file, cb) {
@@ -268,7 +269,7 @@ function parse(file, cb) {
 	const info = extractGameInfo(clean)
 
 	// get boxscore info and integrate into data rows
-	getBoxscoreInfo(info, ({ refs, score }) => {
+	getBoxscoreInfo(info, ({ refs, score, url }) => {
 		const reviewsWithBoxscore = reviews.map(d => ({
 			...d,
 			id: info.id,
@@ -281,6 +282,7 @@ function parse(file, cb) {
 			score_away: score[0],
 			score_home: score[1],
 			original_pdf: `${file}`,
+			box_score_url: url,
 		}))
 
 		// write out data
