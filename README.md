@@ -13,6 +13,8 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 
 ## Usage
 
+If already setup, simply run `make latest`. This will do everything below and commit latest data to repo.
+
 #### Get latest games from archive
 `npm run get-games [max]` (optionally pass a number `[max]` to only download recent games)
 
@@ -24,3 +26,18 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 
 ## Manual fixes
 * conversion of pdf to text for `L2M-BKN-ORL-12-16-16.pdf` resulted in a period + line break for the last entry
+
+## Questions
+* Who is the the worst ref?
+* Have any decisions had direct impacts on betting lines?
+* Is any player getting start treatment?
+* Home/away advantage?
+
+## Possible charts
+* stacked bar/histogram of when calls are wrong (separate regulation and OT or just final 2 mins of each)
+* bar charts of wrong call types
+* over the course of season comparison?
+team by team breakdown / lookup
+* home vs away
+* star treatment
+* worst ref leaderboard
