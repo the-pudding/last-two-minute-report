@@ -11,7 +11,7 @@ const d3 = require('d3')
 const teamLookup = require('./team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
-const DEBUG = false
+const DEBUG = true
 
 function cleanLines(lines) {
 	return lines
@@ -184,20 +184,7 @@ function extractReviews({ lines, videoURLs }) {
 		video: videoURLs[i],
 	}))
 
-	// add in team
-	const reviewsWithTeam = reviews.map(d => ({
-		...d,
-		committing_team: getTeamFromComment({
-			player: d.committing_player,
-			comment: d.comment,
-		}),
-		disadvantaged_team: getTeamFromComment({
-			player: d.disadvantaged_player,
-			comment: d.comment,
-		}),
-	}))
-
-	return reviewsWithTeam
+	return reviews
 }
 
 function extractVideoURLs($) {
@@ -261,6 +248,29 @@ function createPlayID(d, info) {
 	return parts.join('').toLowerCase()
 }
 
+function getCommittingAndDisadvantagedTeams(d) {
+	let committing = getTeamFromComment({
+		player: d.committing_player,
+		comment: d.comment,
+	})
+
+	let disadvantaged = getTeamFromComment({
+		player: d.disadvantaged_player,
+		comment: d.comment,
+	})
+
+	// if dis is blank
+	if (committing && !disadvantaged) {
+		disadvantaged = committing === d.home ? d.away : d.home
+	}
+	// if com is blank
+	if (disadvantaged && !committing) {
+		committing = disadvantaged === d.home ? d.away : d.home
+	}
+
+	return { committing, disadvantaged }
+}
+
 function parse(file, cb) {
 	// load txt file into array of lines
 	const lines = fs.readFileSync(`${cwd}/processing/text/${file}.txt`)
@@ -300,9 +310,19 @@ function parse(file, cb) {
 			box_score_url: url,
 		}))
 
+		// add in teams
+		const reviewsWithTeam = reviewsWithBoxscore.map((d) => {
+			const teams = getCommittingAndDisadvantagedTeams(d)
+			return {
+				...d,
+				disadvantaged_team: teams.disadvantaged,
+				committing_team: teams.committing,
+			}
+		})
+
 		// write out data
-		const csvOut = d3.csvFormat(reviewsWithBoxscore)
-		if (DEBUG) console.log(JSON.stringify(reviewsWithBoxscore, null, 2))
+		const csvOut = d3.csvFormat(reviewsWithTeam)
+		if (DEBUG) console.log(JSON.stringify(reviewsWithTeam, null, 2))
 		else fs.writeFileSync(`${cwd}/processing/csv/${info.game_id}.csv`, csvOut)
 		cb()
 	})
