@@ -11,7 +11,7 @@ const d3 = require('d3')
 const teamLookup = require('./team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
-const DEBUG = false
+const DEBUG = true
 
 function cleanLines(lines) {
 	return lines
@@ -235,19 +235,6 @@ function getBoxscoreInfo(info, cb) {
 	cb({ refs, score, url })
 }
 
-function createPlayID(d, info) {
-	const clean = str => str ? String(str).replace(/\W/g, '') : ''
-
-	const parts = [
-		info.game_id,
-		clean(d.seconds_left),
-		clean(d.disadvantaged_player).slice(0, 3),
-		clean(d.committing_player).slice(0, 3),
-		clean(d.comment).slice(0, 3),
-	]
-	return parts.join('').toLowerCase()
-}
-
 function getCommittingAndDisadvantagedTeams(d) {
 	let committing = getTeamFromComment({
 		player: d.committing_player,
@@ -294,10 +281,10 @@ function parse(file, cb) {
 
 	// get boxscore info and integrate into data rows
 	getBoxscoreInfo(info, ({ refs, score, url }) => {
-		const reviewsWithBoxscore = reviews.map(d => ({
+		const reviewsWithBoxscore = reviews.map((d, i) => ({
 			...d,
 			game_id: info.game_id,
-			play_id: createPlayID(d, info),
+			play_id: `${info.game_id}-${i}`,
 			away: info.away,
 			home: info.home,
 			date: info.date,
