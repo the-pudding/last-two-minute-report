@@ -41,3 +41,7 @@ team by team breakdown / lookup
 * home vs away
 * star treatment
 * worst ref leaderboard
+
+## Resources
+http://www.nbra.net/nba-officials/referee-biographies/
+http://official.nba.com/referee-assignments/
