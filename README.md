@@ -37,7 +37,7 @@ If already setup, simply run `make latest`. This will do everything below and co
 * stacked bar/histogram of when calls are wrong (separate regulation and OT or just final 2 mins of each)
 * bar charts of wrong call types
 * over the course of season comparison?
-team by team breakdown / lookup
+* team by team breakdown / lookup
 * home vs away
 * star treatment
 * worst ref leaderboard
