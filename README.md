@@ -28,19 +28,21 @@ If already setup, simply run `make latest`. This will do everything below and co
 * conversion of pdf to text for `L2M-BKN-ORL-12-16-16.pdf` resulted in a period + line break for the last entry
 
 ## Questions
-* Who is the the worst ref?
+* Who is the the worst ref? (table)
 * Have any decisions had direct impacts on betting lines?
 * Is any player getting start treatment?
 * Home/away advantage?
 
 ## Possible charts
-* stacked bar/histogram of when calls are wrong (separate regulation and OT or just final 2 mins of each)
-* bar charts of wrong call types
-* over the course of season comparison?
-* team by team breakdown / lookup
+* when wrong calls are made (line chart/stacked bar)
+* type of wrong call breakdown (INC and IC)
+* team by team breakdown
 * home vs away
 * star treatment
 * worst ref leaderboard
+* Most recent incorrect calls table (load calls from any game calendar)
+
+* over the course of season comparison (# calls wrong per 100 minutes reviewed... does it go down over the season?)
 
 ## Resources
 http://www.nbra.net/nba-officials/referee-biographies/

@@ -22,4 +22,3 @@ merge-incorrect-ref:
 	.tmp/concat.csv custom/incorrect_calls_with_ref.csv \
 	| csvcut -C play_id2 \
 	> output/all_games.csv
-	
