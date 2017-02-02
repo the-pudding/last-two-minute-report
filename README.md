@@ -1,4 +1,4 @@
-# Last Two Minute Report
+https://cooking.nytimes.com/recipes/1018550-pressure-cooker-chocolate-pudding?module=Recipe+of+The+Day&pgType=homepage&action=click# Last Two Minute Report
 Converts all PDFs released by the NBA's [Last Two Minute Report](http://official.nba.com/nba-last-two-minute-reports-archive/) to a single csv file. Additionally determines advantaged/disadvantaged team, and referees for that game.
 
 The code is a bit involved because the NBA doesn't stick to a consistent format! Converting all the games at once takes a while since it needs to fetch supplemental data from [Basketball Reference](https://basketball-reference.com).
