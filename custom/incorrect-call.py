@@ -32,4 +32,4 @@ select_columns = ['play_id', 'ref_1', 'ref_2', 'ref_3', 'video', 'box_score_url'
 
 ic = data.where(lambda r: r['review_decision'] == 'IC').select(select_columns)
 
-ic.to_csv('incorrect_calls.csv')
+ic.to_csv('incorrect_call.csv')

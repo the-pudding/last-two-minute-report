@@ -15,10 +15,10 @@ latest:
 	git push;
 
 incorrect-call:
-	python custom/incorrect-calls.py;
+	cd custom; python incorrect-call.py;
 
 merge-incorrect-ref:
 	csvjoin -c 'play_id,play_id' --outer \
-	.tmp/concat.csv custom/incorrect_calls_with_ref.csv \
+	.tmp/concat.csv custom/incorrect_call_with_ref.csv \
 	| csvcut -C play_id2 \
 	> output/all_games.csv
