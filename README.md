@@ -47,3 +47,9 @@ If already setup, simply run `make latest`. This will do everything below and co
 ## Resources
 http://www.nbra.net/nba-officials/referee-biographies/
 http://official.nba.com/referee-assignments/
+
+
+## Random thoughts
+* pics of players
+* team logos
+* gifs of incorrect calls

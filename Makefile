@@ -6,13 +6,13 @@ concat:
 	csvstack processing/csv/* > .tmp/concat.csv;
 
 latest:
-	npm run get-games 10;
-	npm run parse-games;
-	make concat;
-	make merge-incorrect-ref;
-	git add output/all_games.csv;
-	git commit -m 'update with latest data';
-	git push;
+	npm run get-games 10
+	npm run parse-games
+	make concat
+	make merge-incorrect-ref
+	git add output/all_games.csv
+	git commit -m 'update with latest data'
+	git push
 
 incorrect-call:
 	cd custom; python incorrect-call.py;
@@ -22,3 +22,7 @@ merge-incorrect-ref:
 	.tmp/concat.csv custom/incorrect_call_with_ref.csv \
 	| csvcut -C play_id2 \
 	> output/all_games.csv
+
+copy-data:
+	cp -rf analysis/output web/src/assets/data
+	csvjson -k key --no-inference analysis/output/web_summary.csv > web/template-data/summary.json
