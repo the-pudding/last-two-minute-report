@@ -2,6 +2,7 @@ import debounce from 'lodash.debounce'
 import * as $ from './utils/dom'
 import isMobile from './utils/is-mobile'
 import graphicLocation from './graphic-location'
+import graphicRecent from './graphic-recent'
 
 const DEV_MODE = window.location.hostname.indexOf('localhost') > -1
 
@@ -25,6 +26,7 @@ function init() {
 	addMobileClass()
 	window.addEventListener('resize', debounce(handleResize, 150))
 	graphicLocation.init()
+	graphicRecent.init()
 }
 
 init()
