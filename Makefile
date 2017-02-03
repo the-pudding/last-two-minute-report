@@ -24,5 +24,6 @@ merge-incorrect-ref:
 	> output/all_games.csv
 
 copy-data:
-	cp -rf analysis/output web/src/assets/data
+	rm -rf web/src/assets/data
+	cp -fr analysis/output web/src/assets/data
 	csvjson -k key --no-inference analysis/output/web_summary.csv > web/template-data/summary.json
