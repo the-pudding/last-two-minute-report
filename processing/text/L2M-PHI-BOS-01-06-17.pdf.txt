@@ -1,0 +1,48 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                                  76ers (106) @ Celtics (110) (Jan 06, 2017)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:49.0                         Foul: Offensive                                               Al Horford                                                 Gerald Henderson           INC             Video
+Comment:         Horford (BOS) extends his knee into Henderson (PHI) on the screen and does not give him room to avoid the contact.
+     Q4           01:43.0                     Foul: Away from Play                                         Gerald Henderson                                                  Marcus Smart              CC             Video
+Comment:         Henderson (PHI) grabs Smart (BOS) and affects his FOM on the inbound.
+     Q4           01:43.0               Instant Replay: Support Ruling                                     Gerald Henderson                                                                            CC             Video
+Comment:         After communicating with the Replay Center, the ruling on the court (away-from-the-play foul) was upheld.
+     Q4           01:10.0                         Foul: Shooting                                              Ersan Ilyasova                                                 Isaiah Thomas            CNC             Video
+Comment:         Ilyasova (PHI) maintains legal guarding position and makes incidental contact with Thomas (BOS) on his driving shot attempt.
+     Q4           00:53.0                         Foul: Offensive                                             Isaiah Thomas                                                  Ersan Ilyasova           CNC             Video
+Comment:         Thomas (BOS) makes incidental contact with Ilyasova (PHI) as he regains control of the ball.
+     Q4           00:28.7                         Foul: Shooting                                                Al Horford                                                    Joel Embiid              CC             Video
+Comment:         Horford (BOS) makes contact with Embiid (PHI) that affects his SQBR on the shot attempt.
+     Q4           00:17.2                     Violation: Kicked Ball                                           Jae Crowder                                                                             CC             Video
+Comment:         Crowder (BOS) intentionally kicks the ball on the play.
+     Q4           00:09.9                         Foul: Shooting                                               Jae Crowder                                                   Ersan Ilyasova           CNC             Video
+Comment:         Crowder (BOS) makes incidental contact with Ilyasova (PHI) that does not affect his jump shot attempt.
+     Q4           00:08.2                    Foul: Double Personal                                              Al Horford                                                    Joel Embiid             INC             Video
+Comment:         Embiid (PHI) grabs Horford (BOS) and Horford extends his arm into Embiid and the two players affect each other's ability to retrieve the rebound.
+     Q4           00:06.3                         Foul: Personal                                               Joel Embiid                                                   Amir Johnson              CC             Video
+Comment:         Embiid (PHI) commits a take foul on Johnson (BOS).
+     Q4           00:02.1                         Foul: Personal                                            Robert Covington                                                 Isaiah Thomas             CC             Video
+Comment:         Covington (PHI) commits a take foul on Thomas (BOS).
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              01/07/2017 04:31:10PM

@@ -1,0 +1,48 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                              Mavericks (90) @ Clippers (88) (Dec 23, 2016)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:56.0                        Foul: Loose Ball                                                JJ Redick                                                    Salah Mejri              CC             Video
+Comment:         Redick (LAC) dislodges Mejri (DAL), affecting his ability to retrieve the rebound.
+     Q4           01:50.0                         Foul: Personal                                          Luc Mbah a Moute                                                    Salah Mejri              CC             Video
+Comment:         Mbah a Moute (LAC) makes contact with Mejri (DAL) that affects his FOM away from the ball.
+     Q4           01:31.0                         Foul: Personal                                              Austin Rivers                                                  Dwight Powell            CNC             Video
+Comment:         Rivers (LAC) makes marginal contact with Powell (DAL) on the screen that does not affect his FOM.
+     Q4           01:15.0                         Foul: Offensive                                           DeAndre Jordan                                                   Deron Williams           CNC             Video
+Comment:         Jordan (LAC) makes marginal contact with Williams (DAL) on the screen.
+     Q4           01:13.0                        Foul: Offensive                                            DeAndre Jordan                                                   Deron Williams           CNC             Video
+Comment:         Jordan (LAC) makes marginal contact with Williams (DAL) on the screen.
+     Q4           01:11.0                         Foul: Personal                                                Seth Curry                                                  DeAndre Jordan            INC             Video
+Comment:         Curry (DAL) makes contact with Jordan (LAC) that affects his FOM on the cut to the basket.
+     Q4           00:33.9                        Foul: Loose Ball                                           DeAndre Jordan                                                 Wesley Matthews             CC             Video
+Comment:         Jordan (LAC) dislodges Matthews (DAL), affecting his ability to retrieve the rebound.
+     Q4           00:33.0                        Violation: Lane                                            DeAndre Jordan                                                 Wesley Matthews            INC             Video
+Comment:         Jordan (LAC) enters the paint area prior to the free throw being released.
+     Q4           00:27.4                         Foul: Shooting                                         Dorian Finney-Smith                                                DeAndre Jordan             CC             Video
+Comment:         Finney-Smith (DAL) makes body contact with Jordan (LAC) that affects his shot attempt.
+     Q4           00:07.0                         Foul: Personal                                          Luc Mbah a Moute                                                  Harrison Barnes           CNC             Video
+Comment:         Mbah a Moute (LAC) makes incidental contact with Barnes (DAL) on the perimeter.
+     Q4           00:03.7                             Other                                                                                                                                                           Video
+Comment:         LAC does not signal for a timeout and the whistle is inadvertent.
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              12/24/2016 03:50:43PM

@@ -1,0 +1,52 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                                 Hawks (99) @ Pelicans (94) (Jan 05, 2017)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:50.0                         Foul: Shooting                                               Buddy Hield                                                  Thabo Sefolosha           CNC             Video
+Comment:         Hield (NOP) makes marginal contact with Sefolosha (ATL) that does not affect his shot attempt.
+     Q4           01:26.0                         Foul: Shooting                                            Dennis Schroder                                                   Buddy Hield             INC             Video
+Comment:         Schroder (ATL) makes contact with Hield's (NOP) arm that affects his driving shot attempt.
+     Q4           01:17.0                Turnover: 3 Second Violation                                        Dwight Howard                                                                                            Video
+Comment:         [Detectable with stop watch] Howard (ATL) is in the paint for longer than three seconds.
+     Q4           00:55.0                         Foul: Shooting                                             Dwight Howard                                                    Buddy Hield             CNC             Video
+Comment:         Howard (ATL) obtains a legal guarding position on the driving shot attempt by Hield (NOP).
+     Q4           00:34.6                        Foul: Loose Ball                                             Anthony Davis                                                 Tim Hardaway Jr.           CC             Video
+Comment:         Davis (NOP) dislodges Hardaway Jr. (ATL), affecting his ability to retrieve the rebound.
+     Q4           00:33.0               Turnover: Backcourt Turnover                                        Dennis Schroder                                                                                           Video
+Comment:         [Observable in enhanced video] Schroder (ATL) steps on the midcourt line.
+     Q4           00:30.2                         Foul: Personal                                             E'Twaun Moore                                                  Dennis Schroder            CC             Video
+Comment:         Moore (NOP) commits a take foul on Schroder (ATL).
+     Q4           00:20.8                         Foul: Personal                                              Anthony Davis                                                   Paul Millsap            CNC             Video
+Comment:         Davis (NOP) makes incidental contact with Millsap (ATL) during the loose ball.
+     Q4           00:20.0              Turnover: Stepped out of Bounds                                         Paul Millsap                                                                           INC             Video
+Comment:         Millsap's (ATL) foot lands out of bounds before he releases the ball.
+     Q4           00:17.3                         Foul: Technical                                              Paul Millsap                                                                            CC             Video
+Comment:         All technical fouls are reviewed by League Operations.
+     Q4           00:17.3                         Foul: Personal                                           Langston Galloway                                                  Paul Millsap             CC             Video
+Comment:         Galloway (NOP) commits a take foul on Millsap (ATL).
+     Q4           00:10.0                        Foul: Loose Ball                                            Kent Bazemore                                                   Anthony Davis            CNC             Video
+Comment:         Bazemore (ATL) makes marginal contact with Davis (NOP) during rebounding.
+     Q4           00:05.7                         Foul: Personal                                             E'Twaun Moore                                                    Paul Millsap             CC             Video
+Comment:         Moore (NOP) commits a take foul on Millsap (ATL).
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              01/06/2017 04:10:15PM

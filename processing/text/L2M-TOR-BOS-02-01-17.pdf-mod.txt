@@ -1,0 +1,77 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                               Raptors (104) @ Celtics (109) (Feb 01, 2017)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:58.0                         Foul: Offensive                                            Lucas Nogueira                                                  Marcus Smart                             Video
+Comment:         [Incidental or immaterial] Nogueira (TOR) takes a wide stance and makes foot to foot contact with Smart (BOS) on the screen.
+     Q4           01:57.0                         Foul: Personal                                              Marcus Smart                                                     Kyle Lowry             CNC             Video
+Comment:         Smart (BOS) does not make contact with Lowry (TOR) that affects his SQBR.
+
+     Q4           01:55.0                         Violation: Lane                                              Jae Crowder                                                     Kyle Lowry                             Video
+Comment:         [Observable in enhanced video] Crowder (BOS) enters the paint area prior to the free throw being released.
+
+     Q4           01:55.0                         Foul: Shooting                                               Jae Crowder                                                     Kyle Lowry              CC             Video
+Comment:         Crowder (BOS) does not beat Lowry (TOR) to the spot and obtain a legal guarding position, and he makes contact that affects the driving shot attempt.
+
+     Q4          01:48.0                       Turnover: Palming                                             Isaiah Thomas                                                                            CNC             Video
+Comment:         Thomas (BOS) does not have part of his hand under the ball when he brings it to a pause and continues his dribble.
+
+     Q4           01:34.0                         Foul: Personal                                                Al Horford                                                   Lucas Nogueira           CNC             Video
+                 
+Comment:    Horford (BOS) makes marginal contact with Nogueira (TOR) that does not affect his FOM.
+     Q4           01:31.0                         Foul: Offensive                                            Lucas Nogueira                                                  Marcus Smart             CNC             Video
+                 
+Comment:    Nogueira (TOR) sets the screen on Smart (BOS) and gives him room to avoid the contact.
+                  
+     Q4     01:21.0               Instant Replay: Overturn Ruling   CC             Video
+                 
+Comment:    After communicating with the Replay Center, the ruling on the floor that Lowry's (TOR) field goal attempt did not hit the rim is overturned and the shot clock is correctly reset.
+                 
+     Q4          01:19.0                      Turnover: Traveling                                              Kyle Lowry                                                                                             Video
+Comment:         [Observable in enhanced video] Lowry (TOR) moves his pivot foot.
+     Q4           01:05.0                         Foul: Shooting                                              Marcus Smart                                                   Norman Powell            CNC             Video
+Comment:         There is no clear and conclusive evidence that Smart (BOS) makes contact with Powell (TOR) that affects his shot attempt.
+     Q4           00:54.0                         Foul: Personal                                            DeMarre Carroll                                                  Isaiah Thomas            CNC             Video
+Comment:         Carroll (TOR) makes marginal contact with Thomas (BOS) that does not affect his SQBR.
+
+     Q4          00:37.0                      Turnover: Traveling                                            Marcus Smart                                                                                             Video
+Comment:         [Observable in enhanced video] Smart (BOS) moves his pivot foot.
+
+     Q4           00:29.0                         Foul: Offensive                                               Al Horford                                                   Norman Powell            CNC             Video
+Comment:         Horford (BOS) sets the screen on Powell (TOR) and gives him room to avoid the contact.
+
+     Q4           00:23.0                         Foul: Shooting                                             Norman Powell                                                   Isaiah Thomas            CNC             Video
+Comment:         Powell (TOR) makes marginal contact with Thomas (BOS) that does not affect his driving shot attempt. Nogueira (TOR) makes incidental contact after the blocked
+                 shot.
+     Q4           00:17.0                        Foul: Loose Ball                                           DeMarre Carroll                                                  Marcus Smart             CNC             Video
+Comment:         Carroll (TOR) and Powell (TOR) make incidental contact with Smart (BOS) during rebounding.
+     Q4           00:10.6                         Foul: Personal                                            DeMarre Carroll                                                  Isaiah Thomas             CC             Video
+Comment:         Carroll (TOR) commits a take foul on Thomas (BOS).
+     Q4           00:03.0                     Foul: Away from Play                                          Patrick Patterson                                                  Al Horford             CNC             Video
+Comment:         Patterson (TOR) makes marginal contact with Horford (BOS) that does not affect his FOM.
+     Q4           00:02.8                         Foul: Personal                                             Lucas Nogueira                                                  Isaiah Thomas             CC             Video
+Comment:         Nogueira (TOR) commits a take foul on Thomas (BOS).
+     Q4           00:01.0                         Foul: Personal                                             Norman Powell                                                     Al Horford              CC             Video
+Comment:         Powell (TOR) commits a take foul on Horford (BOS).
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              02/02/2017 03:19:04PM

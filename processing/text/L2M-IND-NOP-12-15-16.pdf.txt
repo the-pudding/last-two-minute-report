@@ -1,0 +1,54 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                                Pacers (95) @ Pelicans (102) (Dec 15, 2016)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:56.0                      Turnover: Traveling                                             Jeff Teague                                                                            INC             Video
+Comment:         Teague (IND) takes more than the allowed two steps after gathering the ball.
+     Q4           01:19.0                         Foul: Shooting                                              Anthony Davis                                                 Thaddeus Young            CNC             Video
+Comment:         Davis (NOP) makes incidental contact with Young (IND) that does not affect his jump shot attempt.
+     Q4           00:57.3                         Foul: Shooting                                            Thaddeus Young                                                   Anthony Davis            INC             Video
+Comment:         RHH shows that Young (IND) makes contact with Davis' (NOP) body and affects his shot attempt.
+     Q4           00:55.1                         Foul: Personal                                             Glenn Robinson                                                  Terrence Jones           CNC             Video
+Comment:         Robinson III (IND) makes incidental contact with Jones (NOP) during rebounding.
+     Q4           00:46.9               Instant Replay: Support Ruling                                      Thaddeus Young                                                                             CC             Video
+Comment:         After communicating with the Replay Center, the ruling on the court was upheld.
+     Q4           00:45.1                         Foul: Personal                                              Myles Turner                                                   Anthony Davis             CC             Video
+Comment:         Turner (IND) commits a take foul on Davis (NOP).
+     Q4           00:45.1                  Violation: Delay of Game                                                                                                                                    CC             Video
+Comment:         Indiana players do not enter the game in a timely fashion after the timeout.
+     Q4           00:43.6                         Foul: Personal                                             E'Twaun Moore                                                      CJ Miles              CNC             Video
+Comment:         Moore (NOP) and Miles (IND) briefly engage and separate off ball.
+     Q4           00:42.4                         Foul: Offensive                                                 CJ Miles                                                    Solomon Hill            CNC             Video
+Comment:         Miles (IND) sets the screen on Hill (NOP) and gives him room to avoid the contact.
+     Q4           00:37.0                         Foul: Offensive                                              Jeff Teague                                                    Jrue Holiday            CNC             Video
+Comment:         Teague (IND) does not dislodge Holiday (NOP) from his legal guarding position.
+     Q4           00:31.9                         Foul: Personal                                               Paul George                                                   Terrence Jones            CC             Video
+Comment:         George (IND) commits a take foul on Jones (NOP).
+     Q4           00:22.0                         Foul: Personal                                               Jeff Teague                                                  E'Twaun Moore              CC             Video
+Comment:         Teague (IND) commits a take foul on Moore (NOP).
+     Q4           00:13.6                         Foul: Shooting                                             E'Twaun Moore                                                      CJ Miles              CNC             Video
+Comment:         Moore (NOP) maintains legal guarding position and makes incidental contact with Miles (IND).
+     Q4          00:12.6              Violation: Defensive Goaltending                                      Terrence Jones                                                                            CNC             Video
+Comment:         Jones (NOP) grabs the rebound after it makes contact with the rim and is outside of the cylinder.
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              12/16/2016 01:25:19PM

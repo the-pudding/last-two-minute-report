@@ -1,0 +1,60 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                                  76ers (91) @ Grizzlies (96) (Dec 06, 2016)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:57.0                         Foul: Shooting                                              Troy Williams                                                    Dario Saric             CC             Video
+Comment:         LO SLA shows Williams (MEM) makes contact to Saric's (PHI) body that affects his shot attempt.
+     Q4           01:44.0                Turnover: 3 Second Violation                                           Marc Gasol                                                                                            Video
+Comment:         [Detectable with stop watch] Gasol (MEM) is in the paint for longer than three seconds.
+     Q4           01:41.0                         Foul: Personal                                            Richaun Holmes                                                    Marc Gasol               CC             Video
+Comment:         Holmes (PHI) makes contact with Gasol (MEM) that affects his FOM.
+     Q4           01:37.0                         Foul: Offensive                                               Marc Gasol                                                    TJ McConnell            CNC             Video
+Comment:         Gasol (MEM) sets the screen on McConnell (PHI) and gives him room to avoid the contact.
+     Q4           01:29.0                        Foul: Loose Ball                                            Zach Randolph                                                   Ersan Ilyasova           CNC             Video
+Comment:         Randolph (MEM) and Ilyasova (PHI) make incidental contact with one another during rebounding.
+     Q4           01:28.0                         Foul: Shooting                                              TJ McConnell                                                     Tony Allen             CNC             Video
+Comment:         McConnell (PHI) maintains legal guarding position on Allen's (MEM) drive to the basket and shot attempt.
+     Q4           01:12.0                         Foul: Offensive                                           Richaun Holmes                                                  Andrew Harrison           CNC             Video
+Comment:         Holmes (PHI) sets the screen on Harrison (MEM) and gives him room to avoid the contact.
+     Q4           01:01.0                        Foul: Loose Ball                                           Andrew Harrison                                                  Ersan Ilyasova           CNC             Video
+Comment:         Harrison (MEM) and Ilyasova (PHI) make incidental contact with one another while attempting to retrieve the loose ball.
+     Q4           00:53.1                         Foul: Shooting                                            Richaun Holmes                                                    Marc Gasol               CC             Video
+Comment:         Holmes (PHI) jumps from point A to point B and makes contact with Gasol (MEM) that affects his shot attempt.
+     Q4           00:41.4                         Foul: Offensive                                             Ersan Ilyasova                                                Andrew Harrison           CNC             Video
+Comment:         Ilyasova (PHI) sets the screen on Harrison (MEM) and gives him room to avoid the contact.
+     Q4           00:32.5                         Foul: Personal                                               Nik Stauskas                                                    Tony Allen              CC             Video
+Comment:         Stauskas (PHI) makes contact with Allen (MEM) that affects his SQBR.
+     Q4           00:32.5                         Violation: Lane                                             Ersan Ilyasova                                                   Tony Allen                             Video
+Comment:         [Observable in enhanced video] PXP shows Ilyasova (PHI) enters the paint area prior to the free throw being released.
+     Q4          00:29.4                Turnover: Backcourt Turnover                                                                                                                                  CNC             Video
+Comment:         Randolph (MEM) dislodges the ball from Holmes (PHI), causing it to go into the backcourt.
+     Q4           00:14.8                         Foul: Shooting                                            Andrew Harrison                                                    Dario Saric            CNC             Video
+Comment:         Harrison (MEM) legally contests Saric's (PHI) jump shot attempt.
+     Q4           00:09.2                         Foul: Personal                                             Ersan Ilyasova                                                  Zach Randolph             CC             Video
+Comment:         Ilyasova (PHI) commits a take foul on Randolph (MEM).
+     Q4           00:09.2                        Foul: Loose Ball                                              Marc Gasol                                                    Ersan Ilyasova           CNC             Video
+Comment:         Gasol (MEM) and Ilyasova (PHI) make incidental contact with one another during rebounding.
+     Q4           00:03.9                         Foul: Personal                                             Ersan Ilyasova                                                 JaMychal Green             CC             Video
+Comment:         Ilyasova (PHI) commits a take foul on Green (MEM).
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              12/07/2016 11:04:44AM

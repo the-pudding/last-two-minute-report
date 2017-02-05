@@ -1,0 +1,48 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other
+technical support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you
+have any questions, please contact the NBA here.
+                                                                                Hornets (107) @ Hawks (99) (Dec 17, 2016)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:17.0                    Foul: Defense 3 Second                                          Dwight Howard                                                                                            Video
+Comment:         [Detectable with stop watch] Howard (ATL) is in the paint without actively guarding an opponent for longer than three seconds.
+     Q4           01:13.0                         Foul: Personal                                            Dennis Schroder                                                  Kemba Walker              CC             Video
+Comment:         RO SLA shows Schroder (ATL) makes contact with Walker (CHA) that affects his SQBR.
+     Q4           01:08.0                         Foul: Offensive                                               Cody Zeller                                                 Dennis Schroder           CNC             Video
+Comment:         Zeller (CHA) sets the screen on Schroder (ATL) and gives him room to avoid the contact.
+     Q4           01:07.0                         Foul: Personal                                             Dwight Howard                                                   Kemba Walker             CNC             Video
+Comment:         Howard (ATL) makes marginal contact with Walker (CHA) that does not affect his SQBR.
+     Q4           01:04.0                         Foul: Shooting                                            Thabo Sefolosha                                                   Cody Zeller             CNC             Video
+Comment:         Sefolosha (ATL) maintains legal guarding position on the shot attempt by Zeller (CHA).
+     Q4           00:52.5                         Foul: Shooting                                                Cody Zeller                                                 Dennis Schroder           CNC             Video
+Comment:         Zeller (CHA) makes marginal contact with Schroder (ATL) that does not affect his driving shot attempt.
+     Q4           00:48.6                         Foul: Personal                                            Dennis Schroder                                                  Kemba Walker             CNC             Video
+Comment:         Scroder (ATL) makes marginal contact with Walker (CHA) that does not affect his SQBR.
+     Q4           00:27.1                         Foul: Shooting                                                Cody Zeller                                                   Paul Millsap            INC             Video
+Comment:         LATR shows Zeller (CHA) grabs the arm of Millsap (ATL) and affects his shot attempt.
+     Q4           00:23.6                         Foul: Personal                                             Kent Bazemore                                                   Kemba Walker              CC             Video
+Comment:         Bazemore (ATL) commits a take foul on Walker (CHA).
+     Q4           00:11.4                      Foul: Personal Take                                          Dennis Schroder                                                  Nicolas Batum             CC             Video
+Comment:         Scroder (ATL) commits a take foul on Batum (CHA).
+     Q4           00:04.1                      Foul: Personal Take                                          Dennis Schroder                                                  Kemba Walker              CC             Video
+Comment:         Scroder (ATL) commits a take foul on Walker (CHA).
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              12/18/2016 12:48:24PM
