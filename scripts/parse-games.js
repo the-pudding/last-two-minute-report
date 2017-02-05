@@ -365,7 +365,7 @@ function parse({ index, file }, cb) {
 		// write out data
 		const csvOut = d3.csvFormat(reviewsWithTeam)
 		if (DEBUG) console.log(JSON.stringify('reviewsWithTeam', null, 2))
-		else fs.writeFileSync(`${cwd}/processing/csv/${info.game_id}.csv`, csvOut)
+		else fs.writeFileSync(`${cwd}/output/games/${info.game_id}.csv`, csvOut)
 		cb()
 	})
 }
