@@ -171,9 +171,38 @@ function getSeconds(str) {
 	return (min * 60) + sec
 }
 
+function buildComment({ line, index }, lines) {
+	let done = false
+	let output = line[1]
+	let i = index + 1
+
+	while(!done) {
+		// test end
+		if (lines[i]) {
+			const quarter = lines[i][0].match(/Q\d/) && lines[i][0].length === 2
+			const common = lines[i][0].startsWith('Common')
+			if (quarter || common) done = true
+			else output = `${output} ${lines[i][0]}`
+		}
+		if (i >= lines.length) done = true
+		i += 1
+	}
+
+	return output
+}
+
+function extractComments(lines) {
+	const linesWithIndex = lines.map((line, index) => ({ line, index }))
+	const commentStart = linesWithIndex.filter(d => d.line[0].startsWith('Comment:'))
+	// go thru each, and add following lines until you hit Q or Common
+	const comments = commentStart.map(d => buildComment(d, lines))
+	return comments
+}
+
 function extractReviews({ lines, videoURLs }) {
 	const details = lines.filter(line => line[0].match(/Q\d/) && line[0].length === 2)
-	const comments = lines.filter(line => line[0].startsWith('Comment:'))
+
+	const comments = extractComments(lines)
 
 	const reviews = details.map((d, i) => ({
 		period: d[0],
@@ -183,7 +212,7 @@ function extractReviews({ lines, videoURLs }) {
 		committing_player: getCommittingPlayer(d),
 		disadvantaged_player: getDisdvantagedPlayer(d),
 		review_decision: getReviewDecision(d),
-		comment: comments[i][1],
+		comment: comments[i],
 		video: videoURLs[i],
 	}))
 
@@ -335,7 +364,7 @@ function parse({ index, file }, cb) {
 
 		// write out data
 		const csvOut = d3.csvFormat(reviewsWithTeam)
-		if (DEBUG) console.log(JSON.stringify(reviewsWithTeam, null, 2))
+		if (DEBUG) console.log(JSON.stringify('reviewsWithTeam', null, 2))
 		else fs.writeFileSync(`${cwd}/processing/csv/${info.game_id}.csv`, csvOut)
 		cb()
 	})
@@ -344,7 +373,7 @@ function parse({ index, file }, cb) {
 function init() {
 	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('pdf.txt'))
 	// const files = DEBUG ? ['L2M-BKN-ORL-12-16-16.pdf'] : fileInput
-	const files = DEBUG ? ['L2M-TOR-BOS-02-01-17.pdf'] : fileInput
+	const files = DEBUG ? ['L2M-NYK-PHX-12-13-16.pdf'] : fileInput
 
 	const len = files.length
 	let index = 0
