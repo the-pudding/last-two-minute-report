@@ -13,6 +13,8 @@ const teamLookup = require('./team-lookup.js')
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
 const DEBUG = false
 
+const badFormatGames = []
+
 function cleanLines(lines) {
 	return lines
 		.map(line =>
@@ -172,6 +174,7 @@ function getSeconds(str) {
 function extractReviews({ lines, videoURLs }) {
 	const details = lines.filter(line => line[0].match(/Q\d/) && line[0].length === 2)
 	const comments = lines.filter(line => line[0].startsWith('Comment:'))
+
 	const reviews = details.map((d, i) => ({
 		period: d[0],
 		time: d[1],
@@ -258,9 +261,27 @@ function getCommittingAndDisadvantagedTeams(d) {
 	return { committing, disadvantaged }
 }
 
-function parse(file, cb) {
+function checkBadFormat(reviews) {
+	let bad = false
+	reviews.forEach(review => {
+		const noComment = !review.comment || !review.comment.trim().length
+		const noSeconds = isNaN(review.seconds_left)
+		if (noComment || noSeconds) bad = true
+	})
+	return bad
+}
+
+function parse({ index, file }, cb) {
 	// load txt file into array of lines
-	const lines = fs.readFileSync(`${cwd}/processing/text/${file}.txt`)
+	// always check if there is a modified version first
+	const modifiedFile = `${cwd}/processing/text/${file}-mod.txt`
+	const rawFile = `${cwd}/processing/text/${file}.txt`
+	const modExists = fs.existsSync(modifiedFile)
+	const filepath = modExists ? modifiedFile : rawFile
+
+	console.log(index, file, modExists ? 'modified' : '')
+
+	const lines = fs.readFileSync(filepath)
 		.toString()
 		.split('\n')
 
@@ -278,6 +299,11 @@ function parse(file, cb) {
 
 	// grab the teams and date
 	const info = extractGameInfo(clean)
+
+	// alert if we have bad formatting
+	const badFormat = checkBadFormat(reviews)
+
+	if (badFormat) badFormatGames.push(file)
 
 	// get boxscore info and integrate into data rows
 	getBoxscoreInfo(info, ({ refs, score, url }) => {
@@ -316,19 +342,20 @@ function parse(file, cb) {
 }
 
 function init() {
-	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('.txt'))
+	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('pdf.txt'))
 	// const files = DEBUG ? ['L2M-BKN-ORL-12-16-16.pdf'] : fileInput
-	const files = DEBUG ? ['Wozards-110-Hornets-107-OT.pdf'] : fileInput
+	const files = DEBUG ? ['L2M-TOR-BOS-02-01-17.pdf'] : fileInput
 
 	const len = files.length
-	let i = 0
+	let index = 0
 
 	const next = () => {
-		const file = files[i].replace('.txt', '')
-		console.log(i, file)
-		parse(file, () => {
-			i += 1
-			if (i < len) next()
+		const file = files[index].replace('.txt', '')
+
+		parse({ file, index }, () => {
+			index += 1
+			if (index < len) next()
+			else console.log('bad format games:', badFormatGames)
 		})
 	}
 
