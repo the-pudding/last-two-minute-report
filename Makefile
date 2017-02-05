@@ -10,7 +10,7 @@ latest:
 	npm run parse-games
 	make concat
 	make merge-incorrect-ref
-	git add output/all_games.csv
+	git add output/all_games.csv output/games/*.csv
 	git commit -m 'update with latest data'
 	git push
 
