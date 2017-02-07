@@ -11,7 +11,7 @@ const d3 = require('d3')
 const teamLookup = require('./team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
-const DEBUG = true
+const DEBUG = false
 
 const badFormatGames = []
 
