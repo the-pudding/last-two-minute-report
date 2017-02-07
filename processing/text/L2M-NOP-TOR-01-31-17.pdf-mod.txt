@@ -77,7 +77,7 @@ Comment:         After communicating with the Replay Center, the ruling on the f
      Q5     01:41.0                  Stoppage: Out-of-Bounds    CC             Video
                   
 Comment:         The ball never goes OOB and the play is deemed an inadvertent whistle.
-     Q5     01:37.0                         Foul: Shooting                                            DeMarre Carroll                                                 E'Twaun Moore CNC             Video
+     Q5     01:37.0                         Foul: Shooting                                            DeMarre Carroll                                                 E'Twaun Moore     CNC             Video
                   
 Comment:         Carroll (TOR) maintains legal guarding position and makes incidental contact with Moore (NOP) that does not affect his drive to the basket and shot attempt.
      Q5     01:18.0                         Foul: Offensive                                          Jonas Valanciunas                                                  Jrue Holiday    CNC             Video

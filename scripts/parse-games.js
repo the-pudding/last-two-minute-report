@@ -11,7 +11,7 @@ const d3 = require('d3')
 const teamLookup = require('./team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
-const DEBUG = false
+const DEBUG = true
 
 const badFormatGames = []
 
@@ -364,7 +364,7 @@ function parse({ index, file }, cb) {
 
 		// write out data
 		const csvOut = d3.csvFormat(reviewsWithTeam)
-		if (DEBUG) console.log(JSON.stringify('reviewsWithTeam', null, 2))
+		if (DEBUG) console.log(JSON.stringify(reviewsWithTeam, null, 2))
 		else fs.writeFileSync(`${cwd}/output/games/${info.game_id}.csv`, csvOut)
 		cb()
 	})
@@ -373,7 +373,7 @@ function parse({ index, file }, cb) {
 function init() {
 	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('pdf.txt'))
 	// const files = DEBUG ? ['L2M-BKN-ORL-12-16-16.pdf'] : fileInput
-	const files = DEBUG ? ['L2M-NYK-PHX-12-13-16.pdf'] : fileInput
+	const files = DEBUG ? ['L2M-CLE-HOU-3-1-15.pdf'] : fileInput
 
 	const len = files.length
 	let index = 0

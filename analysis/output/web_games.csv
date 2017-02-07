@@ -799,3 +799,14 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20170131DENLAL,DEN,LAL,20170131,Ken Mauer,Michael Smith,Leon Wood,116,120,L2M-DEN-LAL-01-31-17.pdf,http://www.basketball-reference.com/boxscores/201701310LAL.html
 20170131NOPTOR,NOP,TOR,20170131,Mike Callahan,Derrick Collins,Eric Dalen,106,108,L2M-NOP-TOR-01-31-17.pdf,http://www.basketball-reference.com/boxscores/201701310TOR.html
 20170201TORBOS,TOR,BOS,20170201,Bennie Adams,Tony Brothers,Mitchell Ervin,104,109,L2M-TOR-BOS-02-01-17.pdf,http://www.basketball-reference.com/boxscores/201702010BOS.html
+20170202ATLHOU,ATL,HOU,20170202,Derrick Collins,John Goble,Gary Zielinski,113,108,L2M-ATL-HOU-02-02-17.pdf,http://www.basketball-reference.com/boxscores/201702020HOU.html
+20170202LALWAS,LAL,WAS,20170202,Eric Dalen,Tre Maddox,Derrick Stafford,108,116,L2M-LAL-WAS-02-02-17.pdf,http://www.basketball-reference.com/boxscores/201702020WAS.html
+20170203CHIHOU,CHI,HOU,20170203,Tony Brothers,Mitchell Ervin,Pat Fraher,117,121,L2M-CHI-HOU-02-03-17.pdf,http://www.basketball-reference.com/boxscores/201702030HOU.html
+20170203DALPOR,DAL,POR,20170203,Matt Boland,Dan Crawford,Scott Twardoski,108,104,L2M-DAL-POR-02-03-17.pdf,http://www.basketball-reference.com/boxscores/201702030POR.html
+20170203INDBKN,IND,BKN,20170203,Tony Brown,Aaron Smith,Zach Zarba,106,97,L2M-IND-BKN-02-03-17.pdf,http://www.basketball-reference.com/boxscores/201702030BRK.html
+20170203MEMOKC,MEM,OKC,20170203,Ed Malloy,Leroy Richardson,Haywoode Workman,102,114,L2M-MEM-OKC-02-03-17.pdf,http://www.basketball-reference.com/boxscores/201702030OKC.html
+20170203MILDEN,MIL,DEN,20170203,Lauren Holtkamp,Bill Kennedy,Karl Lane,117,121,L2M-MIL-DEN-02-03-17.pdf,http://www.basketball-reference.com/boxscores/201702030DEN.html
+20170203PHOSAC,PHO,SAC,20170203,Sean Corbin,Eric Lewis,Leon Wood,105,103,L2M-PHX-SAC-02-03-17.pdf,http://www.basketball-reference.com/boxscores/201702030SAC.html
+20170204CHAUTA,CHA,UTA,20170204,Bennie Adams,Tyler Ford,Ken Mauer,98,105,L2M-CHA-UTA-02-04-17.pdf,http://www.basketball-reference.com/boxscores/201702040UTA.html
+20170204GSWSAC,GSW,SAC,20170204,Matt Boland,Jacyn Goble,Bill Spooner,106,109,L2M-GSW-SAC-02-04-17.pdf,http://www.basketball-reference.com/boxscores/201702040SAC.html
+20170205POROKC,POR,OKC,20170205,Tony Brown,Mike Callahan,Michael Smith,99,105,L2M-POR-OKC-02-05-17.pdf,http://www.basketball-reference.com/boxscores/201702050OKC.html

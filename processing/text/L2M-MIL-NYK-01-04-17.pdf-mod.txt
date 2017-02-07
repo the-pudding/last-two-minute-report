@@ -37,11 +37,11 @@ Comment:    Antetokounmpo (MIL) makes marginal contact with Thomas (NYK) that do
                  
 Comment:    Noah (NYK) and Parker (MIL) briefly engage and separate during rebounding.
                   
-     Q4     00:33.7                        Foul: Loose Ball                                              Joakim Noah                                                    Greg Monroe CC             Video
+     Q4     00:33.7                        Foul: Loose Ball                                              Joakim Noah                                                    Greg Monroe     CC             Video
                  
 Comment:    Noah (NYK) clamps the arm and shoulder of Monroe (MIL), affecting his ability to retrieve the rebound.
                 
-     Q4     00:33.7                        Violation: Lane                                              Derrick RoseINC             Video
+     Q4     00:33.7                        Violation: Lane                                              Derrick Rose    INC             Video
 
 Comment:      Rose (NYK) is inside the three-point arc prior to the free throw being released. Noah (NYK) and Parker (MIL) enter the paint area prior to the free throw being released.
      Q4           00:18.4                   Foul: Defense 3 Second                                     Giannis Antetokounmpo                                                                                           Video

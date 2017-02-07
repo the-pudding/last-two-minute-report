@@ -3,7 +3,7 @@ setup:
 	cd processing; mkdir pdf text boxscore html csv output
 
 concat: 
-	csvstack output/games/* > .tmp/concat.csv;
+	csvstack output/games/* > .tmp/concat.csv
 
 latest:
 	npm run get-games 10
