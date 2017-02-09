@@ -100,8 +100,18 @@ function createTable(err, data) {
 		.attr('href', d => d.video)
 		.attr('target', '_blank')
 	trEnter.append('td').text(d => d.review_decision)
-	trEnter.append('td').text(d => d.committing_player)
-	trEnter.append('td').text(d => d.disadvantaged_player)
+	trEnter.append('td').html((d) => {
+		const p = d.committing_player
+		const t = d.committing_team
+		const team = t ? `${t}` : ''
+		return `<span>${team}</span> ${p}`
+	}).attr('class', 'td--committing')
+	trEnter.append('td').html((d) => {
+		const p = d.disadvantaged_player
+		const t = d.disadvantaged_team
+		const team = t ? `${t}` : ''
+		return `<span>${team}</span> ${p}`
+	}).attr('class', 'td--disadvantaged')
 }
 
 function init() {

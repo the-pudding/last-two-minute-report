@@ -3,6 +3,8 @@ import * as $ from './utils/dom'
 import isMobile from './utils/is-mobile'
 import graphicLocation from './graphic-location'
 import graphicRecent from './graphic-recent'
+import graphicGames from './graphic-games'
+import graphicTeams from './graphic-teams'
 
 const DEV_MODE = window.location.hostname.indexOf('localhost') > -1
 
@@ -27,6 +29,8 @@ function init() {
 	window.addEventListener('resize', debounce(handleResize, 150))
 	graphicLocation.init()
 	graphicRecent.init()
+	graphicGames.init()
+	graphicTeams.init()
 }
 
 init()

@@ -1,6 +1,9 @@
 .graphic__recent
-	max-width 50rem
+	max-width 60rem
 	margin 0 auto
+	.graphic__chart
+		// max-height 250px
+		// overflow hidden
 	.game__info
 		display flex
 		justify-content space-between
@@ -22,11 +25,19 @@
 		td 
 			font-size 0.85rem
 			padding 0.25em
+		.td--committing, .td--disadvantaged
+			span 
+				font-size 0.65rem
+				color $gray-dark
 		.ic
-			background-color #ed7886
+			background-color $ic
+			// color darken($ic, 60)
 		.inc
-			background-color #fabcb2
+			background-color $inc
+			// color darken($inc, 60)
 		.cc
-			background-color #abdda4
+			background-color $cc
+			// color darken($cc, 60)
 		.cnc 
-			background-color #d5eec2
+			background-color $cnc
+			// color darken($cnc, 60)

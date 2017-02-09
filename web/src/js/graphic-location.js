@@ -19,15 +19,17 @@ function createBars(data) {
 
 	graphic.select('.bar__home')
 		.style('width', homePercent)
+		.text(`Home: ${home}`)
 
 	graphic.select('.bar__away')
 		.style('width', awayPercent)
-
-	graphic.select('.text__home')
-		.text(`Home: ${home}`)
-
-	graphic.select('.text__away')
 		.text(`Away: ${away}`)
+
+	// graphic.select('.text__home')
+		
+
+	// graphic.select('.text__away')
+		
 }
 
 function init() {
