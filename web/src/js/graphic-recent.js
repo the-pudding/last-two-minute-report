@@ -27,6 +27,15 @@ function loadRecent(cb) {
 	})
 }
 
+function formatTime(str) {
+	const secondsLeft = +str
+	const minutes = Math.floor(secondsLeft / 60)
+	const rem = secondsLeft - (minutes * 60)
+	const seconds = d3.format('0.1f')(rem)
+	const pre = rem < 10 ? '0' : ''
+	return `${minutes}:${pre}${seconds}`
+}
+
 function createTable(err, data) {
 	const [gameData, playsData] = data
 
@@ -42,6 +51,7 @@ function createTable(err, data) {
 	const games = gameData.filter(d => gameIds.includes(d.game_id))
 	const gamesDict = {}
 	games.forEach(d => gamesDict[d.game_id] = d)
+
 
 	const gameEnter = chart.selectAll('.game')
 		.data(playsByGame)
@@ -60,7 +70,7 @@ function createTable(err, data) {
 	const tableEnter = gameEnter.append('table')
 		.datum(d => d.values)
 		.attr('class', 'game__plays')
-	
+
 	const headEnter = tableEnter.append('thead')
 		.append('tr')
 
@@ -71,7 +81,9 @@ function createTable(err, data) {
 	headEnter.append('th').text('Committing player')
 	headEnter.append('th').text('Disadvantaged player')
 
-	const trEnter = tableEnter.selectAll('tr')
+	const bodyEnter = tableEnter.append('tbody')
+
+	const trEnter = bodyEnter.selectAll('tr')
 		.data(d => d)
 		.enter().append('tr')
 
@@ -82,7 +94,7 @@ function createTable(err, data) {
 	})
 
 	trEnter.append('td').text(d => d.period)
-	trEnter.append('td').text(d => d.time)
+	trEnter.append('td').text(d => formatTime(d.seconds_left))
 	trEnter.append('td').append('a')
 		.text(d => d.call_type)
 		.attr('href', d => d.video)
