@@ -9,8 +9,6 @@ latest:
 	npm run get-games 10
 	npm run parse-games
 	make concat
-	make incorrect-call
-	make merge-incorrect-ref
 	git add output/all_games.csv
 	git add output/games/*.csv
 	git add custom/*.csv
