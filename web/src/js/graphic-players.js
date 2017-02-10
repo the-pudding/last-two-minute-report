@@ -2,26 +2,28 @@ import * as d3 from 'd3'
 import './utils/includes-polyfill'
 import colors from './colors'
 
-const graphic = d3.select('.graphic__refs')
+const graphic = d3.select('.graphic__players')
 const chart = graphic.select('.graphic__chart')
 
 function cleanData(row) {
 	return {
 		...row,
-		ic: +row.ic,
-		inc: +row.inc,
-		games: +row.games,
-		rate_ic: +row.ic / +row.games,
-		rate_inc: +row.inc / +row.games,
+		against_total: +row.count_against,
+		against_ic: +row.count_against_ic,
+		against_inc: +row.count_against_inc,
+		for_total: +row.count_for,
+		for_ic: +row.count_for_ic,
+		for_inc: +row.count_for_inc,
+		net: +row.net,
+		total: +row.count_against + +row.count_for,
 	}
 }
 
 function createTable(data) {
-	const refData = data
-		.filter(d => d.games > 20)
-		.sort((a, b) => d3.descending(a.rate_inc, b.rate_inc))
+	const playerData = data
+		.filter(d => d.total > 10)
+		.sort((a, b) => d3.descending(a.net / a.total, b.net / b.total))
 
-	// console.log(refData)
 	// const scale = d3.scaleThreshold()
 
 	// scale
@@ -57,7 +59,7 @@ function createTable(data) {
 }
 
 function init() {
-	d3.csv('assets/data/web_refs.csv', cleanData, (err,  data) => {
+	d3.csv('assets/data/web_players.csv', cleanData, (err,  data) => {
 		if (err) console.error(err)
 		createTable(data)
 	})

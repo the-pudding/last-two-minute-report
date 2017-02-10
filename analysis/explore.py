@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[41]:
 
 import agate
 import math
@@ -37,6 +37,8 @@ data = agate.Table.from_csv('../output/all_games.csv', column_types=specified_ty
 incorrect = data.where(lambda r: r['review_decision'] in ['IC', 'INC'])
 ic = incorrect.where(lambda r: r['review_decision'] == 'IC')
 inc = incorrect.where(lambda r: r['review_decision'] == 'INC')
+cc = data.where(lambda r: r['review_decision'] == 'CC')
+cnc = data.where(lambda r: r['review_decision'] == 'CNC')
 
 
 # In[2]:
@@ -64,7 +66,7 @@ play_data = data.select(play_include)
 play_data.to_csv('output/web_plays.csv')
 
 
-# In[4]:
+# In[5]:
 
 # basic stats
 by_game = data.group_by('game_id')
@@ -78,9 +80,6 @@ num_calls = len(data.rows)
 num_calls_incorrect = len(incorrect.rows)
 percent_incorrect = float(num_calls_incorrect) / float(num_calls) * 100.0
 num_calls_incorrect_per_game = float(num_calls_incorrect) / float(num_games)
-
-
-# In[5]:
 
 # calls incorrect per minute played
 data_with_quarter = data.compute([
@@ -103,9 +102,6 @@ quarter_minutes = unique_quarters.compute([
 minutes_played = int(quarter_minutes.aggregate(agate.Sum('minutes_played')))
 num_calls_incorrect_per_minute = float(num_calls_incorrect) / float(minutes_played)
 
-
-# In[6]:
-
 # export summary data
 
 summary_column_names = ['key', 'value']
@@ -125,7 +121,7 @@ summary_table = agate.Table(summary_rows, summary_column_names, summary_column_t
 summary_table.to_csv('output/web_summary.csv')
 
 
-# In[7]:
+# In[6]:
 
 # home / away
 def hasLocationAdvantage(row, location):
@@ -155,7 +151,7 @@ location_table = agate.Table(location_rows, location_column_names, location_colu
 location_table.to_csv('output/web_location.csv')
 
 
-# In[8]:
+# In[7]:
 
 #latest games
 sorted_date = data.order_by('date', reverse=True)
@@ -167,28 +163,21 @@ recent_games.exclude(exclude_recent).to_csv('output/web_recent.csv')
 
 # In[9]:
 
-# decision breakdown
-by_decision = data.group_by('review_decision')
+# # decision breakdown
+# by_decision = data.group_by('review_decision')
 
-decision_totals = by_decision.aggregate([
-    ('count', agate.Count())
-]).where(lambda r: r['review_decision'] is not None)
+# decision_totals = by_decision.aggregate([
+#     ('count', agate.Count())
+# ]).where(lambda r: r['review_decision'] is not None)
 
 # decision_totals.order_by('count', reverse=True).print_table()
 
-decision_totals.to_csv('output/web_decision.csv')
+# decision_totals.to_csv('output/web_decision.csv')
 
 
-# In[10]:
+# In[16]:
 
 # call type breakdown
-# by_call = incorrect.group_by('call_type')
-
-# call_totals = by_call.aggregate([
-#     ('count', agate.Count())
-# ])
-
-# call_totals.order_by('count', reverse=True).print_table(max_column_width=100,max_rows=100)
 
 # inc
 by_call_inc = inc.group_by('call_type')
@@ -197,8 +186,6 @@ call_totals_inc = by_call_inc.aggregate([
     ('count_inc', agate.Count())
 ])
 
-# call_totals_inc.order_by('count_inc', reverse=True).print_table(max_column_width=100,max_rows=10)
-
 # ic
 by_call_ic = ic.group_by('call_type')
 
@@ -206,47 +193,97 @@ call_totals_ic = by_call_ic.aggregate([
     ('count_ic', agate.Count())
 ])
 
-# call_totals_ic.order_by('count_ic', reverse=True).print_table(max_column_width=100,max_rows=5)
+#cc 
+by_call_cc = cc.group_by('call_type')
 
-call_totals_merged = call_totals_inc.join(call_totals_ic, 'call_type','call_type')
-
-def addCallTypes(row):
-    count_ic = 0 if row['count_ic'] is None else row['count_ic']
-    count_inc = 0 if row['count_inc'] is None else row['count_inc']
-    return count_ic + count_inc
-    
-call_totals_all = call_totals_merged.compute([
-    ('count', agate.Formula(agate.Number(), addCallTypes))
-]).order_by('count', reverse=True)
-
-call_totals_all.to_csv('output/web_call_types.csv')
-
-
-# In[11]:
-
-# when wrong calls happen (in last 2 minutes)
-in_last_two = incorrect.where(lambda r: float(r['seconds_left']) < 120)
-
-with_bin = in_last_two.compute([
-    ('seconds_left_bin', agate.Formula(agate.Number(), lambda r: math.floor(float(r['seconds_left']) / 10) ))
+call_totals_cc = by_call_cc.aggregate([
+    ('count_cc', agate.Count())
 ])
 
-by_bin = with_bin.group_by('seconds_left_bin')
+#cnc 
+by_call_cnc = cnc.group_by('call_type')
+
+call_totals_cnc = by_call_cnc.aggregate([
+    ('count_cnc', agate.Count())
+])
+
+call_merge1 = call_totals_inc.join(call_totals_ic, 'call_type','call_type')
+call_merge2 = call_merge1.join(call_totals_cc, 'call_type','call_type')
+call_totals_merged = call_merge2.join(call_totals_cnc, 'call_type','call_type')
+    
+call_totals_merged.to_csv('output/web_calls.csv')
 
 
-counts_bin = by_bin.aggregate([
-    ('count', agate.Count())
-]).order_by('seconds_left_bin')
+# In[40]:
+
+# when wrong calls happen (in last 2 minutes)
+in_last_two_ic = ic.where(lambda r: float(r['seconds_left']) < 120)
+in_last_two_inc = inc.where(lambda r: float(r['seconds_left']) < 120)
+in_last_two_cc = cc.where(lambda r: float(r['seconds_left']) < 120)
+
+def getBin(row):
+    bin_size = 10
+    return math.floor(float(row['seconds_left']) / bin_size)
+
+with_bin_ic = in_last_two_ic.compute([('bin', agate.Formula(agate.Number(), getBin))])
+with_bin_inc = in_last_two_inc.compute([('bin', agate.Formula(agate.Number(), getBin))])
+with_bin_cc = in_last_two_cc.compute([('bin', agate.Formula(agate.Number(), getBin))])
+
+count_bin_ic = with_bin_ic.group_by('bin').aggregate([('ic', agate.Count())])
+count_bin_inc = with_bin_inc.group_by('bin').aggregate([('inc', agate.Count())])
+count_bin_cc = with_bin_cc.group_by('bin').aggregate([('cc', agate.Count())])
 
 
-# counts_bin.line_chart('seconds_left_bin', 'count')
+bin_merge1 = count_bin_ic.join(count_bin_inc, 'bin', 'bin')
+bin_merge2 = bin_merge1.join(count_bin_cc, 'bin', 'bin')
 
-counts_bin.to_csv('output/web_when.csv')
+bin_merge2.to_csv('output/web_when.csv')
 
 
-# In[12]:
+# In[30]:
 
-# worst ref
+#rec inc
+by_ref1 = inc.group_by('ref_1')
+by_ref2 = inc.group_by('ref_2')
+by_ref3 = inc.group_by('ref_3')
+
+counts_ref1 = by_ref1.aggregate([('count1', agate.Count())])
+counts_ref2 = by_ref2.aggregate([('count2', agate.Count())])
+counts_ref3 = by_ref3.aggregate([('count3', agate.Count())])
+
+refs_merge1 = counts_ref1.join(counts_ref2, 'ref_1','ref_2')
+refs_merged = refs_merge1.join(counts_ref3, 'ref_1','ref_3')
+
+def addRefCount(row):
+    c1 = 0 if row['count1'] is None else row['count1']
+    c2 = 0 if row['count2'] is None else row['count2']
+    c3 = 0 if row['count3'] is None else row['count3']
+    return c1 + c2 + c3
+
+refs_count_total = refs_merged.compute([
+    ('count', agate.Formula(agate.Number(), addRefCount))
+]).select(['ref_1', 'count'])
+
+refs_inc = refs_count_total.rename(column_names=['name', 'inc']).order_by('inc', reverse=True)
+
+ref_games = data.select(['game_id','ref_1','ref_2','ref_3']).distinct()
+
+def hasRef(row, ref):
+    return row['ref_1'] == ref or row['ref_2'] == ref or row['ref_3'] == ref
+
+def countGames(row):
+    ref = row['name']
+    with_ref = ref_games.where(lambda r: hasRef(r, ref))
+    return len(with_ref.rows)
+    
+refs_inc_with_games = refs_inc.compute([
+    ('games', agate.Formula(agate.Number(), countGames))
+])
+
+
+# In[32]:
+
+# ref ic
 ref_dict = {}
 
 def update_ref_dict(str):
@@ -255,18 +292,16 @@ def update_ref_dict(str):
         ref_dict.setdefault(name, 0)
         ref_dict[name] += 1
 
-by_ref = data.where(lambda r: r['ref_made_call'] is not None)
+by_ref_made = data.where(lambda r: r['ref_made_call'] is not None)
 
-for row in by_ref.rows:
+for row in by_ref_made.rows:
     update_ref_dict(row['ref_made_call'])
 
-ref_table = agate.Table(ref_dict.items(),column_names=['name', 'count']).order_by('name').order_by('count', reverse=True)
+ref_made_table = agate.Table(ref_dict.items(),column_names=['name', 'ic'])
 
-# ref_table.print_table(max_rows=100)
+ref_both = refs_inc_with_games.join(ref_made_table, 'name', 'name')
 
-# ref_count.order_by('count', reverse=True).print_table(max_column_width=100,max_rows=100)
-
-ref_table.to_csv('output/web_ref.csv')
+ref_both.to_csv('output/web_refs.csv')
 
 
 # In[14]:
@@ -353,7 +388,7 @@ count_player_with_net = count_player.compute([
 ]).order_by('net', reverse=True)
 
 
-count_player_with_net.to_csv('output/web_player.csv')
+count_player_with_net.to_csv('output/web_players.csv')
 
 
 # In[18]:
@@ -439,10 +474,5 @@ count_team_with_net = count_team.compute([
 ]).order_by('net', reverse=True)
 
 
-count_team_with_net.to_csv('output/web_team.csv')
-
-
-# In[ ]:
-
-
+count_team_with_net.to_csv('output/web_teams.csv')
 

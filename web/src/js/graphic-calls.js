@@ -26,22 +26,15 @@ function cleanData(row) {
 	return { call, cc, cnc, ic, inc, total, total_infraction, rate_correct, rate_incorrect }
 }
 
-function loadCalls(cb) {
-	d3.csv('assets/data/web_calls.csv', cleanData, (err,  data) => {
-		cb(null, data)
-	})
-}
-
-function createTable(err, data) {
-	if (err) console.error(err)
-	const callData = data[0]
+function createTable(data) {
+	const callData = data
 		.filter(d => d.total_infraction > 20)
 		.sort((a, b) => d3.descending(a.rate_correct, b.rate_correct))
 
 	const scale = d3.scaleThreshold()
 
 	scale
-		.domain([.2, .4, .6, .8])
+		.domain([0.2, 0.4, 0.6, 0.8])
 		.range(colors.diverging)
 
 	const tableEnter = chart.append('table')
@@ -73,10 +66,10 @@ function createTable(err, data) {
 }
 
 function init() {
-	const q = d3.queue()
-	q
-		.defer(loadCalls)
-		.awaitAll(createTable)
+	d3.csv('assets/data/web_calls.csv', cleanData, (err,  data) => {
+		if (err) console.error(err)
+		createTable(data)
+	})
 }
 
 export default { init }

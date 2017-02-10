@@ -17,16 +17,8 @@ function cleanData(row) {
 	}
 }
 
-function loadTeams(cb) {
-	d3.csv('assets/data/web_team.csv', cleanData, (err, data) => {
-		cb(null, data)
-	})
-}
-
-function createChart(err, data) {
-	if (err) throw err
-
-	const teamData = data[0]
+function createChart(data) {
+	const teamData = data
 	const team = chart.selectAll('.team')
 		.data(teamData)
 	.enter().append('div')
@@ -40,11 +32,10 @@ function createChart(err, data) {
 		.attr('src', d => `assets/logos/${d.team}@2x.jpg`)
 }
 function init() {
-	console.log(teamLookup)
-	const q = d3.queue()
-	q
-		.defer(loadTeams)
-		.awaitAll(createChart)
+	d3.csv('assets/data/web_teams.csv', cleanData, (err, data) => {
+		if (err) console.error(err)
+		createChart(data)
+	})
 }
 
 export default { init }

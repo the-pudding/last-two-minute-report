@@ -24,12 +24,6 @@ function createBars(data) {
 	graphic.select('.bar__away')
 		.style('width', awayPercent)
 		.text(`Away: ${away}`)
-
-	// graphic.select('.text__home')
-		
-
-	// graphic.select('.text__away')
-		
 }
 
 function init() {
