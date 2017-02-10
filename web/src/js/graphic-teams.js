@@ -32,9 +32,9 @@ function createChart(err, data) {
 	.enter().append('div')
 		.attr('class', 'team')
 
-	console.log(teamData)
-	team.append('p')
-		.text(d => d.team)
+	// console.log(teamData)
+	// team.append('p')
+	// 	.text(d => d.team)
 	team.append('img')
 		.attr('class', 'team__logo')
 		.attr('src', d => `assets/logos/${d.team}@2x.jpg`)

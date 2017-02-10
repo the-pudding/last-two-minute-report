@@ -1,4 +1,17 @@
 $logo-width = 75px
-.graphic__teams
+.graphic__teams	
+	.graphic__chart
+		max-width 55rem
+		margin 0 auto
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
 	.team__logo
 		max-width $logo-width
+		filter grayscale(100%)
+		transition filter 250ms
+		cursor pointer
+		&:hover
+			filter grayscale(0%)
+			border 1px dotted $off-black
+			

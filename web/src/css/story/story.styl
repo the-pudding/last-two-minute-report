@@ -1,9 +1,9 @@
-fontify($whitney, $whitney-hash, 400, $sans, 400, 0.04em)
-fontify($mercury, $mercury-hash, 400, $serif, 400, 0.04em)
+fontify($ptSerif, $ptSerif-hash, 400, $serif, 400, 0.04em)
+fontify($roboto, $roboto-hash, 400, $sans, 400, 0.04em)
 
 body
 	background #fff
-	font-size 16px
+	font-size 17px
 
 a
 	text-decoration none
@@ -28,8 +28,26 @@ button
 .graphic
 	margin-top 4rem
 	&__hed
-		font-size 1rem
+		font-size 1.5rem
 		text-transform uppercase
+		letter-spacing 0.05em
 	&__intro
 		max-width 40rem
 		margin 0 auto
+
+table 
+	width 100%
+	th
+		font-size 0.85rem
+		padding 0.3em 0.5em
+		background-color #fff
+	tr 
+		background-color #eee
+	td 
+		font-size 0.85rem
+		padding 0.3em 0.5em
+		border 1px solid #fff
+	.number
+		text-align right
+	.text
+		text-align left

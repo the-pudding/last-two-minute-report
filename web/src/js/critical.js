@@ -1,42 +1,36 @@
 // import loadCSS from './utils/load-css'
-import { loadFontGroup } from './utils/load-font'
+import { loadFont } from './utils/load-font'
 
 // comment out fonts you wont be using
-const whitney = [
+const ptSerif = [
 	{
-		family: 'Whitney',
+		family: 'PT Serif',
 		weight: 400,
-		style: 'normal',
-		parts: ['Whitney SSm A', 'Whitney SSm B'],
 	},
 	{
-		family: 'Whitney',
+		family: 'PT Serif',
 		weight: 700,
-		style: 'normal',
-		parts: ['Whitney SSm A', 'Whitney SSm B'],
-	},
-	{
-		family: 'Whitney',
-		weight: 400,
-		style: 'italic',
-		parts: ['Whitney SSm A', 'Whitney SSm B'],
 	},
 ]
 
-const mercury = [
+const roboto = [
 	{
-		family: 'Mercury',
-		weight: 400,
-		style: 'normal',
-		parts: ['Mercury SSm A', 'Mercury SSm B'],
+		family: 'Roboto',
+		weight: 300,
 	},
 	{
-		family: 'Mercury',
+		family: 'Roboto',
+		weight: 400,
+	},
+	{
+		family: 'Roboto',
 		weight: 500,
-		style: 'normal',
-		parts: ['Mercury SSm A', 'Mercury SSm B'],
+	},
+	{
+		family: 'Roboto',
+		weight: 700,
 	},
 ]
 
-whitney.forEach(loadFontGroup)
-mercury.forEach(loadFontGroup)
+ptSerif.forEach(loadFont)
+roboto.forEach(loadFont)

@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
 import './utils/includes-polyfill'
+import { jumpTo } from './utils/dom'
 
 const graphic = d3.select('.graphic__recent')
 const chart = graphic.select('.graphic__chart')
@@ -38,6 +39,8 @@ function formatTime(str) {
 }
 
 function createTable(err, data) {
+	if (err) console.error(err)
+
 	const [gameData, playsData] = data
 
 	// group plays by game
@@ -122,6 +125,7 @@ function handleButton() {
 	const text = visible ? 'Expand to see all' : 'Collapse'
 	chart.classed('is-visible', !visible)
 	button.text(text)
+	jumpTo(chart.node())
 }
 
 function setupEvents() {

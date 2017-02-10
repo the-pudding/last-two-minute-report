@@ -5,6 +5,8 @@ import graphicLocation from './graphic-location'
 import graphicRecent from './graphic-recent'
 import graphicGames from './graphic-games'
 import graphicTeams from './graphic-teams'
+import graphicCalls from './graphic-calls'
+import graphicRefs from './graphic-refs'
 
 const DEV_MODE = window.location.hostname.indexOf('localhost') > -1
 
@@ -31,6 +33,8 @@ function init() {
 	graphicRecent.init()
 	graphicGames.init()
 	graphicTeams.init()
+	graphicCalls.init()
+	graphicRefs.init()
 }
 
 init()
