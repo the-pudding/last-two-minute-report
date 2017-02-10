@@ -165,7 +165,7 @@ exclude_recent = ['away', 'box_score_url', 'date', 'home', 'original_pdf', 'ref_
 recent_games.exclude(exclude_recent).to_csv('output/web_recent.csv')
 
 
-# In[24]:
+# In[9]:
 
 # decision breakdown
 by_decision = data.group_by('review_decision')
@@ -179,7 +179,7 @@ decision_totals = by_decision.aggregate([
 decision_totals.to_csv('output/web_decision.csv')
 
 
-# In[26]:
+# In[10]:
 
 # call type breakdown
 # by_call = incorrect.group_by('call_type')
@@ -244,7 +244,7 @@ counts_bin = by_bin.aggregate([
 counts_bin.to_csv('output/web_when.csv')
 
 
-# In[28]:
+# In[12]:
 
 # worst ref
 ref_dict = {}
@@ -269,7 +269,7 @@ ref_table = agate.Table(ref_dict.items(),column_names=['name', 'count']).order_b
 ref_table.to_csv('output/web_ref.csv')
 
 
-# In[29]:
+# In[14]:
 
 # star treatment
 
@@ -304,7 +304,7 @@ count_player_for = count_player_for_renamed.compute([
 # count_player_for.order_by('count_for', reverse=True).print_table()
 
 
-# In[30]:
+# In[13]:
 
 #anti-star treatment
 # did not get call they shouldve (INC + disadvantaged)
@@ -338,7 +338,7 @@ count_player_against = count_player_against_renamed.compute([
 # count_player_against.order_by('count_against', reverse=True).print_table()
 
 
-# In[31]:
+# In[15]:
 
 # join star tables
 count_player = count_player_for.join(count_player_against, 'player', 'player')
@@ -356,7 +356,7 @@ count_player_with_net = count_player.compute([
 count_player_with_net.to_csv('output/web_player.csv')
 
 
-# In[32]:
+# In[18]:
 
 # teams
 # got away with calls (INC + committing)
@@ -387,10 +387,10 @@ count_team_for = count_team_for_renamed.compute([
     ('count_for', agate.Formula(agate.Number(), addCountFor))
 ])
 
-# count_team_for.order_by('count_for', reverse=True).print_table()
+# count_team_for.order_by('count_for', reverse=True).print_table(max_rows=100)
 
 
-# In[33]:
+# In[19]:
 
 # anti - team
 # did not get call they shouldve (INC + disadvantaged)
@@ -421,10 +421,10 @@ count_team_against = count_team_against_renamed.compute([
     ('count_against', agate.Formula(agate.Number(), addCountAgainst))
 ])
 
-# count_team_against.order_by('count_against', reverse=True).print_table()
+# count_team_against.order_by('count_against', reverse=True).print_table(max_rows=100)
 
 
-# In[34]:
+# In[20]:
 
 # join teams
 count_team = count_team_for.join(count_team_against, 'team', 'team')
@@ -440,4 +440,9 @@ count_team_with_net = count_team.compute([
 
 
 count_team_with_net.to_csv('output/web_team.csv')
+
+
+# In[ ]:
+
+
 

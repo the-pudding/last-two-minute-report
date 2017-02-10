@@ -35,3 +35,4 @@ convert:
 
 web-data:
 	cd analysis; python explore.py;
+	make copy-data;
