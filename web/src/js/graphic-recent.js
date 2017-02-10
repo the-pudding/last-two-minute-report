@@ -3,6 +3,7 @@ import './utils/includes-polyfill'
 
 const graphic = d3.select('.graphic__recent')
 const chart = graphic.select('.graphic__chart')
+const button = graphic.select('.button--expand')
 
 function formatDate(str) {
 	const parsed = d3.timeParse('%Y%m%d')(str)
@@ -62,9 +63,11 @@ function createTable(err, data) {
 		.datum(d => gamesDict[d.key])
 		.attr('class', 'game__info')
 
-	infoEnter.append('a').text(d => {
+	infoEnter.append('a').text((d) => {
 		return `${d.away} (${d.score_away}) at ${d.home} (${d.score_home})`
 	}).attr('href', d => d.box_score_url)
+		.attr('target', '_blank')
+
 	infoEnter.append('p').text(d => formatDate(d.date))
 
 	const tableEnter = gameEnter.append('table')
@@ -114,7 +117,19 @@ function createTable(err, data) {
 	}).attr('class', 'td--disadvantaged')
 }
 
+function handleButton() {
+	const visible = chart.classed('is-visible')
+	const text = visible ? 'Expand to see all' : 'Collapse'
+	chart.classed('is-visible', !visible)
+	button.text(text)
+}
+
+function setupEvents() {
+	button.on('click', handleButton)
+}
+
 function init() {
+	setupEvents()
 	const q = d3.queue()
 	q
 		.defer(loadGames)

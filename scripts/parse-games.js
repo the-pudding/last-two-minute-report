@@ -1,6 +1,7 @@
 /*
 convert text files to csv
 */
+const DEBUG = false
 
 const cwd = process.cwd()
 
@@ -11,7 +12,6 @@ const d3 = require('d3')
 const teamLookup = require('./team-lookup.js')
 
 const REVIEW_TYPES = ['CC', 'IC', 'CNC', 'INC']
-const DEBUG = false
 
 const badFormatGames = []
 
@@ -76,7 +76,7 @@ function extractGameInfo(lines) {
 
 		// generate a unique id for the game
 		const id = `${formattedDate}${awayAbbr}${homeAbbr}`
-		return { 
+		return {
 			game_id: id,
 			away: awayAbbr,
 			home: homeAbbr,
@@ -310,9 +310,12 @@ function parse({ index, file }, cb) {
 
 	console.log(index, file, modExists ? 'modified' : '')
 
-	const lines = fs.readFileSync(filepath)
-		.toString()
-		.split('\n')
+	const fileText = fs.readFileSync(filepath).toString()
+
+	// PHOENIX HACK
+	const hack = fileText.replace(/\(PHX\)/g, '(PHO)')
+
+	const lines = hack.split('\n')
 
 	// load html file so we can get video links
 	const $ = cheerio.load(fs.readFileSync(`${cwd}/processing/html/${file}.html`))

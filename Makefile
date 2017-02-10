@@ -29,3 +29,9 @@ copy-data:
 	rm -rf web/src/assets/data
 	cp -fr analysis/output web/src/assets/data
 	csvjson -k key --no-inference analysis/output/web_summary.csv > web/template-data/summary.json
+
+convert:
+	cd analysis; jupyter nbconvert --to python explore.ipynb;
+
+web-data:
+	cd analysis; python explore.py;

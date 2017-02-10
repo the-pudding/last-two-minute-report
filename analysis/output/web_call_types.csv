@@ -1,9 +1,9 @@
 call_type,count_inc,count_ic,count
-Foul: Shooting,198,69,267
-Foul: Offensive,229,7,236
+Foul: Shooting,201,70,271
+Foul: Offensive,230,7,237
 Foul: Personal,182,51,233
+Foul: Loose Ball,163,14,177
 Turnover: Traveling,170,6,176
-Foul: Loose Ball,161,14,175
 Foul: Defense 3 Second,90,,90
 Turnover: 3 Second Violation,34,,34
 Violation: Lane,16,,16
