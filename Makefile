@@ -5,6 +5,9 @@ setup:
 concat: 
 	csvstack output/games/* > .tmp/concat.csv
 
+convert:
+	cd analysis; jupyter nbconvert --to python explore.ipynb;
+
 # 1
 latest:
 	npm run get-games 10
@@ -23,7 +26,7 @@ merge-incorrect:
 	> output/all_games.csv
 
 # 4
-commit:
+commit-latest:
 	git add output/all_games.csv
 	git add output/games/*.csv
 	git add custom/*.csv
@@ -31,15 +34,21 @@ commit:
 	git commit -m 'update with latest data'
 	git push
 
+#5
+web-data:
+	cd analysis; python explore.py;
+	make copy-data;
+
+#6 
 copy-data:
 	rm -rf web/src/assets/data
 	cp -fr analysis/output web/src/assets/data
 	csvjson -k key --no-inference analysis/output/web_summary.csv > web/template-data/summary.json
 
-convert:
-	cd analysis; jupyter nbconvert --to python explore.ipynb;
-
-web-data:
-	cd analysis; python explore.py;
-	make copy-data;
-
+#7
+commit-web:
+	git add analysis/**/*
+	git add web/src/assets/data/*.csv
+	git add web/template-data/summary.json
+	git commit -m 'update web data'
+	git push
