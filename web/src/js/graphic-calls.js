@@ -38,7 +38,6 @@ function createTable(data) {
 		.range(colors.diverging)
 
 	const tableEnter = chart.append('table')
-		.attr('class', 'calls__table')
 
 	const headEnter = tableEnter.append('thead')
 		.append('tr')
