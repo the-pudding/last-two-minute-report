@@ -1,0 +1,37 @@
+.graphic__when
+	.graphic__chart
+		max-width 40rem
+		margin 0 auto
+	
+	.g-ic rect
+		fill $ic
+	
+	.g-inc rect
+		fill $inc
+			
+	.axis path
+		stroke none
+	
+	.axis text
+		fill $gray-dark
+		font-size 10px
+	
+	.axis--x line
+		stroke none
+	
+	.axis--y line
+		stroke $gray-light
+		stroke-dasharray 3px 3px
+	
+	.axis--y .tick:nth-child(2)
+		line
+			display none
+	
+	.axis--x .tick:nth-child(odd)
+		display none
+	
+	.labels text
+		font-size 12px
+		text-transform uppercase
+		letter-spacing 0.05em
+		fill $gray-dark

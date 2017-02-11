@@ -1,11 +1,6 @@
 .graphic__location
 	max-width 40rem
 	margin 0 auto
-	.chart__text
-		display flex
-		justify-content space-between
-		p
-			margin 0
 	.chart__bars
 		display flex
 		position relative
@@ -14,20 +9,22 @@
 		height 2rem
 		line-height 2rem
 		padding 0 0.5rem
+		text-transform uppercase
+		font-size 0.85rem
 	.bar__home
-		background-color $off-black
-		color $off-white
+		background-color $cnc
+		color $off-black
 		text-align left
 	.bar__away
-		background-color $off-white
+		background-color $inc
 		color $off-black
 		text-align right
 	.bar__mid
 		position absolute
-		top -25%
+		top 0%
 		left 50%
-		height 3rem
+		height 2rem
 		width 0px
 		// margin-right 1px
-		border-left 1px dashed $ic
+		border-left 1px dashed $off-black
 	
