@@ -13,7 +13,11 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 
 ## Usage
 
-If already setup, simply run `make latest`. This will do everything below and commit latest data to repo.
+1. `make latest`
+2a. `make incorrect`
+2b. manually update custom/incorrect_call_with_ref.csv
+3. `make merge-incorrect`
+4. `make commit`
 
 #### Get latest games from archive
 `npm run get-games [max]` (optionally pass a number `[max]` to only download recent games)

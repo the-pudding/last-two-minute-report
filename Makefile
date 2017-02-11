@@ -5,25 +5,31 @@ setup:
 concat: 
 	csvstack output/games/* > .tmp/concat.csv
 
+# 1
 latest:
 	npm run get-games 10
 	npm run parse-games
-	make concat
+	csvstack output/games/* > .tmp/concat.csv
+
+# 2
+incorrect:
+	cd custom; python incorrect-call.py;
+
+# 3
+merge-incorrect:
+	csvjoin -c 'play_id,play_id' --outer \
+	.tmp/concat.csv custom/incorrect_call_with_ref.csv \
+	| csvcut -C play_id2 \
+	> output/all_games.csv
+
+# 4
+commit:
 	git add output/all_games.csv
 	git add output/games/*.csv
 	git add custom/*.csv
 	git add processing/text/*.txt
 	git commit -m 'update with latest data'
 	git push
-
-incorrect-call:
-	cd custom; python incorrect-call.py;
-
-merge-incorrect-ref:
-	csvjoin -c 'play_id,play_id' --outer \
-	.tmp/concat.csv custom/incorrect_call_with_ref.csv \
-	| csvcut -C play_id2 \
-	> output/all_games.csv
 
 copy-data:
 	rm -rf web/src/assets/data
@@ -36,3 +42,4 @@ convert:
 web-data:
 	cd analysis; python explore.py;
 	make copy-data;
+
