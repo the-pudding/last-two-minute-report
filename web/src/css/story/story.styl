@@ -5,6 +5,9 @@ body
 	background #fff
 	font-size 17px
 
+main
+	padding 0.75rem
+
 a
 	text-decoration none
 	color $off-black
@@ -25,8 +28,10 @@ button
 	transition background-color 200ms
 	&:hover
 		background-color $gray-light
+
 .graphic
-	margin-top 4rem
+	position relative
+	margin 3rem auto
 	&__hed
 		font-size 1.5rem
 		text-transform uppercase
@@ -35,6 +40,15 @@ button
 		max-width 40rem
 		margin 0 auto
 
+.note
+	max-width 40rem
+	margin 0.25rem auto
+	color $gray-dark
+	font-size 0.8rem
+
+.align-right
+	text-align right
+	
 table 
 	width 100%
 	th
@@ -52,3 +66,10 @@ table
 		text-align right
 	.text
 		text-align left
+
+.travel
+	max-width 25rem
+	margin 3rem auto
+	p 
+		margin 0.25rem 0
+		text-align center
