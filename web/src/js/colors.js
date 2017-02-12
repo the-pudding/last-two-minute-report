@@ -1,3 +1,12 @@
 export default {
-	diverging: ['#ed7886', '#fabcb2', '#eee', '#d5eec2', '#abdda4'],
+	diverging: ['#db6f57','#ebafa0','#eeeeee','#b2d9d1','#70c2b4'],
+	sequentialRed: ['#eeeeee','#eec4b9','#e79a87','#db6f57'],
+	sequentialGreen: ['#eeeeee','#c6dfda','#9dd1c7','#70c2b4'],
+	ordinal: {
+		ic: '#db6f57',
+		inc: '#ebafa0',
+		neutral: '#eeeeee',
+		cnc: '#b2d9d1',
+		cc: '#70c2b4',
+	},
 }

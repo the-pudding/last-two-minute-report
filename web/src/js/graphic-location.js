@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
 import './utils/find-polyfill'
+import colors from './colors'
 
 const graphic = d3.select('.graphic__location')
 
@@ -18,10 +19,12 @@ function createBars(data) {
 	const awayPercent = `${(away / total) * 100}%`
 
 	graphic.select('.bar__home')
+		.style('background-color', colors.ordinal.cnc)
 		.style('width', homePercent)
 		.text(`Home: ${home}`)
 
 	graphic.select('.bar__away')
+		.style('background-color', colors.ordinal.inc)
 		.style('width', awayPercent)
 		.text(`Away: ${away}`)
 }

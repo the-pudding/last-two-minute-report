@@ -1,7 +1,8 @@
 import * as d3 from 'd3'
 import './utils/includes-polyfill'
 import colors from './colors'
-const colorsLight = colors.diverging.map(lighten)
+
+const colorsLight = {}
 
 const graphic = d3.select('.graphic__calls')
 const chart = graphic.select('.graphic__chart')
@@ -45,6 +46,21 @@ function createScale(data) {
 	}
 }
 
+function getRange({ key, selected }) {
+	switch (key) {
+	case 'cc':
+		return selected ? colors.sequentialGreen : colorsLight.sequentialGreen
+	case 'ic':
+		return selected ? colors.sequentialRed : colorsLight.sequentialRed
+	case 'inc':
+		return selected ? colors.sequentialRed : colorsLight.sequentialRed
+	case 'rate':
+		return selected ? colors.diverging : colorsLight.diverging
+	default:
+		return colors.diverging
+	}
+}
+
 function updateTable({ col, order }) {
 	const sortedData = callData.sort((a, b) => d3[order](a[col], b[col]))
 
@@ -54,7 +70,11 @@ function updateTable({ col, order }) {
 	tr.select('.td-cc').text(d => formatComma(d.cc))
 	tr.select('.td-ic').text(d => formatComma(d.ic))
 	tr.select('.td-inc').text(d => formatComma(d.inc))
-	tr.select('.td-rate').text(d => formatPercent(d.rate))
+	tr.select('.td-rate').text((d, i) => {
+		const p = formatPercent(d.rate)
+		if (i > 0) return p.replace(/\%/, '')
+		return p
+	})
 	tr.select('.td-call').text(d => d.call)
 
 	chart.selectAll('th')
@@ -62,7 +82,7 @@ function updateTable({ col, order }) {
 		.classed('ascending', false)
 	Object.keys(scale).forEach((key) => {
 		const selected = key === col
-		const range = selected ? colors.diverging : colorsLight
+		const range = getRange({ key, selected })
 
 		scale[key].range(range)
 		chart.selectAll(`.td-${key}`)
@@ -137,29 +157,39 @@ function createTable() {
 
 	trEnter.append('td')
 		.attr('class', 'td-call')
+		// .attr('data-title', 'call')
 		.classed('text', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-cc')
+		.attr('data-title', 'cc')
 		.classed('number', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-ic')
+		.attr('data-title', 'ic')
 		.classed('number', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-inc')
+		.attr('data-title', 'inc')
 		.classed('number', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-rate')
+		.attr('data-title', '% correct')
 		.classed('number', true)
 }
 
 function prepareData(data) {
 	return data.filter(d => d.total_infraction >= 20)
 }
+
 function init() {
+	colorsLight.diverging = colors.diverging.map(lighten)
+	colorsLight.sequentialRed = colors.sequentialRed.map(lighten)
+	colorsLight.sequentialGreen = colors.sequentialGreen.map(lighten)
+
 	d3.csv('assets/data/web_calls.csv', cleanData, (err,  data) => {
 		if (err) console.error(err)
 		callData = prepareData(data)

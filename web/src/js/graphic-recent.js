@@ -1,6 +1,7 @@
 import * as d3 from 'd3'
 import './utils/includes-polyfill'
 import { jumpTo } from './utils/dom'
+import colors from './colors'
 
 const graphic = d3.select('.graphic__recent')
 const chart = graphic.select('.graphic__chart')
@@ -94,9 +95,9 @@ function createTable(err, data) {
 		.enter().append('tr')
 
 
-	trEnter.attr('class', d => {
+	trEnter.style('background-color', (d) => {
 		const r = d.review_decision
-		return r ? r.toLowerCase() : ''
+		return r ? colors.ordinal[r.toLowerCase()] : colors.ordinal['default']
 	})
 
 	trEnter.append('td').text(d => d.period)

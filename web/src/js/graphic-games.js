@@ -1,9 +1,9 @@
 import * as d3 from 'd3'
 import './utils/includes-polyfill'
+import colors from './colors'
 
 const graphic = d3.select('.graphic__games')
 const chart = graphic.select('.graphic__chart')
-const colors = ['#eeeeee','#f2c7ca','#f2a1a7','#ed7886']
 
 
 function cleanData(row) {
@@ -18,8 +18,8 @@ function createChart(data) {
 	const scale = d3.scaleThreshold()
 
 	scale
-		.domain([1, 3, 5])
-		.range(colors)
+		.domain([1, 2, 4])
+		.range(colors.sequentialRed)
 
 	chart.selectAll('.game')
 		.data(gameData)
