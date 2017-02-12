@@ -1,11 +1,11 @@
 import * as d3 from 'd3'
 import './utils/includes-polyfill'
 import colors from './colors'
+const colorsLight = colors.diverging.map(lighten)
 
 const graphic = d3.select('.graphic__calls')
 const chart = graphic.select('.graphic__chart')
-let colorsIndex
-let colorsLight
+
 let scale
 let callData
 
@@ -45,9 +45,46 @@ function createScale(data) {
 	}
 }
 
-function handleColumnClick(d) {
-	const col = d3.select(this).attr('data-col')
-	updateTable(col)
+function updateTable({ col, order }) {
+	const sortedData = callData.sort((a, b) => d3[order](a[col], b[col]))
+
+	const tr = chart.selectAll('tbody tr')
+		.data(sortedData, (d, i) => i)
+
+	tr.select('.td-cc').text(d => formatComma(d.cc))
+	tr.select('.td-ic').text(d => formatComma(d.ic))
+	tr.select('.td-inc').text(d => formatComma(d.inc))
+	tr.select('.td-rate').text(d => formatPercent(d.rate))
+	tr.select('.td-call').text(d => d.call)
+
+	chart.selectAll('th')
+		.classed('descending', false)
+		.classed('ascending', false)
+	Object.keys(scale).forEach((key) => {
+		const selected = key === col
+		const range = selected ? colors.diverging : colorsLight
+
+		scale[key].range(range)
+		chart.selectAll(`.td-${key}`)
+			.style('background-color', d => scale[key](d[key]))
+
+		const th = chart.select(`.th-${key}`)
+
+		th.classed('is-selected', selected)
+
+		if (selected) {
+			const reverse = order === 'ascending' ? 'descending' : 'ascending'
+			th.classed(order, true)
+			th.classed(reverse, false)
+		}
+	})
+}
+
+function handleColumnClick() {
+	const sel = d3.select(this)
+	const col = sel.attr('data-col')
+	const order = sel.classed('descending') ? 'ascending' : 'descending'
+	updateTable({ col, order })
 }
 
 function createTable() {
@@ -57,31 +94,37 @@ function createTable() {
 		.append('tr')
 
 	headEnter.append('th')
+		.attr('class', 'th-call')
 		.text('Call')
 		.classed('text', true)
 
 	headEnter.append('th')
+		.attr('class', 'th-cc')
 		.attr('data-col', 'cc')
 		.text('CC')
 		.classed('number', true)
 		.on('click', handleColumnClick)
 
 	headEnter.append('th')
+		.attr('class', 'th-ic')
 		.attr('data-col', 'ic')
 		.text('IC')
 		.classed('number', true)
 		.on('click', handleColumnClick)
 
 	headEnter.append('th')
+		.attr('class', 'th-inc')
 		.attr('data-col', 'inc')
 		.text('INC')
 		.classed('number', true)
 		.on('click', handleColumnClick)
 
 	headEnter.append('th')
+		.attr('class', 'th-rate')
 		.attr('data-col', 'rate')
-		.text('Rate correct')
+		.text('% Correct')
 		.classed('number', true)
+		.classed('descending', true)
 		.on('click', handleColumnClick)
 
 	const bodyEnter = tableEnter.append('tbody')
@@ -92,7 +135,9 @@ function createTable() {
 
 	// trEnter.style('background-color', d => scale(d.rate))
 
-	trEnter.append('td').text(d => d.call).classed('text', true)
+	trEnter.append('td')
+		.attr('class', 'td-call')
+		.classed('text', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-cc')
@@ -111,38 +156,16 @@ function createTable() {
 		.classed('number', true)
 }
 
-function updateTable(col) {
-	const sortedData = callData.sort((a, b) => d3.descending(a[col], b[col]))
-
-	const tr = chart.selectAll('tbody tr')
-		.data(sortedData, (d, i) => i)
-
-	tr.select('.td-cc').text(d => formatComma(d.cc))
-	tr.select('.td-ic').text(d => formatComma(d.ic))
-	tr.select('.td-inc').text(d => formatComma(d.inc))
-	tr.select('.td-rate').text(d => formatPercent(d.rate))
-
-	Object.keys(scale).forEach((key) => {
-		const range = col === key ? colors.diverging : colorsLight
-		scale[key].range(range)
-		chart.selectAll(`.td-${key}`)
-			.style('background-color', d => scale[key](d[key]))
-	})
-}
-
 function prepareData(data) {
 	return data.filter(d => d.total_infraction >= 20)
 }
 function init() {
-	colorsIndex = colors.diverging.map((d, i) => i)
-	colorsLight = colors.diverging.map(lighten)
-
 	d3.csv('assets/data/web_calls.csv', cleanData, (err,  data) => {
 		if (err) console.error(err)
 		callData = prepareData(data)
 		scale = createScale(callData)
 		createTable()
-		updateTable('rate')
+		updateTable({ col: 'rate', order: 'descending' })
 	})
 }
 
