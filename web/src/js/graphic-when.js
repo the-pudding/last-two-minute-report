@@ -79,7 +79,7 @@ function resize() {
 	scale.y.rangeRound([height, 0])
 
 	svg.select('.axis--y')
-		.call(d3.axisLeft(scale.y).tickSize(-width))
+		.call(d3.axisLeft(scale.y).tickSize(-height))
 		.selectAll('text')
 			.attr('x', -5)
 

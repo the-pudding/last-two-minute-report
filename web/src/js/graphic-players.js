@@ -2,12 +2,19 @@ import * as d3 from 'd3'
 import './utils/includes-polyfill'
 import colors from './colors'
 
-let colorsLight
-
 const graphic = d3.select('.graphic__players')
 const chart = graphic.select('.graphic__chart')
 
+const margin = { top: 12, right: 12, bottom: 36, left: 36 }
+const FONT_SIZE = 13
+const RECT_HEIGHT = 8
+const MARGIN = RECT_HEIGHT / 2
+
+const ITEM_HEIGHT = FONT_SIZE + RECT_HEIGHT + MARGIN * 3
+
 let scale
+let scaleAxis
+let svg
 let playerData
 
 function formatPercent(num) {
@@ -26,151 +33,139 @@ function cleanData(row) {
 	const total = against_total + for_total
 	const against_rate = against_total / total
 	const for_rate = for_total / total
-	return { player, total, against_total, for_total, net, against_rate, for_rate }
-}
-
-function createScale(data) {
-	return {
-		for_total: d3.scaleQuantile().domain(data.map(d => d.for_total)),
-		against_total: d3.scaleQuantile().domain(data.map(d => d.against_total)),
-		net: d3.scaleQuantile().domain(data.map(d => d.net)),
-		rate_for: d3.scaleThreshold().domain([0.2, 0.4, 0.6, 0.8]),
-	}
-}
-
-// function updateTable() {
-// 	const playerData = data
-// 		.sort((a, b) => d3.descending(a.net / a.total, b.net / b.total))
-// }
-
-function updateTable({ col, order }) {
-	const sortedData = callData.sort((a, b) => d3[order](a[col], b[col]))
-
-	const tr = chart.selectAll('tbody tr')
-		.data(sortedData, (d, i) => i)
-
-	tr.select('.td-cc').text(d => formatComma(d.cc))
-	tr.select('.td-ic').text(d => formatComma(d.ic))
-	tr.select('.td-inc').text(d => formatComma(d.inc))
-	tr.select('.td-rate').text((d, i) => {
-		const p = formatPercent(d.rate)
-		if (i > 0) return p.replace(/\%/, '')
-		return p
-	})
-	tr.select('.td-call').text(d => d.call)
-
-	chart.selectAll('th')
-		.classed('descending', false)
-		.classed('ascending', false)
-	Object.keys(scale).forEach((key) => {
-		const selected = key === col
-		const range = selected ? colors.diverging : colorsLight
-
-		scale[key].range(range)
-		chart.selectAll(`.td-${key}`)
-			.style('background-color', d => scale[key](d[key]))
-
-		const th = chart.select(`.th-${key}`)
-
-		th.classed('is-selected', selected)
-
-		if (selected) {
-			const reverse = order === 'ascending' ? 'descending' : 'ascending'
-			th.classed(order, true)
-			th.classed(reverse, false)
-		}
-	})
-}
-
-function handleColumnClick() {
-	const sel = d3.select(this)
-	const col = sel.attr('data-col')
-	const order = sel.classed('descending') ? 'ascending' : 'descending'
-	updateTable({ col, order })
-}
-
-function createTable(data) {
-	const tableEnter = chart.append('table')
-
-	const headEnter = tableEnter.append('thead')
-		.append('tr')
-
-	headEnter.append('th')
-		.attr('class', 'th-name')
-		.text('name')
-		.classed('text', true)
-		.on('click', handleColumnClick)
-
-	headEnter.append('th')
-		.attr('class', 'th-in-favor')
-		.text('In favor')
-		.classed('number', true)
-		.on('click', handleColumnClick)
-
-	headEnter.append('th')
-		.attr('class', 'th-against')
-		.text('Against')
-		.classed('number', true)
-		.on('click', handleColumnClick)
-
-	headEnter.append('th')
-		.attr('class', 'Net')
-		.text('Net')
-		.classed('number', true)
-		.on('click', handleColumnClick)
-
-	headEnter.append('th')
-		.attr('class', 'th-in-favor-pct')
-		.text('In favor %')
-		.classed('number', true)
-		.on('click', handleColumnClick)
-
-
-	const bodyEnter = tableEnter.append('tbody')
-
-	const trEnter = bodyEnter.selectAll('tr')
-		.data(playerData, (d, i ) => i)
-		.enter().append('tr')
-
-	// trEnter.style('background-color', d => scale(d.for_rate))
-
-	trEnter.append('td')
-		.attr('class', 'td-name')
-		.text(d => d.player)
-		.classed('text', true)
-
-	trEnter.append('td')
-		.attr('class', 'td-for')
-		.text(d => d.for_total)
-		.classed('number', true)
-
-	trEnter.append('td')
-		.attr('class', 'td-against')
-		.text(d => d.against_total)
-		.classed('number', true)
-
-	trEnter.append('td')
-		.attr('class', 'td-net')
-		.text(d => d.net)
-		.classed('number', true)
-
-	trEnter.append('td')
-		.attr('class', 'td-for-pct')
-		.text(d => formatPercent(d.for_rate))
-		.classed('number', true)
+	// return { player, total, against_total, for_total, net, against_rate, for_rate }
+	return { player, total, against_total, for_total, for_ic, for_inc, against_ic, against_inc }
 }
 
 function prepareData(data) {
 	return data.filter(d => d.total > 15)
 }
 
+function createChart() {
+	// setup scales
+	const maxAgainst = d3.max(playerData, d => d.against_total)
+	const maxFor = d3.max(playerData, d => d.for_total)
+	const max = Math.max(maxFor, maxAgainst)
+
+	scale = d3.scaleLinear().domain([0, max])
+	scaleAxis = d3.scaleLinear().domain([-max, max])
+
+	svg = chart.append('svg')
+
+	const g = svg.append('g')
+
+	g.attr('transform', `translate(${margin.left},${margin.top})`)
+
+	// axis
+	g.append('g')
+		.attr('class', 'axis axis--x')
+		.attr('transform', 'translate(0, 10)')
+
+	const label = svg.append('g').attr('class', 'labels')
+
+	label.append('text')
+		.attr('class', 'label--x')
+		.text('Seconds left')
+			.attr('text-anchor', 'middle')
+
+	// players
+	const groupPlayers = g.append('g')
+		.attr('class', 'g-players')
+
+	const player = groupPlayers.selectAll('.player')
+		.data(playerData)
+		.enter().append('g')
+			.attr('class', 'player')
+
+	player.append('text')
+		.text(d => d.player)
+		.attr('class', 'name')
+		.attr('text-anchor', 'middle')
+
+	const keys = (['against_ic', 'against_inc', 'for_inc', 'for_ic'])
+
+	keys.forEach((key) => {
+		player.append('g')
+			.attr('class', `g-${key}`)
+			.datum(d => d[key])
+			.append('rect')
+			.attr('class', () => key.replace('_', '--'))
+	})
+}
+
+function resize() {
+	const width = chart.node().offsetWidth - (margin.left + margin.right)
+	const height = (playerData.length * ITEM_HEIGHT) + ITEM_HEIGHT / 2
+	const middle = width / 2
+
+	svg
+		.attr('width', width + (margin.left + margin.right))
+		.attr('height', height + (margin.top + margin.bottom))
+
+	scale.rangeRound([0, middle])
+	scaleAxis.rangeRound([0, width])
+
+	svg.select('.axis--x')
+		.call(d3.axisTop(scaleAxis).tickSize(-height))
+		.selectAll('text')
+
+	svg.select('.label--x')
+		.attr('transform', `translate(${middle},0)`)
+
+	const player = svg.selectAll('.player')
+
+	player.attr('transform', (d, i) => `translate(0,${ITEM_HEIGHT * (i + 1)})`)
+
+	player.select('.name')
+		.attr('transform', `translate(${middle}, 0)`)
+
+	const keys = (['against_ic', 'against_inc', 'for_inc', 'for_ic'])
+
+	keys.forEach((key) => {
+		player.select(`.g-${key}`)
+		.attr('transform', (d) => {
+			const inc = key.includes('inc')
+			const against = key.includes('against')
+			const val = d[key]
+			const otherKey = inc ? key.replace('inc', 'ic') : key.replace('ic', 'inc')
+			const otherVal = d[otherKey]
+
+			let x = middle
+			if (inc) {
+				// inc
+				if (against) {
+					x = x - scale(val)
+				}
+			} else {
+				// ic
+				if (against) {
+					x = x - scale(val) - scale(otherVal)
+				} else {
+					x = x + scale(otherVal)
+				}
+			}
+			return `translate(${x}, 0)`
+		})
+		.select('rect')
+			.attr('width', d => scale(d[key]))
+			.attr('height', RECT_HEIGHT)
+			.attr('x', 0)
+			.attr('y', MARGIN)
+	})
+
+	// svg.select('.g-against_ic')
+	// 	.attr('x', d => scale.x(d.data.bin))
+	// 	.attr('y', d => scale.y(d[1]))
+	// 	.attr('height', 10)
+	// 	.attr('width', d => d.scale.against(d[0]))
+}
+
 function init() {
 	d3.csv('assets/data/web_players.csv', cleanData, (err,  data) => {
 		if (err) console.error(err)
 		playerData = prepareData(data)
-		scale = createScale(playerData)
-		createTable()
-		// updateTable({ col: 'rate', order: 'descending' })
+		createChart()
+		resize()
 	})
 }
 
