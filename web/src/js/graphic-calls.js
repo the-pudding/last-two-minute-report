@@ -1,5 +1,4 @@
 import * as d3 from 'd3'
-import './utils/includes-polyfill'
 import colors from './colors'
 
 const colorsLight = {}

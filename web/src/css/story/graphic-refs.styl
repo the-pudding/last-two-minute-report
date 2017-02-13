@@ -1,0 +1,41 @@
+.graphic__refs
+	.graphic__chart
+		max-width 40rem
+		margin 0 auto
+	table
+		table-layout fixed
+		.text
+			width 10rem
+		th 
+			text-transform uppercase
+			font-size 0.75rem
+			&.number
+				cursor pointer
+				&:hover
+					background-color $off-white
+		th.is-selected
+			&:after
+				display inline-block
+				padding-left 0.25rem
+				color $gray
+				line-height 1
+			&.ascending:after
+				content '\025B4'
+			&.descending:after
+				content '\025BE'
+		
+		// td
+		// 	display block
+		// tr 
+		// 	margin-top 2rem
+		
+		// thead 
+		// 	display none
+		
+		// td[data-title]:before
+		// 	content attr(data-title)
+		// 	content attr(data-title)
+		// 	display inline-block
+		// 	float left
+		// 	margin-right 0.5em
+		// 	font-size 0.95em
