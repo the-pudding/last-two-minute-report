@@ -67,12 +67,34 @@ function createTable(err, data) {
 		.datum(d => gamesDict[d.key])
 		.attr('class', 'game__info')
 
-	infoEnter.append('a').text((d) => {
-		return `${d.away} (${d.score_away}) at ${d.home} (${d.score_home})`
-	}).attr('href', d => d.box_score_url)
-		.attr('target', '_blank')
+	infoEnter.append('p')
+		.attr('class', 'info__date')
+		.text(d => formatDate(d.date))
 
-	infoEnter.append('p').text(d => formatDate(d.date))
+	const matchup = infoEnter.append('div')
+		.attr('class', 'info__matchup')
+
+	const away = matchup.append('div')
+		.attr('class', 'info__team')
+
+	away.append('img')
+		.attr('src', d => `assets/logos/${d.away}@2x.jpg`)
+
+	away.append('p')
+		.text(d => d.score_away)
+
+	matchup.append('span')
+		.text('@')
+
+	const home = matchup.append('div')
+		.attr('class', 'info__team')
+
+	home.append('img')
+		.attr('src', d => `assets/logos/${d.home}@2x.jpg`)
+
+	home.append('p')
+		.text(d => d.score_home)
+
 
 	const tableEnter = gameEnter.append('table')
 		.datum(d => d.values)

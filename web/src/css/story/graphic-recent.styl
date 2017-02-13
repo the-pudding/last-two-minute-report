@@ -2,7 +2,7 @@
 	.graphic__chart
 		max-width 55rem
 		margin 0 auto
-		height 250px
+		height 300px
 		overflow hidden
 		position relative
 		&.is-visible
@@ -20,14 +20,37 @@
 	.game
 		padding 1rem 0 2rem 0
 	.game__info
-		display flex
-		justify-content space-between
+		text-align center
 		margin-bottom 1rem
-		p, a
-			display inline-block
+		p
 			margin 0
 			line-height 1
+			text-align center
+			font-size 0.85rem
+			color $gray-dark
+		
+		.info__matchup
+			text-align center
+			height 100%
+			overflow hidden
+			display inline-block
+			margin 0 auto
+			span 
+				display inline-block
+				line-height 4rem
+				veritcal-align middle
+				float left
+				font-size 0.85rem
 	
+		.info__team
+			display inline-block
+			margin 0 auto
+			line-height 4rem
+			border none
+			float left
+			img 
+				width 4rem
+				height 4rem
 	.game__plays
 		.td--committing, .td--disadvantaged
 			span 
