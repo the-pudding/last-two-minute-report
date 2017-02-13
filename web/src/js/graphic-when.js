@@ -17,6 +17,19 @@ function cleanData(row) {
 	}
 }
 
+function createKey() {
+	const key = chart.append('div')
+		.attr('class', 'chart__key')
+
+	const data = ['ic', 'inc']
+
+	key.selectAll('.key__value')
+		.data(data)
+	.enter().append('p')
+		.attr('class', d => `key__value ${d}`)
+		.text(d => d)
+}
+
 function createChart(data) {
 	const whenData = data.sort((a, b) => d3.ascending(a.bin, b.bin))
 	svg = chart.append('svg')
@@ -73,13 +86,13 @@ function resize() {
 
 	svg
 		.attr('width', width + (margin.left + margin.right))
-		.attr('height', height +(margin.top + margin.bottom))
+		.attr('height', height + (margin.top + margin.bottom))
 
 	scale.x.rangeRound([0, width])
 	scale.y.rangeRound([height, 0])
 
 	svg.select('.axis--y')
-		.call(d3.axisLeft(scale.y).tickSize(-height))
+		.call(d3.axisLeft(scale.y).tickSize(-width))
 		.selectAll('text')
 			.attr('x', -5)
 
@@ -104,9 +117,10 @@ function resize() {
 function init() {
 	d3.csv('assets/data/web_when.csv', cleanData, (err,  data) => {
 		if (err) console.error(err)
+		createKey()
 		createChart(data)
 		resize()
 	})
 }
 
-export default { init }
+export default { init, resize }

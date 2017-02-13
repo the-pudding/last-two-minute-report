@@ -5,7 +5,7 @@ import colors from './colors'
 const graphic = d3.select('.graphic__players')
 const chart = graphic.select('.graphic__chart')
 
-const margin = { top: 12, right: 12, bottom: 36, left: 36 }
+const margin = { top: 12, right: 12, bottom: 36, left: 12 }
 const FONT_SIZE = 13
 const RECT_HEIGHT = 8
 const MARGIN = RECT_HEIGHT / 2
@@ -41,6 +41,10 @@ function prepareData(data) {
 	return data.filter(d => d.total > 15)
 }
 
+function createKey() {
+
+}
+
 function createChart() {
 	// setup scales
 	const maxAgainst = d3.max(playerData, d => d.against_total)
@@ -49,6 +53,14 @@ function createChart() {
 
 	scale = d3.scaleLinear().domain([0, max])
 	scaleAxis = d3.scaleLinear().domain([-max, max])
+
+	const label = chart.append('p')
+		.attr('class', 'chart__label')
+
+	label.append('span').attr('class', 'label__text')
+			.html('&larr; Oppose')
+	label.append('span').attr('class', 'label__text')
+			.html('Favor &rarr;')
 
 	svg = chart.append('svg')
 
@@ -60,13 +72,6 @@ function createChart() {
 	g.append('g')
 		.attr('class', 'axis axis--x')
 		.attr('transform', 'translate(0, 10)')
-
-	const label = svg.append('g').attr('class', 'labels')
-
-	label.append('text')
-		.attr('class', 'label--x')
-		.text('Seconds left')
-			.attr('text-anchor', 'middle')
 
 	// players
 	const groupPlayers = g.append('g')
@@ -108,9 +113,6 @@ function resize() {
 	svg.select('.axis--x')
 		.call(d3.axisTop(scaleAxis).tickSize(-height))
 		.selectAll('text')
-
-	svg.select('.label--x')
-		.attr('transform', `translate(${middle},0)`)
 
 	const player = svg.selectAll('.player')
 
@@ -164,9 +166,10 @@ function init() {
 	d3.csv('assets/data/web_players.csv', cleanData, (err,  data) => {
 		if (err) console.error(err)
 		playerData = prepareData(data)
+		createKey()
 		createChart()
 		resize()
 	})
 }
 
-export default { init }
+export default { init, resize }

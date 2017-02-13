@@ -3,7 +3,6 @@ import * as $ from './utils/dom'
 import isMobile from './utils/is-mobile'
 import graphicLocation from './graphic-location'
 import graphicRecent from './graphic-recent'
-import graphicGames from './graphic-games'
 import graphicTeams from './graphic-teams'
 import graphicCalls from './graphic-calls'
 import graphicRefs from './graphic-refs'
@@ -25,20 +24,22 @@ function handleResize() {
 	if (previousWidth !== width) {
 		// resize here
 		previousWidth = width
+		graphicPlayers.resize()
+		graphicWhen.resize()
 	}
 }
 
 function init() {
 	addMobileClass()
 	window.addEventListener('resize', debounce(handleResize, 150))
-	graphicLocation.init()
+
 	graphicRecent.init()
-	graphicGames.init()
-	graphicTeams.init()
 	graphicCalls.init()
-	graphicRefs.init()
 	graphicPlayers.init()
 	graphicWhen.init()
+	graphicRefs.init()
+	graphicLocation.init()
+	graphicTeams.init()
 }
 
 init()
