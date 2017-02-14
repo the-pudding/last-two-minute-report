@@ -37,7 +37,6 @@ commit-latest:
 #5
 web-data:
 	cd analysis; python explore.py;
-	make copy-data;
 
 #6 
 copy-data:

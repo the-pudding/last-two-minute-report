@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[41]:
+# In[1]:
 
 import agate
 import math
@@ -59,14 +59,14 @@ game_data_merged = game_data.join(by_game_with_count, 'game_id','game_id')
 game_data_merged.to_csv('output/web_games.csv')
 
 
-# In[3]:
+# In[2]:
 
 play_include = ['game_id', 'period', 'time', 'seconds_left', 'call_type', 'committing_player', 'disadvantaged_player','review_decision', 'comment', 'video', 'committing_team', 'disadvantaged_team' ,'play_id', 'ref_made_call']
-play_data = data.select(play_include)
+play_data = incorrect.select(play_include)
 play_data.to_csv('output/web_plays.csv')
 
 
-# In[5]:
+# In[4]:
 
 # basic stats
 by_game = data.group_by('game_id')
@@ -121,7 +121,7 @@ summary_table = agate.Table(summary_rows, summary_column_names, summary_column_t
 summary_table.to_csv('output/web_summary.csv')
 
 
-# In[6]:
+# In[5]:
 
 # home / away
 def hasLocationAdvantage(row, location):
@@ -151,7 +151,7 @@ location_table = agate.Table(location_rows, location_column_names, location_colu
 location_table.to_csv('output/web_location.csv')
 
 
-# In[7]:
+# In[6]:
 
 #latest games
 sorted_date = data.order_by('date', reverse=True)
@@ -175,7 +175,7 @@ recent_games.exclude(exclude_recent).to_csv('output/web_recent.csv')
 # decision_totals.to_csv('output/web_decision.csv')
 
 
-# In[16]:
+# In[7]:
 
 # call type breakdown
 
@@ -214,7 +214,7 @@ call_totals_merged = call_merge2.join(call_totals_cnc, 'call_type','call_type')
 call_totals_merged.to_csv('output/web_calls.csv')
 
 
-# In[40]:
+# In[8]:
 
 # when wrong calls happen (in last 2 minutes)
 in_last_two_ic = ic.where(lambda r: float(r['seconds_left']) < 120)
@@ -222,7 +222,7 @@ in_last_two_inc = inc.where(lambda r: float(r['seconds_left']) < 120)
 in_last_two_cc = cc.where(lambda r: float(r['seconds_left']) < 120)
 
 def getBin(row):
-    bin_size = 10
+    bin_size = 5
     return math.floor(float(row['seconds_left']) / bin_size)
 
 with_bin_ic = in_last_two_ic.compute([('bin', agate.Formula(agate.Number(), getBin))])
