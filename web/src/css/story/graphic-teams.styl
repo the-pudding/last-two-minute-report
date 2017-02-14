@@ -3,9 +3,11 @@ $logo-width = 58px
 	.graphic__chart
 		max-width 55rem
 		margin 0 auto
+	.teams
 		display flex
 		flex-wrap wrap
 		justify-content flex-start
+		margin-bottom 1rem
 	.team__logo
 		max-width $logo-width
 		filter grayscale(100%)
@@ -14,3 +16,27 @@ $logo-width = 58px
 		&:hover
 			filter grayscale(0%)
 			border 1px dotted $off-black
+			
+	.game__plays
+		.td--committing, .td--disadvantaged
+			span 
+				font-size 0.65rem
+				color $gray-dark
+		.ic
+			background-color $ic
+			// color darken($ic, 60)
+		.inc
+			background-color $inc
+			// color darken($inc, 60)
+		.cc
+			background-color $cc
+			// color darken($cc, 60)
+		.cnc 
+			background-color $cnc
+			// color darken($cnc, 60)
+	
+	.button--expand
+		width 11rem
+		display block
+		margin 0 auto
+		

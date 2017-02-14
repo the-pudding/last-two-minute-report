@@ -12,24 +12,6 @@ function formatDate(str) {
 	return d3.timeFormat('%b. %d, %Y')(parsed)
 }
 
-function cleanData(row) {
-	return {
-		...row,
-	}
-}
-
-function loadGames(cb) {
-	d3.csv('assets/data/web_games.csv', cleanData, (err,  data) => {
-		cb(null, data)
-	})
-}
-
-function loadRecent(cb) {
-	d3.csv('assets/data/web_recent.csv', cleanData, (err,  data) => {
-		cb(null, data)
-	})
-}
-
 function formatTime(str) {
 	const secondsLeft = +str
 	const minutes = Math.floor(secondsLeft / 60)
@@ -39,11 +21,7 @@ function formatTime(str) {
 	return `${minutes}:${pre}${seconds}`
 }
 
-function createTable(err, data) {
-	if (err) console.error(err)
-
-	const [gameData, playsData] = data
-
+function createTable({gameData, playsData}) {
 	// group plays by game
 	const playsByGame = d3.nest()
 		.key(d => d.game_id)
@@ -155,13 +133,13 @@ function setupEvents() {
 	button.on('click', handleButton)
 }
 
-function init() {
+function init(gameData) {
 	setupEvents()
-	const q = d3.queue()
-	q
-		.defer(loadGames)
-		.defer(loadRecent)
-		.awaitAll(createTable)
+	d3.csv('assets/data/web_recent.csv', (err,  data) => {
+		if (err) console.error(err)
+		const playsData = data
+		createTable({ gameData, playsData })
+	})
 }
 
 export default { init }

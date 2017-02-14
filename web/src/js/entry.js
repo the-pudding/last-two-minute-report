@@ -1,6 +1,7 @@
 import debounce from 'lodash.debounce'
 import * as $ from './utils/dom'
 import isMobile from './utils/is-mobile'
+import * as d3 from 'd3'
 import graphicLocation from './graphic-location'
 import graphicRecent from './graphic-recent'
 import graphicTeams from './graphic-teams'
@@ -29,11 +30,22 @@ function handleResize() {
 	}
 }
 
+function loadGameData(cb) {
+	d3.csv('assets/data/web_games.csv', (err, data) => {
+		if (err) console.error(err)
+		cb(data)
+	})
+}
+
 function init() {
 	addMobileClass()
 	window.addEventListener('resize', debounce(handleResize, 150))
 
-	graphicRecent.init()
+	// depend on games data
+	loadGameData((gameData) => {
+		graphicRecent.init(gameData)
+	})
+
 	graphicCalls.init()
 	graphicPlayers.init()
 	graphicWhen.init()
