@@ -16,11 +16,11 @@ Comment:         Carroll (TOR) sets the screen on Morris (DET) and the two playe
      Q4           01:46.0                         Foul: Personal                                             Marcus Morris                                                    DeMar DeRozan               CNC             Video
 Comment:         Morris (DET) makes contact with the ball and DeRozan's (TOR) hand that is part of the ball and Smith (DET) makes incidental contact with DeRozan that does not
                  affect his SQBR.
-                                                                                                                                                                                                          CNC             Video
-     Q4           01:42.0                         Foul: Personal                                                 Ish Smith                                                    DeMarre Carroll
+                                                                                                                                                                                                          
+     Q4           01:42.0                         Foul: Personal                                                 Ish Smith                                                    DeMarre Carroll   CNC             Video
 Comment:         Smith (DET) makes incidental contact with Carroll (TOR) that does not affect his SQBR.
-                                                                                                                                                                                                                          Video
-     Q4           01:42.0                Turnover: 3 Second Violation                                        Lucas Nogueira
+                                                                                                                                                                                                                          
+     Q4           01:42.0                Turnover: 3 Second Violation                                        Lucas Nogueira     Video
 Comment:         [Detectable with stop watch] Nogueira (TOR) is in the paint for longer than three seconds.
      Q4   01:38.0                         Foul: Shooting                                            DeMar DeRozan                                                 Kentavious Caldwell-Pope    CNC             Video
                   
