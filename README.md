@@ -13,14 +13,15 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 
 ## Usage
 
-1. `make latest`
-2. `make incorrect`
-3. manually update custom/incorrect_call_with_ref.csv
-4. `make merge-incorrect`
-5. `make commit-latest`
-6. `make web-data`
-7. `make copy-data`
-8. `make commit-web`
+* `make latest`
+* `make concat`
+* `make incorrect`
+* manually update custom/incorrect_call_with_ref.csv
+* `make merge-incorrect`
+* `make commit-latest`
+* `make web-data`
+* `make copy-data`
+* `make commit-web`
 
 #### Get latest games from archive
 `npm run get-games [max]` (optionally pass a number `[max]` to only download recent games)

@@ -12,7 +12,6 @@ convert:
 latest:
 	npm run get-games 10
 	npm run parse-games
-	csvstack output/games/* > .tmp/concat.csv
 
 # 2
 incorrect:
@@ -38,7 +37,7 @@ commit-latest:
 web-data:
 	cd analysis; python explore.py;
 
-#6 
+#6 s
 copy-data:
 	rm -rf web/src/assets/data
 	cp -fr analysis/output web/src/assets/data
