@@ -59,7 +59,7 @@ game_data_merged = game_data.join(by_game_with_count, 'game_id','game_id')
 game_data_merged.to_csv('output/web_games.csv')
 
 
-# In[2]:
+# In[3]:
 
 play_include = ['game_id', 'period', 'time', 'seconds_left', 'call_type', 'committing_player', 'disadvantaged_player','review_decision', 'comment', 'video', 'committing_team', 'disadvantaged_team' ,'play_id', 'ref_made_call']
 play_data = incorrect.select(play_include)
@@ -159,20 +159,6 @@ last_date = sorted_date.rows[0]['date']
 recent_games = data.where(lambda r: r['date'] == last_date)
 exclude_recent = ['away', 'box_score_url', 'date', 'home', 'original_pdf', 'ref_1', 'ref_2', 'ref_3', 'score_away', 'score_home']
 recent_games.exclude(exclude_recent).to_csv('output/web_recent.csv')
-
-
-# In[9]:
-
-# # decision breakdown
-# by_decision = data.group_by('review_decision')
-
-# decision_totals = by_decision.aggregate([
-#     ('count', agate.Count())
-# ]).where(lambda r: r['review_decision'] is not None)
-
-# decision_totals.order_by('count', reverse=True).print_table()
-
-# decision_totals.to_csv('output/web_decision.csv')
 
 
 # In[7]:
@@ -320,8 +306,6 @@ count_player_for2 = by_player_for_ic.aggregate([
     ('count_ic', agate.Count())
 ])
 
-# count_player_for1.order_by('count_inc', reverse=True).print_table()
-# count_player_for2.order_by('count_ic', reverse=True).print_table()
 
 count_player_for_joined = count_player_for1.join(count_player_for2, 'committing_player', 'disadvantaged_player')
 
@@ -335,8 +319,6 @@ def addCountFor(row):
 count_player_for = count_player_for_renamed.compute([
     ('count_for', agate.Formula(agate.Number(), addCountFor))
 ])
-
-# count_player_for.order_by('count_for', reverse=True).print_table()
 
 
 # In[13]:
@@ -354,9 +336,6 @@ count_player_against2 = by_player_against_ic.aggregate([
     ('count_ic', agate.Count())
 ])
 
-# count_player_against1.order_by('count_inc', reverse=True).print_table()
-# count_player_against2.order_by('count_ic', reverse=True).print_table()
-
 count_player_against_joined = count_player_against1.join(count_player_against2, 'disadvantaged_player', 'committing_player')
 
 count_player_against_renamed = count_player_against_joined.rename(column_names=['player', 'count_against_inc', 'count_against_ic'])
@@ -369,8 +348,6 @@ def addCountAgainst(row):
 count_player_against = count_player_against_renamed.compute([
     ('count_against', agate.Formula(agate.Number(), addCountAgainst))
 ])
-
-# count_player_against.order_by('count_against', reverse=True).print_table()
 
 
 # In[15]:
@@ -406,9 +383,6 @@ count_team_for2 = by_team_for_ic.aggregate([
     ('count_ic', agate.Count())
 ])
 
-# count_team_for1.order_by('count_inc', reverse=True).print_table()
-# count_team_for2.order_by('count_ic', reverse=True).print_table()
-
 count_team_for_joined = count_team_for1.join(count_team_for2, 'committing_team', 'disadvantaged_team')
 
 count_team_for_renamed = count_team_for_joined.rename(column_names=['team', 'count_for_inc', 'count_for_ic'])
@@ -421,8 +395,6 @@ def addCountFor(row):
 count_team_for = count_team_for_renamed.compute([
     ('count_for', agate.Formula(agate.Number(), addCountFor))
 ])
-
-# count_team_for.order_by('count_for', reverse=True).print_table(max_rows=100)
 
 
 # In[19]:
@@ -440,9 +412,6 @@ count_team_against2 = by_team_against_ic.aggregate([
     ('count_ic', agate.Count())
 ])
 
-# count_team_against1.order_by('count_inc', reverse=True).print_table()
-# count_team_against2.order_by('count_ic', reverse=True).print_table()
-
 count_team_against_joined = count_team_against1.join(count_team_against2, 'disadvantaged_team', 'committing_team')
 
 count_team_against_renamed = count_team_against_joined.rename(column_names=['team', 'count_against_inc', 'count_against_ic'])
@@ -455,8 +424,6 @@ def addCountAgainst(row):
 count_team_against = count_team_against_renamed.compute([
     ('count_against', agate.Formula(agate.Number(), addCountAgainst))
 ])
-
-# count_team_against.order_by('count_against', reverse=True).print_table(max_rows=100)
 
 
 # In[20]:
