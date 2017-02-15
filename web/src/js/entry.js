@@ -27,6 +27,7 @@ function handleResize() {
 		previousWidth = width
 		graphicPlayers.resize()
 		graphicWhen.resize()
+		graphicRecent.resize()
 	}
 }
 

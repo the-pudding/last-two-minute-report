@@ -7,6 +7,9 @@ const graphic = d3.select('.graphic__recent')
 const chart = graphic.select('.graphic__chart')
 const button = graphic.select('.button--expand')
 
+let mobile = false
+
+
 function formatDate(str) {
 	const parsed = d3.timeParse('%Y%m%d')(str)
 	return d3.timeFormat('%b. %d, %Y')(parsed)
@@ -19,6 +22,43 @@ function formatTime(str) {
 	const seconds = d3.format('0.1f')(rem)
 	const pre = rem < 10 ? '0' : ''
 	return `${minutes}:${pre}${seconds}`
+}
+
+function handleNav(dir, el) {
+	const button = d3.select(el)
+	const otherEl = dir === 1 ? el.previousElementSibling : el.nextElementSibling
+	const otherButton = d3.select(otherEl)
+
+	const game = d3.select(el.parentNode.parentNode)
+	// find current selected
+	const tr = game.selectAll('tbody tr')
+
+	const prev = game.select('.is-visible')
+	tr.classed('is-visible', false)
+
+	// right
+	let next
+	if (dir === 1) {
+		next = prev.node().nextElementSibling
+		if (next) {
+			const stillRight = next.nextElementSibling
+			if (stillRight) button.classed('is-disable', false)
+			else button.classed('is-disable', true)
+			otherButton.classed('is-disable', false)
+		}
+	} else {
+		next = prev.node().previousElementSibling
+		if (next) {
+			const stillLeft = next.previousElementSibling
+			if (stillLeft) button.classed('is-disable', false)
+			else button.classed('is-disable', true)
+			otherButton.classed('is-disable', false)	
+		}
+	}
+
+	if (next) d3.select(next).classed('is-visible', true)
+	else prev.classed('is-visible', true)
+
 }
 
 function createTable({ gameData, playsData }) {
@@ -73,6 +113,18 @@ function createTable({ gameData, playsData }) {
 	home.append('p')
 		.text(d => d.score_home)
 
+	const nav = gameEnter.append('div')
+		.attr('class', 'game__nav')
+
+	nav.append('button')
+		.attr('class', 'nav__button button--left is-disable')
+		.html('&larr;')
+		.on('click', (d, i, nodes) => handleNav(-1, nodes[0]))
+
+	nav.append('button')
+		.attr('class', 'nav__button button--right')
+		.html('&rarr;')
+		.on('click', (d, i, nodes) => handleNav(1, nodes[0]))
 
 	const tableEnter = gameEnter.append('table')
 		.datum(d => d.values)
@@ -94,35 +146,41 @@ function createTable({ gameData, playsData }) {
 		.data(d => d)
 		.enter().append('tr')
 
-
-	// trEnter.style('background-color', (d) => {
-	// 	const r = d.review_decision
-	// 	return r ? colors.ordinal[r.toLowerCase()] : colors.ordinal['default']
-	// })
-
 	trEnter.append('td').text(d => d.period)
+		.attr('data-title', 'Period')
+
 	trEnter.append('td').text(d => formatTime(d.seconds_left))
-	trEnter.append('td').append('a')
+		.attr('data-title', 'Time')
+
+	trEnter.append('td')
+		.attr('data-title', 'Call')
+		.append('a')
 		.text(d => d.call_type)
 		.attr('href', d => d.video)
 		.attr('target', '_blank')
+
 	trEnter.append('td').html((d) => {
 		const p = d.committing_player
 		const t = d.committing_team
 		const team = t ? `${t}` : ''
 		return `<span>${team}</span> ${p}`
 	}).attr('class', 'td--committing')
+		.attr('data-title', 'Committing')
+
 	trEnter.append('td').html((d) => {
 		const p = d.disadvantaged_player
 		const t = d.disadvantaged_team
 		const team = t ? `${t}` : ''
 		return `<span>${team}</span> ${p}`
 	}).attr('class', 'td--disadvantaged')
+	.attr('data-title', 'Disadvantaged')
+
 	trEnter.append('td').text(d => d.review_decision)
 		.style('background-color', d => {
 			const r = d.review_decision
 			return r ? colors.ordinal[r.toLowerCase()] : colors.ordinal['default']
 		})
+		.attr('data-title', 'Review Decision')
 }
 
 function handleButton() {
@@ -151,6 +209,14 @@ function loadRecentData(cb) {
 	})
 }
 
+function resize() {
+	mobile = !window.matchMedia('(min-width: 50em)').matches
+	if (mobile) {
+		const games = chart.selectAll('.game')
+		games.select('tbody tr').classed('is-visible', true)
+	}
+}
+
 function init() {
 	setupEvents()
 
@@ -159,7 +225,8 @@ function init() {
 		.defer(loadRecentData)
 		.awaitAll((err, data) => {
 			createTable({ gameData: data[0], playsData: data[1] })
+			resize()		
 		})
 }
 
-export default { init }
+export default { init, resize }

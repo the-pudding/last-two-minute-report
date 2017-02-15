@@ -2,21 +2,24 @@
 	.graphic__chart
 		max-width 55rem
 		margin 0 auto
-		height 300px
-		overflow hidden
 		position relative
+		
+		+mq('bp-3')
+			height 300px
+			overflow hidden
 		&.is-visible
-			height auto
+			+mq('bp-3')
+				height auto
 		&:after
-			content ''
-			display block
-			width 100%
-			position absolute
-			left 0
-			bottom 0rem
-			height 2rem
-			background-image linear-gradient(to bottom,rgba($primary,0),#fff 66%)
-	
+			+mq('bp-3')
+				content ''
+				display block
+				width 100%
+				position absolute
+				left 0
+				bottom 0rem
+				height 2rem
+				background-image linear-gradient(to bottom,rgba($primary,0),#fff 66%)
 	.game
 		padding 1rem 0 2rem 0
 	.game__info
@@ -51,26 +54,81 @@
 			img 
 				width 4rem
 				height 4rem
-	.game__plays
-		.td--committing, .td--disadvantaged
-			span 
-				font-size 0.65rem
-				color $gray-dark
-		.ic
-			background-color $ic
-			// color darken($ic, 60)
-		.inc
-			background-color $inc
-			// color darken($inc, 60)
-		.cc
-			background-color $cc
-			// color darken($cc, 60)
-		.cnc 
-			background-color $cnc
-			// color darken($cnc, 60)
+	
+	table
+		width 100%
+		max-width 25rem
+		margin 0 auto
+		+mq('bp-3')
+			max-width none
+	td
+		display block
+		text-align right
+		height 1.6rem
+		+mq('bp-3')
+			display table-cell
+			text-align left
+			height auto
+	
+	tr 
+		display none
+		+mq('bp-3')
+			display table-row
+		&.is-visible
+			display block
+			+mq('bp-3')
+				display table-row
+
+	thead 
+		display none
+		+mq('bp-3')
+			display table-header-group
+
+	td[data-title]:before
+		content attr(data-title)
+		content attr(data-title)
+		display inline-block
+		float left
+		margin-right 0.5em
+		font-size 0.8em
+		line-height 1.6
+		+mq('bp-3')
+			display none
+
+	.td--committing, .td--disadvantaged
+		span 
+			font-size 0.65rem
+			color $gray-dark
+	.ic
+		background-color $ic
+		// color darken($ic, 60)
+	.inc
+		background-color $inc
+		// color darken($inc, 60)
+	.cc
+		background-color $cc
+		// color darken($cc, 60)
+	.cnc 
+		background-color $cnc
+		// color darken($cnc, 60)
 	
 	.button--expand
 		width 11rem
 		display block
 		margin 0 auto
-		
+		display none
+		+mq('bp-3')
+			display block
+	
+	.game__nav
+		display flex
+		justify-content space-between
+		max-width 25rem
+		margin 1rem auto
+		+mq('bp-3')
+			display none
+	
+	.nav__button
+		font-size 1.5rem
+		&.is-disable
+			opacity 0.25
