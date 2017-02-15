@@ -28,11 +28,14 @@ function hasClass(el, className) {
 	return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
 }
 
-function jumpTo(el) {
+function jumpTo(el, offset) {
+	offset = offset || 0
 	const top = el.getBoundingClientRect().top
-	document.body.scrollTop ?
-	document.body.scrollTop += top :
-	document.documentElement.scrollTop += top
+	const dist = top + offset
+
+	!isNaN(document.body.scrollTop) ?
+	document.body.scrollTop += dist :
+	document.documentElement.scrollTop += dist
 }
 
 
