@@ -1,7 +1,6 @@
 import debounce from 'lodash.debounce'
 import * as $ from './utils/dom'
 import isMobile from './utils/is-mobile'
-import * as d3 from 'd3'
 import graphicLocation from './graphic-location'
 import graphicRecent from './graphic-recent'
 import graphicTeams from './graphic-teams'
