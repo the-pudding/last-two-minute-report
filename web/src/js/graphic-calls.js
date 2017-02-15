@@ -1,5 +1,6 @@
 import * as d3 from 'd3'
 import colors from './colors'
+import './utils/find-index-polyfill'
 
 const colorsLight = {}
 
@@ -8,6 +9,7 @@ const chart = graphic.select('.graphic__chart')
 
 let scale
 let callData
+let mobile
 
 function lighten(hex) {
 	const color = d3.color(hex)
@@ -86,6 +88,7 @@ function updateTable({ col, order }) {
 		scale[key].range(range)
 		chart.selectAll(`.td-${key}`)
 			.style('background-color', d => scale[key](d[key]))
+			.classed('is-selected', selected)
 
 		const th = chart.select(`.th-${key}`)
 
@@ -156,32 +159,46 @@ function createTable() {
 
 	trEnter.append('td')
 		.attr('class', 'td-call')
-		// .attr('data-title', 'call')
 		.classed('text', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-cc')
-		.attr('data-title', 'cc')
 		.classed('number', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-ic')
-		.attr('data-title', 'ic')
 		.classed('number', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-inc')
-		.attr('data-title', 'inc')
 		.classed('number', true)
 
 	trEnter.append('td')
 		.attr('class', 'td-rate')
-		.attr('data-title', '% correct')
 		.classed('number', true)
 }
 
 function prepareData(data) {
 	return data.filter(d => d.total_infraction >= 20)
+}
+
+function resize() {
+	mobile = !window.matchMedia('(min-width: 40em)').matches
+}
+
+function setupEvents() {
+	const cols = ['cc', 'ic', 'inc', 'rate']
+	d3.select('.graphic__calls .button--swap').on('click', () => {
+		const col = chart.select('th.is-selected').attr('data-col')
+		const index = cols.findIndex(d => d === col) + 1
+		const next = index < cols.length ? index : 0
+		const nextCol = cols[next]
+		chart.selectAll('th').classed('is-selected', false)
+		chart.selectAll('td').classed('is-selected', false)
+		chart.selectAll(`.th-${nextCol}`).classed('is-selected', true)
+		chart.selectAll(`.td-${nextCol}`).classed('is-selected', true)
+		updateTable({ col: nextCol, order: 'descending' })
+	})
 }
 
 function init() {
@@ -194,8 +211,10 @@ function init() {
 		callData = prepareData(data)
 		scale = createScale(callData)
 		createTable()
+		resize()
+		setupEvents()
 		updateTable({ col: 'rate', order: 'descending' })
 	})
 }
 
-export default { init }
+export default { init, resize }

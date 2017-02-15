@@ -5,15 +5,31 @@
 	table
 		table-layout fixed
 		.text
-			width 15rem
+			width 12rem
+			+mq('bp-2')
+				width 15rem
+		td
+			display none
+			&:first-child
+				display table-cell
+			&.is-selected
+				display table-cell
+			+mq('bp-2')
+				display table-cell
 		th 
 			text-transform uppercase
 			font-size 0.75rem
+			display none
+			&:first-child
+				display table-cell
+			+mq('bp-2')
+				display table-cell
 			&.number
 				cursor pointer
 				&:hover
 					background-color $off-white
 		th.is-selected
+			display table-cell
 			&:after
 				display inline-block
 				padding-left 0.25rem
@@ -24,6 +40,10 @@
 			&.descending:after
 				content '\025BE'
 		
+		td.text
+			font-size 0.75rem
+			+mq('bp-2')
+				font-size 0.85rem
 		// td
 		// 	display block
 		// tr 
@@ -39,3 +59,17 @@
 		// 	float left
 		// 	margin-right 0.5em
 		// 	font-size 0.95em
+	.swap
+		text-align right
+		margin-bottom 0.5rem
+		+mq('bp-2')
+			display none
+	.button--swap
+		font-size 0.7rem
+		&:after
+			display inline-block
+			padding-left 0.25rem
+			color $gray
+			line-height 1
+			content '\021BA'
+			display inline
