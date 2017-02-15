@@ -85,6 +85,7 @@ function updateTable({ col, order }) {
 			scale[key].range(range)
 			chart.selectAll(`.td-${key}`)
 				.style('background-color', d => scale[key](d[key]))
+				.classed('is-selected', selected)
 		}
 
 		const th = chart.select(`.th-${key}`)
@@ -193,6 +194,21 @@ function prepareData(data) {
 	return data.filter(d => d.games > 20)
 }
 
+function setupEvents() {
+	const cols = ['ic', 'inc', 'rate_ic', 'rate_inc']
+	d3.select('.graphic__refs .button--swap').on('click', () => {
+		const col = chart.select('th.is-selected').attr('data-col')
+		const index = cols.findIndex(d => d === col) + 1
+		const next = index < cols.length ? index : 0
+		const nextCol = cols[next]
+		chart.selectAll('th').classed('is-selected', false)
+		chart.selectAll('td').classed('is-selected', false)
+		chart.selectAll(`.th-${nextCol}`).classed('is-selected', true)
+		chart.selectAll(`.td-${nextCol}`).classed('is-selected', true)
+		updateTable({ col: nextCol, order: 'descending' })
+	})
+}
+
 function init() {
 	colorsLight.diverging = colors.diverging.map(lighten)
 	colorsLight.divergingReverse = colors.divergingReverse.map(lighten)
@@ -204,6 +220,7 @@ function init() {
 		refData = prepareData(data)
 		scale = createScale(refData)
 		createTable()
+		setupEvents()
 		updateTable({ col: 'ic', order: 'descending' })
 	})
 }

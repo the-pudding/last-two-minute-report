@@ -29,6 +29,7 @@ function handleResize() {
 		graphicWhen.resize()
 		graphicRecent.resize()
 		graphicCalls.resize()
+		graphicRefs.resize()
 	}
 }
 
