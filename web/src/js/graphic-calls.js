@@ -9,7 +9,6 @@ const chart = graphic.select('.graphic__chart')
 
 let scale
 let callData
-let mobile
 
 function lighten(hex) {
 	const color = d3.color(hex)
@@ -182,10 +181,6 @@ function prepareData(data) {
 	return data.filter(d => d.total_infraction >= 20)
 }
 
-function resize() {
-	mobile = !window.matchMedia('(min-width: 40em)').matches
-}
-
 function setupEvents() {
 	const cols = ['cc', 'ic', 'inc', 'rate']
 	d3.select('.graphic__calls .button--swap').on('click', () => {
@@ -211,10 +206,9 @@ function init() {
 		callData = prepareData(data)
 		scale = createScale(callData)
 		createTable()
-		resize()
 		setupEvents()
 		updateTable({ col: 'rate', order: 'descending' })
 	})
 }
 
-export default { init, resize }
+export default { init }
