@@ -21,7 +21,7 @@ function formatTime(str) {
 	return `${minutes}:${pre}${seconds}`
 }
 
-function createTable({gameData, playsData}) {
+function createTable({ gameData, playsData }) {
 	// group plays by game
 	const playsByGame = d3.nest()
 		.key(d => d.game_id)
@@ -84,9 +84,9 @@ function createTable({gameData, playsData}) {
 	headEnter.append('th').text('Period')
 	headEnter.append('th').text('Time')
 	headEnter.append('th').text('Call')
-	headEnter.append('th').text('Review decision')
 	headEnter.append('th').text('Committing player')
 	headEnter.append('th').text('Disadvantaged player')
+	headEnter.append('th').text('Review decision')
 
 	const bodyEnter = tableEnter.append('tbody')
 
@@ -95,10 +95,10 @@ function createTable({gameData, playsData}) {
 		.enter().append('tr')
 
 
-	trEnter.style('background-color', (d) => {
-		const r = d.review_decision
-		return r ? colors.ordinal[r.toLowerCase()] : colors.ordinal['default']
-	})
+	// trEnter.style('background-color', (d) => {
+	// 	const r = d.review_decision
+	// 	return r ? colors.ordinal[r.toLowerCase()] : colors.ordinal['default']
+	// })
 
 	trEnter.append('td').text(d => d.period)
 	trEnter.append('td').text(d => formatTime(d.seconds_left))
@@ -106,7 +106,6 @@ function createTable({gameData, playsData}) {
 		.text(d => d.call_type)
 		.attr('href', d => d.video)
 		.attr('target', '_blank')
-	trEnter.append('td').text(d => d.review_decision)
 	trEnter.append('td').html((d) => {
 		const p = d.committing_player
 		const t = d.committing_team
@@ -119,6 +118,11 @@ function createTable({gameData, playsData}) {
 		const team = t ? `${t}` : ''
 		return `<span>${team}</span> ${p}`
 	}).attr('class', 'td--disadvantaged')
+	trEnter.append('td').text(d => d.review_decision)
+		.style('background-color', d => {
+			const r = d.review_decision
+			return r ? colors.ordinal[r.toLowerCase()] : colors.ordinal['default']
+		})
 }
 
 function handleButton() {
@@ -126,20 +130,36 @@ function handleButton() {
 	const text = visible ? 'Expand to see all' : 'Collapse'
 	chart.classed('is-visible', !visible)
 	button.text(text)
-	jumpTo(chart.node())
+	if (visible) jumpTo(chart.node())
 }
 
 function setupEvents() {
 	button.on('click', handleButton)
 }
 
-function init(gameData) {
-	setupEvents()
-	d3.csv('assets/data/web_recent.csv', (err,  data) => {
+function loadGameData(cb) {
+	d3.csv('assets/data/web_games.csv', (err, data) => {
 		if (err) console.error(err)
-		const playsData = data
-		createTable({ gameData, playsData })
+		cb(null, data)
 	})
+}
+
+function loadRecentData(cb) {
+	d3.csv('assets/data/web_recent.csv', (err, data) => {
+		if (err) console.error(err)
+		cb(null, data)
+	})
+}
+
+function init() {
+	setupEvents()
+
+	d3.queue()
+		.defer(loadGameData)
+		.defer(loadRecentData)
+		.awaitAll((err, data) => {
+			createTable({ gameData: data[0], playsData: data[1] })
+		})
 }
 
 export default { init }

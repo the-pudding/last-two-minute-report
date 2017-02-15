@@ -3,11 +3,33 @@ $logo-width = 58px
 	.graphic__chart
 		max-width 55rem
 		margin 0 auto
+		max-height 480px
+		overflow hidden
+		position relative
+		&.is-visible
+			max-height none
+			height auto
+		&:after
+			content ''
+			display block
+			width 100%
+			position absolute
+			left 0
+			bottom 0rem
+			height 2rem
+			background-image linear-gradient(to bottom,rgba($primary,0),#fff 66%)
 	.teams
 		display flex
 		flex-wrap wrap
 		justify-content flex-start
 		margin-bottom 1rem
+	.team.is-selected
+		.team__logo
+			filter grayscale(0%)
+			border 1px solid $off-black
+			&:hover
+				border 1px solid $off-black
+		
 	.team__logo
 		max-width $logo-width
 		filter grayscale(100%)
@@ -15,9 +37,10 @@ $logo-width = 58px
 		cursor pointer
 		&:hover
 			filter grayscale(0%)
-			border 1px dotted $off-black
+			border 1px dashed $off-black
 			
 	.game__plays
+		margin-bottom 2rem
 		.td--committing, .td--disadvantaged
 			span 
 				font-size 0.65rem
@@ -39,4 +62,26 @@ $logo-width = 58px
 		width 11rem
 		display block
 		margin 0 auto
+		&.is-hidden
+			display none
+	
+	.chart__key
+		text-align right
+		margin-bottom 1rem
+		&.is-hidden
+			display none
+	.key__value
+		display inline-block
+		text-transform uppercase
+		font-size 0.8rem
+		letter-spacing 0.05em
+		width 4rem
+		text-align center
+		margin 0.25rem
+		&.oppose
+			background-color $inc
+			// color lighten($ic, 30)
+		&.favor
+			background-color $cnc
+			// color darken($inc, 30)
 		

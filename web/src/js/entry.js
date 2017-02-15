@@ -30,22 +30,11 @@ function handleResize() {
 	}
 }
 
-function loadGameData(cb) {
-	d3.csv('assets/data/web_games.csv', (err, data) => {
-		if (err) console.error(err)
-		cb(data)
-	})
-}
-
 function init() {
 	addMobileClass()
 	window.addEventListener('resize', debounce(handleResize, 150))
 
-	// depend on games data
-	loadGameData((gameData) => {
-		graphicRecent.init(gameData)
-	})
-
+	graphicRecent.init()
 	graphicCalls.init()
 	graphicPlayers.init()
 	graphicWhen.init()
