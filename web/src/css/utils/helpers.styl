@@ -8,12 +8,12 @@
 fontify($font, $hash, $weight, $fallback, $fb-weight, $fb-letter-spacing = normal)
 	.tk-{$hash}
 		font-family $fallback
-		letter-spacing $fb-letter-spacing
+		// letter-spacing $fb-letter-spacing
 		font-weight $fb-weight
 		.loaded-{$hash} & 
 			font-family $font, $fallback
 			font-weight $weight
-			letter-spacing normal
+			// letter-spacing normal
 			
 // -------------------
 // BREAKPOINT CACHE
