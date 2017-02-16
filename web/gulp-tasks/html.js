@@ -11,7 +11,7 @@ const srcIndex = 'src/html/index.hbs'
 const svgPath = `${process.cwd()}/svg/`
 
 function getDate() {
-	return timeFormat('%b. %d, %Y')(new Date)
+	return timeFormat('%b. %d, %Y %I:%M %p')(new Date)
 }
 
 gulp.task('html-dev', () => {
@@ -20,7 +20,7 @@ gulp.task('html-dev', () => {
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
 		.data({ timestamp: Date.now(), date: getDate() })
-	
+
 	return gulp.src(srcIndex)
 		.pipe(plumber({ errorHandler: report}))
 		.pipe(hbStream)
@@ -36,7 +36,7 @@ gulp.task('html-prod', () => {
 		// .helpers('./src/html/helpers/*.js')
 		.data('./template-data/**/*.{js,json}')
 		.data({ timestamp: Date.now(), date: getDate() })
-		
+
 	return gulp.src(srcIndex)
 		.pipe(plumber({ errorHandler: report}))
 		.pipe(hbStream)

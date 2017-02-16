@@ -61,6 +61,20 @@ $logo-width = 58px
 		.cnc 
 			background-color $cnc
 			// color darken($cnc, 60)
+		
+		tr:first-child td:nth-child(3) a
+			&:after
+				content ''
+				display inline-block
+				opacity 0.33
+				width 1rem
+				height 0.75rem 
+				line-height 1
+				margin-left 0.5rem 
+				vertical-align middle
+				background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAwCAMAAACWlYwtAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADYUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFfwuloAAABHdFJOUwACs7rYoyby1h4/22MIzEnoI5R+YsiI9vR8Dyg4cFzaBx2+t4zx862szyfr7liaCTP1Tpad8CHvFm6Dzm2747A+5NmvhM20dpQwdAAAAP9JREFUSMfFlmdvwjAYhA9CmGUHStl7lk1pGS2jgP//P2pAKKISkYwPKffVukey7PfeA67yLvRVwycnTyuZx38Fa+JBdYq3/oNQ0GZo+U9CSaH41e8WiuqVL/43oazvs78rCL2YgDYDeHchKyhF0ecAA9Q5QAQaB4jBc/9gLAnI2AE+RjMpQBN+mxNg8ikB8NkC5sDXlAEELlNeIgFwpUkAkKuSAKDwSgJQ0UkAYPyQAIQTJMCM/ZSzAPYKxs7RZyQ/EvmV2WFixpkOFOlIo0N1z8Y6vVjo1UYvV3q90wWDrzhMydKeU/OUCVbRBJYq/t/hTehtybJ9ju21flSp+3/FvNNJg/ioWAAAAABJRU5ErkJggg==')
+				background-size contain
+				background-repeat no-repeat
 	
 	.button--expand
 		width 11rem
