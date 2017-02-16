@@ -92,7 +92,8 @@ function getTeamFromComment({ player, comment }) {
 	if (player && comment) {
 		// just last name
 		const startLastName = player.indexOf(' ') + 1
-		const lastName = player.substring(startLastName, player.length)
+		const lastName = player.substring(startLastName, player.length).replace(/ /g, '')
+
 		const nameLength = lastName.length
 
 		// strip whitespace and deal with 's and what not
@@ -375,7 +376,7 @@ function parse({ index, file }, cb) {
 
 function init() {
 	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('pdf.txt'))
-	const files = DEBUG ? ['L2M-UTA-DAL-02-09-17.pdf'] : fileInput
+	const files = DEBUG ? ['L2M-ATL-POR-02-13-17.pdf'] : fileInput
 
 	const len = files.length
 	let index = 0
