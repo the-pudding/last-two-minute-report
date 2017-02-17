@@ -15,7 +15,7 @@ function scrapeGameLinks(maxGames) {
 	let added = 0
 	$('.entry-content p a').each((i, el) => {
 		const url = $(el).attr('href').trim()
-		const valid = url.startsWith('http://official.nba.com/') && url.endsWith('.pdf')
+		const valid = url.endsWith('.pdf')
 		if (valid && added < maxGames) {
 			added += 1
 			urls.push(url)
@@ -27,8 +27,9 @@ function scrapeGameLinks(maxGames) {
 function savePDFs(urls, cb) {
 	let i = 0
 	const next = () => {
-		console.log(urls[i])
-		const command = `cd processing/pdf; curl -O ${urls[i]}`
+		const downloadUrl = urls[i].includes('ak-static') ? urls[i].replace('http', 'https') : urls[i]
+		console.log(downloadUrl)
+		const command = `cd processing/pdf; curl -O ${downloadUrl}`
 		shell.exec(command, { silent: true }, () => {
 			i += 1
 			if (i < urls.length) next()

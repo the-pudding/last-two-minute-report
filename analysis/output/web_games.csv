@@ -123,6 +123,17 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20150425MEMPOR,MEM,POR,20150425,Mark Ayotte,Scott Foster,Bill Kennedy,115,109,L2M-MEM-POR-4-25-15.pdf,http://www.basketball-reference.com/boxscores/201504250POR.html,2
 20150427ATLBKN,ATL,BKN,20150427,James Capers,Eric Lewis,Jason Phillips,115,120,L2M-ATL-BKN-4-27-15.pdf,http://www.basketball-reference.com/boxscores/201504270BRK.html,4
 20150427MEMPOR,MEM,POR,20150427,Derrick Collins,Dan Crawford,Marc Davis,92,99,L2M-MEM-POR-4-27-15.pdf,http://www.basketball-reference.com/boxscores/201504270POR.html,3
+20150429BKNATL,BKN,ATL,20150429,David Jones,Monty McCutchen,James Williams,97,107,L2M-BKN-ATL-4-29-15-GAME-5.pdf,http://www.basketball-reference.com/boxscores/201504290ATL.html,1
+20150502SASLAC,SAS,LAC,20150502,James Capers,Monty McCutchen,Jason Phillips,109,111,L2M-SAS-LAC-5-2-15-GAME-7.pdf,http://www.basketball-reference.com/boxscores/201505020LAC.html,
+20150503WASATL,WAS,ATL,20150503,Scott Foster,Pat Fraher,Ron Garretson,104,98,L2M-WAS-ATL-5-3-15-GAME-1.pdf,http://www.basketball-reference.com/boxscores/201505030ATL.html,1
+20150508CLECHI,CLE,CHI,20150508,Tony Brothers,Mike Callahan,Eric Lewis,96,99,L2M-CLE-CHI-5-8-15-GAME-3.pdf,http://www.basketball-reference.com/boxscores/201505080CHI.html,3
+20150509ATLWAS,ATL,WAS,20150509,Joe Crawford,Bennett Salvatore,Zach Zarba,101,103,L2M-ATL-WAS-5-9-15-GAME-3.pdf,http://www.basketball-reference.com/boxscores/201505090WAS.html,1
+20150510CLECHI,CLE,CHI,20150510,Scott Foster,Jason Phillips,Tom Washington,86,84,L2M-CLE-CHI-5-10-15-GAME-4.pdf,http://www.basketball-reference.com/boxscores/201505100CHI.html,1
+20150511ATLWAS,ATL,WAS,20150511,John Goble,Ed Malloy,Ken Mauer,106,101,L2M-ATL-WAS-5-11-15-GAME-4.pdf,http://www.basketball-reference.com/boxscores/201505110WAS.html,1
+20150512CHICLE,CHI,CLE,20150512,Joe Crawford,Josh Tiven,Zach Zarba,101,106,L2M-CHI-CLE-5-12-15-GAME-5.pdf,http://www.basketball-reference.com/boxscores/201505120CLE.html,2
+20150513WASATL,WAS,ATL,20150513,Tony Brothers,Mike Callahan,Tom Washington,81,82,L2M-WAS-ATL-5-13-15-GAME-5.pdf,http://www.basketball-reference.com/boxscores/201505130ATL.html,2
+20150515ATLWAS,ATL,WAS,20150515,James Capers,Monty McCutchen,Derrick Stafford,94,91,L2M-ATL-WAS-5-15-2015-GAME-6.pdf,http://www.basketball-reference.com/boxscores/201505150WAS.html,
+20150524ATLCLE,ATL,CLE,20150524,Tony Brothers,John Goble,Ed Malloy,111,114,L2M-ATL-CLE-5-24-15-GAME-3.pdf,http://www.basketball-reference.com/boxscores/201505240CLE.html,
 20150604CLEGSW,CLE,GSW,20150604,James Capers,Monty McCutchen,Jason Phillips,100,108,L2M-CLE-GSW-6-4-15-GAME-1.pdf,http://www.basketball-reference.com/boxscores/201506040GSW.html,
 20150607CLEGSW,CLE,GSW,20150607,Tony Brothers,Scott Foster,Zach Zarba,95,93,L2M-CLE-GSW-6-7-15-FINALS-GAME-2.pdf,http://www.basketball-reference.com/boxscores/201506070GSW.html,4
 20150609GSWCLE,GSW,CLE,20150609,Dan Crawford,Marc Davis,Ed Malloy,91,96,L2M-GSW-CLE-6-9-15-FINALS-GAME-3.pdf,http://www.basketball-reference.com/boxscores/201506090CLE.html,2
@@ -251,6 +262,10 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20151209SASTOR,SAS,TOR,20151209,Eric Dalen,Monty McCutchen,James Williams,94,97,L2M-SAS-TOR-12-9-15.pdf,http://www.basketball-reference.com/boxscores/201512090TOR.html,
 20151210NYKSAC,NYK,SAC,20151210,Brian Forte,Ed Malloy,Scott Twardoski,97,99,L2M-NYK-SAC-12-10-15.pdf,http://www.basketball-reference.com/boxscores/201512100SAC.html,1
 20151210PHIBKN,PHI,BKN,20151210,Kevin Cutler,Rodney Mott,Sean Wright,91,100,L2M-PHI-BKN-12-10-15.pdf,http://www.basketball-reference.com/boxscores/201512100BRK.html,
+20151211GSWBOS,GSW,BOS,20151211,Kane Fitzgerald,Monty McCutchen,Aaron Smith,124,119,L2M-GSW-BOS-12-11-15.pdf,http://www.basketball-reference.com/boxscores/201512110BOS.html,
+20151211MINDEN,MIN,DEN,20151211,Mark Ayotte,Justin Van Duyne,Zach Zarba,108,111,L2M-MIN-DEN-12-11-15.pdf,http://www.basketball-reference.com/boxscores/201512110DEN.html,4
+20151211OKCUTA,OKC,UTA,20151211,Derrick Collins,Jason Phillips,Dedric Taylor,94,90,L2M-OKC-UTA-12-11-15.pdf,http://www.basketball-reference.com/boxscores/201512110UTA.html,1
+20151211WASNOP,WAS,NOP,20151211,Scott Foster,Gediminas Petraitis,Gary Zielinski,105,107,L2M-WAS-NOP-12-11-15.pdf,http://www.basketball-reference.com/boxscores/201512110NOP.html,2
 20151212BOSCHA,BOS,CHA,20151212,Brent Barnaky,Dan Crawford,Marat Kogut,98,93,L2M-BOS-CHA-12-12-15.pdf,http://www.basketball-reference.com/boxscores/201512120CHO.html,2
 20151212LACBKN,LAC,BKN,20151212,Tony Brown,John Goble,J.T. Orr,105,100,L2M-LAC-BKN-12-12-15.pdf,http://www.basketball-reference.com/boxscores/201512120BRK.html,1
 20151212NOPCHI,NOP,CHI,20151212,Eric Dalen,Monty McCutchen,Leroy Richardson,94,98,L2M-NOP-CHI-12-12-15.pdf,http://www.basketball-reference.com/boxscores/201512120CHI.html,3
@@ -259,6 +274,12 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20151216BOSDET,BOS,DET,20151216,Lauren Holtkamp,Courtney Kirkland,Eric Lewis,116,119,L2M-BOS-DET-12-16-15.pdf,http://www.basketball-reference.com/boxscores/201512160DET.html,3
 20151217OKCCLE,OKC,CLE,20151217,Dan Crawford,Mark Lindsay,Josh Tiven,100,104,L2M-OKC-CLE-12-17-15.pdf,http://www.basketball-reference.com/boxscores/201512170CLE.html,
 20151217TORCHA,TOR,CHA,20151217,Pat Fraher,Ken Mauer,Kevin Scott,99,109,L2M-TOR-CHA-12-17-15.pdf,http://www.basketball-reference.com/boxscores/201512170CHO.html,4
+20151218ATLBOS,ATL,BOS,20151218,Mitchell Ervin,James Williams,Sean Wright,109,101,L2M-ATL-BOS-12-18-15.pdf,http://www.basketball-reference.com/boxscores/201512180BOS.html,
+20151218DENUTA,DEN,UTA,20151218,Curtis Blair,David Jones,Tom Washington,88,97,L2M-DEN-UTA-12-18-15.pdf,http://www.basketball-reference.com/boxscores/201512180UTA.html,1
+20151218DETCHI,DET,CHI,20151218,Steve Anderson,James Capers,Gary Zielinski,147,144,L2M-DET-CHI-12-18-15.pdf,http://www.basketball-reference.com/boxscores/201512180CHI.html,7
+20151218LACSAS,LAC,SAS,20151218,Brian Forte,Ed Malloy,Leroy Richardson,107,115,L2M-LAC-SAS-12-18-15.pdf,http://www.basketball-reference.com/boxscores/201512180SAS.html,
+20151218MILGSW,MIL,GSW,20151218,Tony Brothers,David Guthrie,Haywoode Workman,112,121,L2M-MIL-GSW-12-18-15.pdf,http://www.basketball-reference.com/boxscores/201512180GSW.html,2
+20151218SACMIN,SAC,MIN,20151218,Sean Corbin,Ron Garretson,Justin Van Duyne,95,99,L2M-SAC-MIN-12-18-15.pdf,http://www.basketball-reference.com/boxscores/201512180MIN.html,2
 20151219CHAWAS,CHA,WAS,20151219,Dan Crawford,Bill Kennedy,J.T. Orr,101,109,L2M-CHA-WAS-12-19-15.pdf,http://www.basketball-reference.com/boxscores/201512190WAS.html,1
 20151220ATLORL,ATL,ORL,20151220,Eric Lewis,J.T. Orr,Bill Spooner,103,100,L2M-ATL-ORL-12-20-15.pdf,http://www.basketball-reference.com/boxscores/201512200ORL.html,1
 20151220MILPHO,MIL,PHO,20151220,Curtis Blair,Leroy Richardson,Tom Washington,101,95,L2M-MIL-PHX-12-20-15.pdf,http://www.basketball-reference.com/boxscores/201512200PHO.html,
@@ -288,6 +309,8 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20151230INDCHI,IND,CHI,20151230,Curtis Blair,Eric Lewis,Jason Phillips,100,102,L2M-IND-CHI-12-30-15.pdf,http://www.basketball-reference.com/boxscores/201512300CHI.html,1
 20151230LALBOS,LAL,BOS,20151230,Brent Barnaky,Mike Callahan,Haywoode Workman,112,104,L2M-LAL-BOS-12-30-15.pdf,http://www.basketball-reference.com/boxscores/201512300BOS.html,3
 20151230PHISAC,PHI,SAC,20151230,James Capers,Brett Nansel,Scott Wall,110,105,L2M-PHI-SAC-12-30-15.pdf,http://www.basketball-reference.com/boxscores/201512300SAC.html,1
+20151231LACNOP,LAC,NOP,20151231,Scott Foster,Lauren Holtkamp,Michael Smith,95,89,L2M-LAC@NOP-12-31-15.pdf,http://www.basketball-reference.com/boxscores/201512310NOP.html,
+20151231PHOOKC,PHO,OKC,20151231,Brian Forte,Ed Malloy,Eli Roe,106,110,L2M-PHX@OKC-12-31-15.pdf,http://www.basketball-reference.com/boxscores/201512310OKC.html,
 20160102DENGSW,DEN,GSW,20160102,Mark Ayotte,James Capers,Justin Van Duyne,108,111,L2M-DEN-GSW-1-2-16.pdf,http://www.basketball-reference.com/boxscores/201601020GSW.html,2
 20160102MEMUTA,MEM,UTA,20160102,Josh Tiven,Scott Twardoski,Sean Wright,87,92,L2M-MEM-UTA-1-2-16.pdf,http://www.basketball-reference.com/boxscores/201601020UTA.html,2
 20160102NOPDAL,NOP,DAL,20160102,Tony Brown,Kevin Scott,Tom Washington,105,98,L2M-NOP-DAL-1-2-16.pdf,http://www.basketball-reference.com/boxscores/201601020DAL.html,4
@@ -524,6 +547,8 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20160412OKCSAS,OKC,SAS,20160412,Mark Lindsay,Derrick Stafford,Josh Tiven,98,102,L2M-OKC-SAS-4-12-16.pdf,http://www.basketball-reference.com/boxscores/201604120SAS.html,2
 20160413DETCLE,DET,CLE,20160413,Eric Dalen,Jason Phillips,Michael Smith,112,110,L2M-DET-CLE-4-13-16.pdf,http://www.basketball-reference.com/boxscores/201604130CLE.html,4
 20160413SASDAL,SAS,DAL,20160413,Nick Buchert,Scott Foster,John Goble,96,91,L2M-SAS-DAL-4-13-16.pdf,http://www.basketball-reference.com/boxscores/201604130DAL.html,2
+20160416BOSATL,BOS,ATL,20160416,James Capers,Derrick Collins,Rodney Mott,101,102,L2M-BOS-ATL-4-16-16.pdf,http://www.basketball-reference.com/boxscores/201604160ATL.html,4
+20160417DETCLE,DET,CLE,20160417,Leroy Richardson,Derrick Stafford,Zach Zarba,101,106,Cavaliers-106-Pistons-101.pdf,http://www.basketball-reference.com/boxscores/201604170CLE.html,1
 20160418DALOKC,DAL,OKC,20160418,Dan Crawford,David Guthrie,Bill Spooner,85,84,Mavericks-85-Thunder-84.pdf,http://www.basketball-reference.com/boxscores/201604180OKC.html,4
 20160421GSWHOU,GSW,HOU,20160421,Mark Ayotte,Scott Foster,Tom Washington,96,97,L2M-GSW-HOU-4-21-16-1.pdf,http://www.basketball-reference.com/boxscores/201604210HOU.html,4
 20160422ATLBOS,ATL,BOS,20160422,Marc Davis,Eric Lewis,Zach Zarba,103,111,L2M-ATL-BOS-4-22-16.pdf,http://www.basketball-reference.com/boxscores/201604220BOS.html,1
@@ -569,6 +594,7 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20161101LALIND,LAL,IND,20161101,Derrick Collins,Dan Crawford,Jacyn Goble,108,115,L2M-LAL-IND-11-1-16.pdf,http://www.basketball-reference.com/boxscores/201611010IND.html,1
 20161101MILNOP,MIL,NOP,20161101,Tyler Ford,Brian Forte,Scott Foster,117,113,L2M-MIL-NOP-11-1-16.pdf,http://www.basketball-reference.com/boxscores/201611010NOP.html,
 20161101ORLPHI,ORL,PHI,20161101,Sean Corbin,Kane Fitzgerald,Haywoode Workman,103,101,L2M-ORL-PHI-11-1-16.pdf,http://www.basketball-reference.com/boxscores/201611010PHI.html,
+20161101SACMIA,SAC,MIA,20161101,J.T. Orr,Josh Tiven,James Williams,96,108,L2M-SAC-MIA-11-1-16-1.pdf,http://www.basketball-reference.com/boxscores/201611010MIA.html,1
 20161102CHIBOS,CHI,BOS,20161102,Marat Kogut,Ken Mauer,Gary Zielinski,100,107,L2M-CHI-BOS-11-2-16.pdf,http://www.basketball-reference.com/boxscores/201611020BOS.html,2
 20161102DETBKN,DET,BKN,20161102,Derrick Collins,Monty McCutchen,Gediminas Petraitis,101,109,L2M-DET-BKN-11-2-16.pdf,http://www.basketball-reference.com/boxscores/201611020BRK.html,
 20161102LALATL,LAL,ATL,20161102,John Goble,J.T. Orr,Jason Phillips,123,116,L2M-LAL-ATL-11-2-16.pdf,http://www.basketball-reference.com/boxscores/201611020ATL.html,
@@ -717,6 +743,7 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20161229MIACHA,MIA,CHA,20161229,Curtis Blair,Kevin Scott,Zach Zarba,82,91,L2M-MIA-CHA-12-29-16.pdf,http://www.basketball-reference.com/boxscores/201612290CHO.html,1
 20161230CHIIND,CHI,IND,20161230,Michael Smith,Justin Van Duyne,James Williams,101,111,L2M-CHI-IND-12-30-16.pdf,http://www.basketball-reference.com/boxscores/201612300IND.html,
 20161230MIABOS,MIA,BOS,20161230,Pat Fraher,Monty McCutchen,Aaron Smith,114,117,L2M-MIA-BOS-12-30-16.pdf,http://www.basketball-reference.com/boxscores/201612300BOS.html,1
+20161230PHIDEN,PHI,DEN,20161230,Scott Foster,Ben Taylor,Gary Zielinski,124,122,L2M-PHI-DEN-12-30-16.pdf,http://www.basketball-reference.com/boxscores/201612300DEN.html,
 20161231PHOUTA,PHO,UTA,20161231,Matt Boland,Dan Crawford,Jacyn Goble,86,91,L2M-PHX-UTA-12-31-16.pdf,http://www.basketball-reference.com/boxscores/201612310UTA.html,2
 20170101PORMIN,POR,MIN,20170101,Courtney Kirkland,Bill Spooner,Justin Van Duyne,95,89,L2M-POR-MIN-01-01-17.pdf,http://www.basketball-reference.com/boxscores/201701010MIN.html,
 20170101SASATL,SAS,ATL,20170101,Tony Brown,Pat Fraher,Haywoode Workman,112,114,L2M-SAS-ATL-01-01-17.pdf,http://www.basketball-reference.com/boxscores/201701010ATL.html,2
@@ -763,6 +790,7 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20170118MEMWAS,MEM,WAS,20170118,Brian Forte,Tre Maddox,Monty McCutchen,101,104,L2M-MEM-WAS-01-18-17.pdf,http://www.basketball-reference.com/boxscores/201701180WAS.html,
 20170118TORPHI,TOR,PHI,20170118,Bill Spooner,Justin Van Duyne,Gary Zielinski,89,94,L2M-TOR-PHI-01-18-17.pdf,http://www.basketball-reference.com/boxscores/201701180PHI.html,
 20170119DALMIA,DAL,MIA,20170119,Sean Corbin,Michael Smith,Dedric Taylor,95,99,L2M-DAL-MIA-01-19-17.pdf,http://www.basketball-reference.com/boxscores/201701190MIA.html,2
+20170119MINLAC,MIN,LAC,20170119,Marat Kogut,Eric Lewis,Ed Malloy,104,101,L2M-MIN-LAC-01-19-17.pdf,http://www.basketball-reference.com/boxscores/201701190LAC.html,
 20170119WASNYK,WAS,NYK,20170119,Brent Barnaky,Bill Kennedy,Gary Zielinski,113,110,L2M-WAS-NYK-01-19-17.pdf,http://www.basketball-reference.com/boxscores/201701190NYK.html,2
 20170120PORPHI,POR,PHI,20170120,Mike Callahan,Gediminas Petraitis,James Williams,92,93,L2M-POR-PHI-01-20-17.pdf,http://www.basketball-reference.com/boxscores/201701200PHI.html,1
 20170120UTADAL,UTA,DAL,20170120,Mark Ayotte,Kane Fitzgerald,Leroy Richardson,112,107,L2M-UTA-DAL-01-20-17.pdf,http://www.basketball-reference.com/boxscores/201701200DAL.html,1
@@ -835,3 +863,4 @@ game_id,away,home,date,ref_1,ref_2,ref_3,score_away,score_home,original_pdf,box_
 20170215CHATOR,CHA,TOR,20170215,Sean Corbin,Tyler Ford,Josh Tiven,85,90,L2M-CHA-TOR-02-15-17.pdf,http://www.basketball-reference.com/boxscores/201702150TOR.html,
 20170215MILBKN,MIL,BKN,20170215,Scott Foster,Lauren Holtkamp,Mark Lindsay,129,125,L2M-MIL-BKN-02-15-17.pdf,http://www.basketball-reference.com/boxscores/201702150BRK.html,
 20170215NOPMEM,NOP,MEM,20170215,Bennie Adams,David Guthrie,Brett Nansel,95,91,L2M-NOP-MEM-02-15-17.pdf,http://www.basketball-reference.com/boxscores/201702150MEM.html,3
+20170216BOSCHI,BOS,CHI,20170216,J.T. Orr,James Williams,Zach Zarba,103,104,L2M-BOS-CHI-02-16-17.pdf,http://www.basketball-reference.com/boxscores/201702160CHI.html,
