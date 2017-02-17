@@ -39,7 +39,8 @@ Comment:         Bogdanovic (BKN) commits a take foul on Fournier (ORL).
 Comment:         Lin (BKN) does not extend his forearm into Augustin (ORL) on the drive to the basket.
      Q4           00:08.7                        Foul: Clear Path                                               Luis Scola                                                    Serge Ibaka              CC             Video
 Comment:         Scola (BKN) commits the take foul on Ibaka (ORL) after he releases the pass to Vucevic (ORL), who has a clear path to the basket.
-     Q4           00:08.7               Instant Replay: Support Ruling                                                                                                                                 CC             Video
+     Q4           .
+                  00:08.7               Instant Replay: Support Ruling                                                                                                                                 CC             Video
 Comment:         After communicating with the Replay Center, the ruling on the court (Clear Path Foul) was upheld.
 
 
