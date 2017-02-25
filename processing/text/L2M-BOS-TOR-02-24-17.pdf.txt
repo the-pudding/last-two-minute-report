@@ -1,0 +1,58 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                                Celtics (97) @ Raptors (107) (Feb 24, 2017)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:51.0                      Turnover: Traveling                                            Marcus Smart                                                                            INC             Video
+Comment:         Smart (BOS) moves his pivot foot.
+     Q4           01:36.0                         Foul: Personal                                              Marcus Smart                                                  DeMar DeRozan             CNC             Video
+Comment:         Smart (BOS) makes marginal contact with DeRozan (TOR) that does not affect his SQBR.
+     Q4           01:34.0                         Foul: Personal                                               Jae Crowder                                                  DeMar DeRozan              CC             Video
+Comment:         LATR shows Crowder (BOS) makes contact with DeRozan (TOR) that affects his SQBR.
+     Q4           01:24.0                         Foul: Shooting                                              Jaylen Brown                                                  DeMarre Carroll           INC             Video
+Comment:         Brown (BOS) makes contact with Carroll (TOR) after he releases the jump shot and affects his ability to land.
+     Q4           01:05.0                         Foul: Shooting                                               Jae Crowder                                                  DeMar DeRozan             CNC             Video
+Comment:         Crowder (COS) cleanly strips the ball from DeRozan (TOR).
+     Q4           01:04.0                  Stoppage: Out-of-Bounds                                                                                                                                     CC             Video
+Comment:         The ball is last touched by Crowder (BOS) prior to going OOB.
+     Q4           01:04.0               Instant Replay: Support Ruling                                                                                                                                 CC             Video
+Comment:         After communicating with the Replay Center, the ruling on the floor of TOR possession is confirmed.
+     Q4           00:53.1                         Foul: Offensive                                               Al Horford                                                    Cory Joseph             INC             Video
+Comment:         Horford (BOS) extends his hip into Joseph (TOR) and delivers the contact on the screen.
+     Q4           00:47.9                         Foul: Personal                                                Al Horford                                                     PJ Tucker               CC             Video
+Comment:         Horford (BOS) commits a take foul on Tucker (TOR).
+     Q4           00:39.4                         Foul: Personal                                                 PJ Tucker                                                   Isaiah Thomas            CNC             Video
+Comment:         Tucker (TOR) makes marginal contact with Thomas (BOS) that does not affect his SQBR.
+     Q4           00:38.4                         Foul: Shooting                                               Cory Joseph                                                   Isaiah Thomas            CNC             Video
+Comment:         Joseph (TOR) makes marginal contact with Thomas (BOS) that does not affect his driving shot attempt.
+     Q4           00:33.6                         Foul: Personal                                              Marcus Smart                                                  DeMar DeRozan              CC             Video
+Comment:         Smart (BOS) makes contact with DeRozan (TOR) that affects his SQBR.
+     Q4           00:30.0                         Foul: Shooting                                            DeMarre Carroll                                                  Marcus Smart              CC             Video
+Comment:         Carroll (TOR) makes contact with Smart's (BOS) body that affects his driving shot attempt.
+     Q4           00:27.5                         Foul: Personal                                              Isaiah Thomas                                                 DeMar DeRozan              CC             Video
+Comment:         Thomas (BOS) commits a take foul on DeRozan (TOR).
+     Q4           00:19.1                        Foul: Loose Ball                                             Jaylen Brown                                                     PJ Tucker               CC             Video
+Comment:         Brown (BOS) dislodges Tucker (TOR), affecting his ability to retrieve the rebound.
+     Q4           00:11.2                         Foul: Personal                                              Isaiah Thomas                                                    PJ Tucker               CC             Video
+Comment:         Thomas (BOS) commits a take foul on Tucker (TOR).
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              02/25/2017 03:24:26PM
