@@ -27,7 +27,10 @@ function scrapeGameLinks(maxGames) {
 function savePDFs(urls, cb) {
 	let i = 0
 	const next = () => {
-		const downloadUrl = urls[i].includes('ak-static') ? urls[i].replace('http', 'https') : urls[i]
+		let downloadUrl = urls[i].includes('ak-static') ? urls[i].replace('http', 'https') : urls[i]
+		// HACK
+		if (downloadUrl.includes('L2M-SAS-LAC-4-28-15')) downloadUrl = 'https://ak-static.cms.nba.com/wp-content/uploads/sites/4/2015/04/L2M-SAS-LAC-4-28-2015.pdf'
+		
 		console.log(downloadUrl)
 		const command = `cd processing/pdf; curl -O ${downloadUrl}`
 		shell.exec(command, { silent: true }, () => {
