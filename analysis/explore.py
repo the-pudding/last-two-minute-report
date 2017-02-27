@@ -161,7 +161,7 @@ exclude_recent = ['away', 'box_score_url', 'date', 'home', 'original_pdf', 'ref_
 recent_games.exclude(exclude_recent).to_csv('output/web_recent.csv')
 
 
-# In[7]:
+# In[6]:
 
 # call type breakdown
 
@@ -200,7 +200,7 @@ call_totals_merged = call_merge2.join(call_totals_cnc, 'call_type','call_type')
 call_totals_merged.to_csv('output/web_calls.csv')
 
 
-# In[8]:
+# In[7]:
 
 # when wrong calls happen (in last 2 minutes)
 in_last_two_ic = ic.where(lambda r: float(r['seconds_left']) < 120)
@@ -226,7 +226,7 @@ bin_merge2 = bin_merge1.join(count_bin_cc, 'bin', 'bin')
 bin_merge2.to_csv('output/web_when.csv')
 
 
-# In[30]:
+# In[8]:
 
 #rec inc
 by_ref1 = inc.group_by('ref_1')
@@ -267,7 +267,7 @@ refs_inc_with_games = refs_inc.compute([
 ])
 
 
-# In[32]:
+# In[9]:
 
 # ref ic
 ref_dict = {}
@@ -290,7 +290,7 @@ ref_both = refs_inc_with_games.join(ref_made_table, 'name', 'name')
 ref_both.to_csv('output/web_refs.csv')
 
 
-# In[14]:
+# In[10]:
 
 # star treatment
 
@@ -321,7 +321,7 @@ count_player_for = count_player_for_renamed.compute([
 ])
 
 
-# In[13]:
+# In[11]:
 
 #anti-star treatment
 # did not get call they shouldve (INC + disadvantaged)
@@ -350,7 +350,7 @@ count_player_against = count_player_against_renamed.compute([
 ])
 
 
-# In[15]:
+# In[12]:
 
 # join star tables
 count_player = count_player_for.join(count_player_against, 'player', 'player')
@@ -368,7 +368,7 @@ count_player_with_net = count_player.compute([
 count_player_with_net.to_csv('output/web_players.csv')
 
 
-# In[18]:
+# In[13]:
 
 # teams
 # got away with calls (INC + committing)
@@ -397,7 +397,7 @@ count_team_for = count_team_for_renamed.compute([
 ])
 
 
-# In[19]:
+# In[14]:
 
 # anti - team
 # did not get call they shouldve (INC + disadvantaged)
@@ -426,7 +426,7 @@ count_team_against = count_team_against_renamed.compute([
 ])
 
 
-# In[20]:
+# In[15]:
 
 # join teams
 count_team = count_team_for.join(count_team_against, 'team', 'team')
@@ -442,4 +442,12 @@ count_team_with_net = count_team.compute([
 
 
 count_team_with_net.to_csv('output/web_teams.csv')
+
+
+# In[17]:
+
+# team home/away data embed
+embed_data = data.where(lambda r: r['review_decision'] in ['IC', 'INC','CC'])
+embed_include = ['date', 'home', 'away','committing_team', 'disadvantaged_team','review_decision']
+embed_data.select(embed_include).to_csv('output/web_embed-teams.csv')
 
