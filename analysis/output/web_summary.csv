@@ -1,8 +1,8 @@
 key,value
-num_games,871
-num_calls,"13,658"
-num_calls_incorrect,"1,412"
-minutes_played,"2,672"
+num_games,875
+num_calls,"13,743"
+num_calls_incorrect,"1,415"
+minutes_played,"2,685"
 percent_incorrect,10.3
 num_calls_incorrect_per_game,1.62
 num_calls_incorrect_per_minute,0.53
