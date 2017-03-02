@@ -451,3 +451,5 @@ embed_data = data.where(lambda r: r['review_decision'] in ['IC', 'INC','CC'])
 embed_include = ['date', 'home', 'away','committing_team', 'disadvantaged_team','review_decision']
 embed_data.select(embed_include).to_csv('output/web_embed-teams.csv')
 
+incorrect.select(embed_include).to_csv('output/web_embed-teams--incorrect.csv')
+
