@@ -1,0 +1,60 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                                  Warriors (87) @ Bulls (94) (Mar 02, 2017)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:48.0                         Foul: Personal                                             Andre Iguodala                                                  Dwyane Wade              CNC             Video
+Comment:         Iguodala (GSW) maintains legal guarding position defending Wade (CHI) on the perimeter.
+     Q4           01:46.0                      Turnover: Traveling                                          Cristiano Felicio                                                                                         Video
+Comment:         [Observable in enhanced video] RATR shows Felicio (CHI) move his pivot foot.
+     Q4           01:44.0                         Foul: Personal                                              Stephen Curry                                                 Cristiano Felicio         CNC             Video
+Comment:         Curry (GSW) makes marginal contact with Felicio (CHI) that does not affect his SQBR.
+     Q4           01:41.0               Instant Replay: Support Ruling                                          Paul Zipser                                                                            CC             Video
+Comment:         After communicating with the Replay Center, the ruling on the floor of a 3pt field goal is confirmed.
+     Q4           01:32.0                         Foul: Offensive                                           Draymond Green                                                   Dwyane Wade              CNC             Video
+Comment:         Green (GSW) and Wade (CHI) briefly engage and separate.
+     Q4           01:29.0                         Foul: Shooting                                             Dwyane Wade                                                     Stephen Curry            CNC             Video
+Comment:         Wade (CHI) maintains legal guarding position and makes incidental contact with Curry (GSW) that does not affect his drive to the basket and shot attempt.
+     Q4           01:11.0                         Foul: Shooting                                               Matt Barnes                                                    Jimmy Butler            CNC             Video
+Comment:         Barnes (GSW) maintains legal guarding position and makes incidental contact with Butler (CHI) that does not affect his drive to the basket and shot attempt.
+     Q4           01:01.0               Instant Replay: Support Ruling                                                                                                                                 CC             Video
+Comment:         After communicating with the Replay Center, the ruling on the floor of GSW possession is confirmed.
+     Q4           00:41.7                        Foul: Loose Ball                                              Bobby Portis                                                   Matt Barnes                             Video
+Comment:         [Incidental or immaterial] Portis (CHI) grabs and holds Barnes (GSW) during the rebound.
+     Q4           00:36.3                         Foul: Personal                                             Cristiano Felicio                                               Stephen Curry            CNC             Video
+Comment:         Felicio (CHI) makes marginal contact with Curry (GSW) that does not affect his SQBR.
+     Q4           00:29.7                         Foul: Personal                                               Matt Barnes                                                    Bobby Portis             CC             Video
+Comment:         Barnes (GSW) commits a take foul on Portis (CHI).
+     Q4           00:28.3                         Foul: Personal                                             Andre Iguodala                                                   Jimmy Butler             CC             Video
+Comment:         Iguodala (GSW) commits a take foul on Butler (CHI).
+     Q4           00:25.3                         Foul: Offensive                                             Stephen Curry                                                    Paul Zipser            CNC             Video
+Comment:         Curry (GSW) sets the screen on Zipser (CHI) and gives him room to avoid the contact.
+     Q4           00:22.5                        Foul: Loose Ball                                              Matt Barnes                                                    Bobby Portis            INC             Video
+Comment:         Barnes (GSW) grabs and pulls Portis' (CHI) jersey during rebounding.
+     Q4           00:21.7                         Foul: Personal                                            Draymond Green                                                   Dwyane Wade              CNC             Video
+Comment:         Green (GSW) cleanly strips the ball from Wade (CHI).
+     Q4           00:15.0                         Foul: Personal                                            Draymond Green                                                    Bobby Portis             CC             Video
+Comment:         Green (GSW) commits a take foul on Portis (CHI).
+     Q4           00:15.0                         Violation: Lane                                             Stephen Curry                                                   Bobby Portis                            Video
+Comment:         [Incidental or immaterial] Curry (GSW) enters the area inside the three-point line prior to the free throw being released.
+
+
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              03/03/2017 03:31:18PM
