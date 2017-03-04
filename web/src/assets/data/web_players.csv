@@ -28,11 +28,11 @@ Reggie Jackson,11,1,12,6,,6,6
 DeMarcus Cousins,15,3,18,11,1,12,6
 Jordan Clarkson,7,2,9,2,1,3,6
 Bismack Biyombo,9,1,10,3,1,4,6
+Kawhi Leonard,7,1,8,2,,2,6
 Robin Lopez,11,1,12,6,,6,6
 Taj Gibson,7,,7,1,,1,6
 Arron Afflalo,7,1,8,2,,2,6
 Gorgui Dieng,7,,7,1,1,2,5
-Kawhi Leonard,7,,7,2,,2,5
 Nene,7,,7,2,,2,5
 Paul George,7,5,12,7,,7,5
 Aron Baynes,7,,7,2,,2,5
@@ -45,6 +45,7 @@ Ish Smith,4,,4,,,,4
 Trevor Ariza,8,,8,3,1,4,4
 Dirk Nowitzki,14,1,15,9,2,11,4
 Kyle Lowry,12,1,13,6,3,9,4
+Kristaps Porzingis,8,,8,4,,4,4
 Steven Adams,8,1,9,4,1,5,4
 Ryan Anderson,4,2,6,2,,2,4
 Raymond Felton,4,,4,,,,4
@@ -63,7 +64,6 @@ Meyers Leonard,4,1,5,1,1,2,3
 John Henson,3,,3,,,,3
 David Lee,3,,3,,,,3
 Thabo Sefolosha,3,1,4,1,,1,3
-Kristaps Porzingis,7,,7,4,,4,3
 Harrison Barnes,5,,5,2,,2,3
 Chris Bosh,2,1,3,,,,3
 Marcus Thornton,3,,3,,,,3
@@ -201,6 +201,7 @@ Mindaugas Kuzminskas,1,,1,,,,1
 Willie Reed,1,,1,,,,1
 Jaylen Brown,1,,1,,,,1
 Denzel Valentine,1,,1,,,,1
+LeBron James,13,1,14,13,1,14,0
 DeAndre Jordan,9,,9,7,2,9,0
 Marc Gasol,9,,9,8,1,9,0
 Bojan Bogdanovic,2,,2,1,1,2,0
@@ -215,9 +216,9 @@ Brandon Bass,2,,2,1,1,2,0
 Aaron Gordon,1,,1,1,,1,0
 Ty Lawson,1,,1,1,,1,0
 Tyler Hansbrough,1,,1,1,,1,0
+Lance Thomas,2,,2,2,,2,0
 Rasual Butler,1,,1,1,,1,0
 J.R. Smith,3,1,4,2,2,4,0
-Paul Millsap,9,1,10,9,1,10,0
 Corey Brewer,2,,2,2,,2,0
 Kevin Garnett,1,,1,1,,1,0
 Victor Oladipo,4,,4,4,,4,0
@@ -230,7 +231,6 @@ Quincy Acy,1,,1,1,,1,0
 Gerald Henderson,1,,1,1,,1,0
 Shelvin Mack,1,,1,1,,1,0
 Jonas Jerebko,2,,2,1,1,2,0
-Robert Covington,3,1,4,4,,4,0
 Jordan Farmar,1,,1,1,,1,0
 Rudy Gay,3,1,4,3,1,4,0
 Nemanja Bjelica,1,1,2,2,,2,0
@@ -240,7 +240,6 @@ Tim Frazier,1,,1,1,,1,0
 Kosta Koufos,1,,1,1,,1,0
 Kyle Anderson,1,,1,1,,1,0
 Okaro White,1,,1,1,,1,0
-LeBron James,12,1,13,13,1,14,-1
 Bradley Beal,4,,4,4,1,5,-1
 Danny Green,1,,1,1,1,2,-1
 Blake Griffin,4,,4,5,,5,-1
@@ -250,12 +249,13 @@ Wayne Ellington,1,,1,2,,2,-1
 Joe Ingles,1,,1,2,,2,-1
 Trey Burke,1,,1,2,,2,-1
 Matthew Dellavedova,1,,1,2,,2,-1
-Lance Thomas,1,,1,2,,2,-1
+Paul Millsap,9,1,10,10,1,11,-1
 Dion Waiters,5,,5,3,3,6,-1
 Ricky Rubio,6,,6,6,1,7,-1
 Kyle Korver,3,,3,3,1,4,-1
 Kyrie Irving,4,1,5,6,,6,-1
 Rodney Stuckey,1,,1,2,,2,-1
+Robert Covington,3,1,4,5,,5,-1
 Michael Beasley,1,,1,2,,2,-1
 Rondae Hollis-Jefferson,1,,1,2,,2,-1
 Brandon Ingram,1,,1,2,,2,-1
