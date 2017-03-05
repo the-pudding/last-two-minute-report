@@ -32,7 +32,6 @@ Kawhi Leonard,7,1,8,2,,2,6
 Robin Lopez,11,1,12,6,,6,6
 Taj Gibson,7,,7,1,,1,6
 Arron Afflalo,7,1,8,2,,2,6
-Gorgui Dieng,7,,7,1,1,2,5
 Nene,7,,7,2,,2,5
 Paul George,7,5,12,7,,7,5
 Aron Baynes,7,,7,2,,2,5
@@ -41,6 +40,7 @@ Lou Amundson,4,,4,,,,4
 Devin Harris,5,,5,1,,1,4
 Evan Turner,6,2,8,3,1,4,4
 Dwyane Wade,9,5,14,8,2,10,4
+Gorgui Dieng,7,,7,2,1,3,4
 Ish Smith,4,,4,,,,4
 Trevor Ariza,8,,8,3,1,4,4
 Dirk Nowitzki,14,1,15,9,2,11,4
@@ -249,6 +249,7 @@ Wayne Ellington,1,,1,2,,2,-1
 Joe Ingles,1,,1,2,,2,-1
 Trey Burke,1,,1,2,,2,-1
 Matthew Dellavedova,1,,1,2,,2,-1
+LaMarcus Aldridge,4,1,5,4,2,6,-1
 Paul Millsap,9,1,10,10,1,11,-1
 Dion Waiters,5,,5,3,3,6,-1
 Ricky Rubio,6,,6,6,1,7,-1
@@ -269,7 +270,6 @@ Al-Farouq Aminu,4,,4,5,1,6,-2
 Lou Williams,2,,2,3,1,4,-2
 Pau Gasol,4,,4,5,1,6,-2
 Amir Johnson,2,,2,3,1,4,-2
-LaMarcus Aldridge,3,1,4,4,2,6,-2
 Derrick Favors,3,,3,5,,5,-2
 Isaiah Thomas,4,5,9,11,,11,-2
 Jrue Holiday,2,,2,3,1,4,-2
