@@ -25,8 +25,7 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 
 in web:
 * `gulp prod`
-* `make s3`
-* `make cloudfront`
+* `make live`
 
 #### Get latest games from archive
 `npm run get-games [max]` (optionally pass a number `[max]` to only download recent games)
