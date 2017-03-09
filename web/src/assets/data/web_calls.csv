@@ -1,17 +1,17 @@
 call_type,count_inc,count_ic,count_cc,count_cnc
 Foul: Double Personal,4,1,1,3
-Foul: Offensive,249,7,132,2011
-Foul: Personal,196,52,2005,1820
+Foul: Offensive,249,7,133,2016
+Foul: Personal,198,52,2015,1829
 Turnover: Traveling,186,6,48,116
 Turnover: Out of Bounds,8,2,4,7
-Foul: Loose Ball,176,14,231,693
-Foul: Shooting,214,72,1100,2293
+Foul: Loose Ball,177,14,231,698
+Foul: Shooting,215,72,1103,2303
 Turnover: 24 Second Violation,4,,107,3
-Turnover: 3 Second Violation,38,,1,11
+Turnover: 3 Second Violation,38,,1,12
 Turnover: Offensive Goaltending,2,,11,8
 Violation: Lane,16,,7,8
-Turnover: 5 Second Inbound,12,3,15,13
-Foul: Defense 3 Second,103,,,27
+Turnover: 5 Second Inbound,12,3,15,14
+Foul: Defense 3 Second,104,,,27
 Turnover: Double Dribble,3,,4,9
 Violation: Delay of Game,4,,17,1
 Violation: Kicked Ball,3,4,26,21
