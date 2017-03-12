@@ -20,7 +20,7 @@ Comment:         [Observable in enhanced video] Hood (UTA) moves his pivot foot 
      Q4           01:29.0                        Foul: Loose Ball                                             Rudy Gobert                                                     Kosta Koufos            CNC             Video
 Comment:         Gobert (UTA) makes marginal contact with Koufos (SAC) during the shot attempt.
      Q4           01:21.0                        Foul: Offensive                                          Willie Cauley-Stein                                                 George Hill             CNC             Video
-Comment:         Cauley-Stein (SAC) makes marginal contact with Hill (UTA) during the screen.
+Comment:         Cauley-Stein (SAC) makes marginal contact to Hill (UTA) during the screen.
      Q4           01:18.0                         Foul: Shooting                                                Boris Diaw                                                     Ty Lawson               CC             Video
 Comment:         Diaw (UTA) makes contact to Lawson's (SAC) arm that affects his jump shot attempt.
      Q4           01:09.0                         Foul: Shooting                                              Arron Afflalo                                                 Gordon Hayward            CNC             Video
@@ -81,8 +81,8 @@ Comment:         Cauley-Stein (SAC) maintains legal guarding position and makes 
 Comment:         Gobert (UTA) deflects the ball away from Collison (SAC).
      Q4           00:03.3               Instant Replay: Overturn Ruling                                                                                                                                CC             Video
 Comment:         After communicating with the Replay Center, the ruling on the floor of SAC possession is overturned and UTA are awarded possession.
-     Q4           00:00.8                         Foul: Shooting                                                Ty Lawson                                                     George Hill             CNC             Video
-Comment:         Lawson (SAC) makes incidental contact with Hill's (UTA) body prior to the shot attempt.
+     Q4           00:00.8                         Foul: Shooting                                                Ty Lawson                                                      George Hill            CNC             Video
+Comment:         Lawson (SAC) makes incidental contact to Hill's (UTA) body prior to the shot attempt.
      Q4           00:00.1                         Foul: Shooting                                           Willie Cauley-Stein                                                 George Hill            CNC             Video
 Comment:         Cauley-Stein (SAC) makes incidental contact with Hill (UTA) following the release of his shot attempt.
      Q5           01:58.0                         Foul: Personal                                           Willie Cauley-Stein                                                Rudy Gobert             CNC             Video
@@ -109,13 +109,13 @@ Comment:         Cauley-Stein (SAC) makes incidental contact with Gobert (UTA) d
 Comment:         Hood (UTA) maintains legal guarding position on the drive to the basket by Collison (SAC).
      Q5           00:17.9                         Foul: Personal                                           Willie Cauley-Stein                                                 George Hill             CC             Video
 Comment:         Cauley-Stein (SAC) makes contact with Hill (UTA) that affects his SQBR.
-     Q5           00:17.9                        Violation: Lane                                              Arron Afflalo                                                                                           Video
+     Q5           00:17.9                         Violation: Lane                                              Arron Afflalo                                                        ,                                 Video
 Comment:         [Observable in enhanced video] Afflalo (SAC) enters the paint area prior to the free throw being released.
      Q5           00:11.6                         Foul: Offensive                                          Willie Cauley-Stein                                                 George Hill            CNC             Video
 Comment:         Cauley-Stein (SAC) sets the screen on Hill (UTA) and gives him room to avoid the contact.
      Q5           00:08.9                         Foul: Shooting                                               Rudy Gobert                                                 Willie Cauley-Stein         CC             Video
 Comment:         Gobert (UTA) makes contact with Cauley-Stein's (SAC) body that affects his driving shot attempt.
-     Q5           00:06.5                      Turnover: Traveling                                             George Hill                                                                                            Video
+     Q5           00:06.5                      Turnover: Traveling                                              George Hill                                                         ,                                 Video
 Comment:         [Observable in enhanced video] Hill (UTA) moves his pivot foot at the start of his dribble.
 
 
