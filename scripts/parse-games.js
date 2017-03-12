@@ -376,7 +376,7 @@ function parse({ index, file }, cb) {
 
 function init() {
 	const fileInput = fs.readdirSync(`${cwd}/processing/text`).filter(file => file.endsWith('pdf.txt'))
-	const files = DEBUG ? ['L2M-ATL-POR-02-13-17.pdf'] : fileInput
+	const files = DEBUG ? ['L2M-MIN-MIL-03-11-17.pdf'] : fileInput
 
 	const len = files.length
 	let index = 0
