@@ -62,7 +62,7 @@ function removePDFs() {
 
 function init() {
 	const command = 'curl -o processing/archive.html http://official.nba.com/nba-last-two-minute-reports-archive/'
-	// const command = 'curl -o processing/archive-temp.html http://official.nba.com/nba-officiating-last-two-minute-report-march-1-2017/'
+	// const command = 'curl -o processing/archive-temp.html http://official.nba.com/nba-officiating-last-two-minute-report-march-13-2017/'
 	shell.exec(command, { silent: true })
 
 	let maxGames = 99999
