@@ -18,14 +18,14 @@ Comment:         Antetokounmpo (MIL) maintains legal guarding position and makes
      Q4           01:42.0                         Foul: Shooting                                               CJ McCollum                                                Giannis Antetokounmpo   CNC             Video
 
 Comment:         McCollum (POR) makes contact with the ball and any contact with Antetokounmpo (MIL) is incidental.
-                                                                                                                                                                                                       CNC             Video
-     Q4           01:34.0                         Foul: Offensive                                              Jusuf Nurkic                                                 Malcolm Brogdon
+                                                                                                                                                                                                       
+     Q4           01:34.0                         Foul: Offensive                                              Jusuf Nurkic                                                 Malcolm Brogdon    CNC             Video
 Comment:         Nurkic (POR) sets the screen on Brogdon (MIL) and gives him room to avoid the contact.
-                                                                                                                                                                                                       CNC             Video
-     Q4           01:30.0                         Foul: Personal                                       Giannis Antetokounmpo                                                   Jusuf Nurkic
+                                                                                                                                                                                                       
+     Q4           01:30.0                         Foul: Personal                                       Giannis Antetokounmpo                                                   Jusuf Nurkic   CNC             Video
 Comment:         Antetokounmpo (MIL) maintains legal guarding position defending Nurkic (POR) in the post.
-                                                                                                                                                                                                       CNC             Video
-     Q4           01:14.0                         Foul: Personal                                               Allen Crabbe                                                  Khris Middleton
+                                                                                                                                                                                                       
+     Q4           01:14.0                         Foul: Personal                                               Allen Crabbe                                                  Khris Middleton    CNC             Video
 
 Comment:         Crabbe (POR) maintains legal guarding position and makes incidental contact with Middleton (MIL) that does not affect his SQBR.
      Q4   01:08.0                      Turnover: Traveling                                          Khris Middleton   Video
