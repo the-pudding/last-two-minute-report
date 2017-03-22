@@ -14,8 +14,8 @@ questions, please contact the NBA here.
      Q4           01:59.0                         Foul: Shooting                                       Giannis Antetokounmpo                                                   Allen Crabbe            CNC             Video
 Comment:         Antetokounmpo (MIL) maintains legal guarding position and makes incidental contact with Crabbe (POR) that does not affect his drive to the basket and shot
                  attempt.
-                                                                                                                                                                                                       CNC             Video
-     Q4           01:42.0                         Foul: Shooting                                               CJ McCollum                                                Giannis Antetokounmpo
+                                                                                                                                                                                                       
+     Q4           01:42.0                         Foul: Shooting                                               CJ McCollum                                                Giannis Antetokounmpo   CNC             Video
 
 Comment:         McCollum (POR) makes contact with the ball and any contact with Antetokounmpo (MIL) is incidental.
                                                                                                                                                                                                        CNC             Video
