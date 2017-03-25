@@ -21,8 +21,8 @@ Comment:         Schroder (ATL) makes contact with the ball and any contact with
      Q4           01:25.0                         Foul: Shooting                                            Thabo Sefolosha                                               Giannis Antetokounmpo        CNC             Video
 Comment:         Sefolosha (ATL) maintains legal guarding position and makes incidental contact with Antetokounmpo (MIL) that does not affect his drive to the basket and shot
                  attempt.
-                                                                                                                                                                                                       CNC             Video
-     Q4           01:20.0                         Foul: Offensive                                           Thabo Sefolosha                                                 Malcolm Brogdon
+                                                                                                                                                                                                       
+     Q4           01:20.0                         Foul: Offensive                                           Thabo Sefolosha                                                 Malcolm Brogdon   CNC             Video
 Comment:         Sefolosha (ATL) sets the screen on Brogdon (MIL) and gives him room to avoid the contact.
      Q4   01:18.0                      Turnover: Traveling                                         Tim Hardaway Jr.   Video
                   
