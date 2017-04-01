@@ -26,7 +26,7 @@ specified_types = {
     'disadvantaged_team': agate.Text()
 }
 
-data = agate.Table.from_csv('../output/all_games.csv', column_types=specified_types)
+data = agate.Table.from_csv('../.tmp/concat.csv', column_types=specified_types)
 
 select_columns = ['play_id', 'ref_1', 'ref_2', 'ref_3', 'video', 'box_score_url', 'original_pdf', 'game_id']
 
