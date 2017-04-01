@@ -1,0 +1,64 @@
+Below is the league's assessment of officiated events that occurred in the last two minutes of last night's games which were within five points at the two-minute mark (and during overtime,
+where applicable). The plays assessed include all calls (whistles) and notable non-calls. Notable non-calls will generally be defined as material plays directly related to the outcome of a
+possession. Similar to our instant replay standards, there must be clear and conclusive video evidence in order to make a determination that a play was incorrectly officiated. Events that are
+indirectly related to the outcome of a possession (e.g., a non-call on contact away from the play) and/or plays that are only observable with the help of a stop-watch, zoom or other technical
+support, are noted in brackets along with the explanatory comments but are not deemed to be incorrectly officiated. The league may change its view after further review. If you have any
+questions, please contact the NBA here.
+                                                                                   Wizards (88) @ Jazz (95) (Mar 31, 2017)
+                                                                             (CC = Correct Call, IC = Incorrect Call, CNC = Correct Non-Call, INC = Incorrect Non-Call)
+
+
+   Period           Time                             Call Type                                             Committing Player                                              Disadvantaged Player   Review Decision      Video
+
+
+     Q4           01:58.0                         Foul: Offensive                                             Marcin Gortat                                                   Shelvin Mack            CNC             Video
+Comment:         Gortat (WAS) makes marginal contact with Mack (UTA) on the screen.
+     Q4           01:56.0                      Turnover: Traveling                                             Bradley Beal                                                                                           Video
+Comment:         [Observable in enhanced video] Beal (WAS) moves his pivot foot.
+     Q4           01:55.0                         Foul: Shooting                                              Shelvin Mack                                                    Bradley Beal             CC             Video
+Comment:         Mack (UTA) makes contact to the body of Beal (WAS) that affects his shot attempt.
+     Q4           01:47.0                         Foul: Offensive                                              Rudy Gobert                                                   Otto Porter Jr.          CNC             Video
+Comment:         Gobert (UTA) and Porter Jr. (WAS) briefly engage and separate off ball.
+     Q4           01:42.0                         Foul: Offensive                                              Joe Johnson                                                     John Wall              CNC             Video
+Comment:         Johnson (UTA) sets the screen on Wall (WAS) and gives him room to avoid the contact.
+     Q4           01:41.0                         Foul: Offensive                                              Rudy Gobert                                                     John Wall              CNC             Video
+Comment:         Gobert (UTA) sets the screen on Wall (WAS) and gives him room to avoid the contact.
+     Q4           01:35.0                         Foul: Personal                                             Markieff Morris                                                  Rudy Gobert             INC             Video
+Comment:         Morris (WAS) grabs and holds Gobert (UTA), affecting his FOM off ball.
+     Q4           01:33.0                         Foul: Shooting                                              Marcin Gortat                                                   Joe Johnson             CNC             Video
+Comment:         Gortat (WAS) legally contests Johnson's (UTA) jump shot attempt.
+     Q4           01:21.0                         Foul: Offensive                                            Markieff Morris                                                   Joe Ingles             CNC             Video
+Comment:         Morris (WAS) sets the screen on Ingles (UTA) and gives him room to avoid the contact.
+     Q4           01:19.0                         Foul: Personal                                                 Joe Ingles                                                   Bradley Beal            CNC             Video
+Comment:         Ingles (UTA) cleanly strips the ball from Beal (WAS).
+     Q4           01:13.0                         Foul: Offensive                                             Marcin Gortat                                                    Joe Ingles             CNC             Video
+Comment:         Gortat (WAS) sets the screen on Ingles (UTA) and gives him room to avoid the contact.
+     Q4           01:11.0                         Foul: Personal                                                 Joe Ingles                                                   Bradley Beal            CNC             Video
+Comment:         Ingles (UTA) makes marginal contact with Beal (WAS) that does not affect his SQBR.
+     Q4           00:54.7                         Foul: Personal                                                 John Wall                                                  Gordon Hayward            CNC             Video
+Comment:         Wall (WAS) makes marginal contact with Hayward (UTA) that does not affect his SQBR.
+     Q4           00:51.3                      Turnover: Traveling                                            Shelvin Mack                                                                                            Video
+Comment:         [Observable in enhanced video] Mack (UTA) moves his pivot foot.
+     Q4           00:49.1                        Foul: Loose Ball                                              Rudy Gobert                                                  Markieff Morris           CNC             Video
+Comment:         Gobert (UTA) makes incidental contact with Morris (WAS) after the made shot attempt.
+     Q4           00:39.4                         Foul: Offensive                                             Marcin Gortat                                                    Joe Ingles             CNC             Video
+Comment:         Gortat (WAS) sets the screen on Ingles (UTA) and gives him room to avoid the contact.
+     Q4           00:35.3               Instant Replay: Support Ruling                                                                                                                                 CC             Video
+Comment:         After communicating with the Replay Center, the ruling on the floor of UTA possession stands.
+     Q4           00:33.4                         Foul: Personal                                              Kelly Oubre Jr.                                                 Shelvin Mack             CC             Video
+Comment:         Oubre Jr. (WAS) commits a take foul on Mack (UTA).
+     Q4           00:27.8                         Foul: Personal                                               Bradley Beal                                                    Joe Ingles              CC             Video
+Comment:         Beal (WAS) commits a take foul on Ingles (UTA).
+     Q4           00:20.6                         Foul: Shooting                                               Joe Johnson                                                    Bradley Beal            CNC             Video
+Comment:         Johnson (UTA) legally contests Beal's (WAS) jump shot attempt.
+
+
+Common Play Abbreviations: SQBR - Speed, Quickness, Balance, Rhythm; POC - Point of Contact; OOB - Out of Bounds; FOM - Freedom of Movement
+
+Common Camera Abbreviations: L/RHH - Left or Right Hand Held; L/RATR - Left or Right Above the Rim; L/RO - Slash - Left or Right Slash
+
+For more information about the rules, go to http://www.nba.com/news/officiating for rule and case books, the NBA Video Rulebook, Misunderstood Rule Explanations and other information
+
+
+
+                                                                                                                             Page 1 of 1                                                              04/01/2017 02:20:35PM
