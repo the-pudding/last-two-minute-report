@@ -1,14 +1,14 @@
 player,count_for_inc,count_for_ic,count_for,count_against_inc,count_against_ic,count_against,net
-Marcin Gortat,24,1,25,3,1,4,21
+Marcin Gortat,26,1,27,3,1,4,23
 Hassan Whiteside,19,2,21,3,,3,18
 Brook Lopez,23,,23,6,1,7,16
 Karl-Anthony Towns,20,1,21,5,,5,16
 Matt Barnes,14,2,16,1,,1,15
-Dwight Howard,19,1,20,5,,5,15
+Dwight Howard,19,1,20,6,,6,14
 Tyson Chandler,16,1,17,2,2,4,13
+Al Horford,22,,22,7,2,9,13
 Mason Plumlee,15,,15,2,,2,13
 Draymond Green,19,,19,4,3,7,12
-Al Horford,21,,21,7,2,9,12
 James Harden,22,5,27,15,1,16,11
 Serge Ibaka,12,,12,1,,1,11
 Kenneth Faried,16,1,17,6,,6,11
@@ -155,7 +155,6 @@ Shawn Marion,1,,1,,,,1
 Paul Pierce,3,,3,1,1,2,1
 John Henson,3,,3,1,1,2,1
 Alan Anderson,1,,1,,,,1
-Mike Muscala,2,,2,1,,1,1
 Jonas Valanciunas,8,,8,6,1,7,1
 Evan Fournier,5,1,6,5,,5,1
 Jeff Teague,4,3,7,6,,6,1
@@ -225,6 +224,7 @@ Tyler Hansbrough,1,,1,1,,1,0
 Lance Thomas,2,,2,2,,2,0
 Rasual Butler,1,,1,1,,1,0
 CJ McCollum,4,,4,4,,4,0
+Mike Muscala,2,,2,2,,2,0
 J.R. Smith,3,1,4,2,2,4,0
 Paul Millsap,10,2,12,10,2,12,0
 Dion Waiters,6,,6,3,3,6,0
@@ -307,7 +307,7 @@ Jeff Green,3,1,4,4,4,8,-4
 Kemba Walker,9,2,11,13,2,15,-4
 George Hill,5,2,7,9,2,11,-4
 Stephen Curry,3,,3,7,,7,-4
-Jimmy Butler,7,2,9,10,3,13,-4
+Jimmy Butler,8,2,10,11,3,14,-4
 Deron Williams,3,,3,6,1,7,-4
 Iman Shumpert,2,,2,5,1,6,-4
 Kyrie Irving,4,1,5,8,1,9,-4
