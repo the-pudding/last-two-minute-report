@@ -45,7 +45,6 @@ Dwyane Wade,9,5,14,8,2,10,4
 Ish Smith,6,,6,2,,2,4
 David Lee,4,,4,,,,4
 Kristaps Porzingis,8,,8,4,,4,4
-Paul George,9,5,14,10,,10,4
 Ryan Anderson,4,2,6,2,,2,4
 Raymond Felton,4,,4,,,,4
 Julius Randle,6,,6,2,,2,4
@@ -74,6 +73,7 @@ Kyle Lowry,12,1,13,7,3,10,3
 Harrison Barnes,6,,6,3,,3,3
 Chris Bosh,2,1,3,,,,3
 Boris Diaw,2,1,3,,,,3
+Paul George,9,5,14,11,,11,3
 Marcus Thornton,3,,3,,,,3
 Rajon Rondo,6,,6,2,1,3,3
 Willie Cauley-Stein,3,,3,,,,3
@@ -105,6 +105,7 @@ Kendrick Perkins,2,,2,,,,2
 Patrick Patterson,3,,3,1,,1,2
 DeMarre Carroll,5,,5,2,1,3,2
 Tristan Thompson,7,,7,5,,5,2
+Jeff Teague,5,3,8,6,,6,2
 Ed Davis,3,,3,1,,1,2
 E'Twaun Moore,4,,4,1,1,2,2
 Lavoy Allen,2,,2,,,,2
@@ -159,7 +160,6 @@ John Henson,3,,3,1,1,2,1
 Alan Anderson,1,,1,,,,1
 Jonas Valanciunas,8,,8,6,1,7,1
 Evan Fournier,5,1,6,5,,5,1
-Jeff Teague,4,3,7,6,,6,1
 Al Jefferson,2,,2,1,,1,1
 Andre Roberson,3,,3,2,,2,1
 D'Angelo Russell,2,,2,1,,1,1
@@ -209,7 +209,7 @@ Tyronn Lue,1,,1,,,,1
 Bryn Forbes,1,,1,,,,1
 Stephen Zimmerman,1,,1,,,,1
 Noah Vonleh,1,,1,,,,1
-LeBron James,13,1,14,13,1,14,0
+Channing Frye,1,,1,,,,1
 Avery Bradley,5,,5,5,,5,0
 DeAndre Jordan,9,,9,7,2,9,0
 Jeremy Lin,4,,4,2,2,4,0
@@ -253,6 +253,7 @@ Caris LeVert,1,,1,1,,1,0
 Marquese Chriss,1,,1,1,,1,0
 Maurice Harkless,1,,1,1,,1,0
 James Johnson,1,,1,1,,1,0
+LeBron James,13,1,14,14,1,15,-1
 Bradley Beal,5,,5,5,1,6,-1
 Danny Green,1,,1,1,1,2,-1
 Jason Smith,1,,1,2,,2,-1
