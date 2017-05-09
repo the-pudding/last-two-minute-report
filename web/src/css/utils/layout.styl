@@ -3,14 +3,46 @@
 // -------------------
 
 // Setting root sizes and base styles.
-html
-	text-size-adjust 100%
 
 body
-	font-feature-settings 'kern' 1, 'onum' 1, 'liga' 0
-	// -webkit-font-smoothing antialiased
-	// -moz-osx-font-smoothing grayscale
+	font-feature-settings 'kern' 1, 'onum' 1, 'liga' 0, 'tnum' 1
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
 	-webkit-tap-highlight-color rgba(0,0,0,0)
+	background-color #fff
+	color $off-black
+	font-size $root-size
+
+h1
+	set-type-size(xxx-large, true)
+	margin 1.5rem 0
+h2
+	set-type-size(xx-large, true)
+	margin 1.5rem 0
+h3
+	set-type-size(x-large, true)
+	margin 1.5rem 0
+h4
+	set-type-size(large, true)
+	margin 1.5rem 0
+h5
+	set-type-size(medium, true)
+	margin 1.5rem 0
+h6
+	set-type-size(small, true)
+	margin 1.5rem 0
+	
+p 
+	margin 1.5rem 0
+	set-type-size(medium, true)
+
+a
+	text-decoration none
+	border-bottom 2px solid $primary
+	color $off-black
+
+	&:visited, &:hover
+		color $off-black
 
 strong, b
 	font-weight bold
@@ -20,6 +52,9 @@ em, i
 	
 ul
 	list-style-type none
+
+li
+	set-type-size(medium, true)
 
 img, video
 	display block
@@ -33,8 +68,11 @@ button
 	padding 0
 	font-size 1rem
 
+h1
+	set-type-size(xxx-large, true)
+
 sub, sup
-	font-size 75%
+	font-size 0.75rem
 	line-height 0
 	position relative
 	vertical-align baseline
@@ -44,11 +82,3 @@ sup
 
 sub
 	bottom -0.25em
-	
-// Various hides
-.hide-accessible
-	hidden(accessible)
-.hide-invisible
-	hidden(invisible)
-.hide-display
-	hidden()

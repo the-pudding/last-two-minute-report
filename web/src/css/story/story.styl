@@ -1,11 +1,7 @@
-fontify($ptSerif, $ptSerif-hash, 400, $serif, 400, 0.04em)
-fontify($roboto, $roboto-hash, 400, $sans, 400, 0.04em)
 
 body
 	background #fff
-	font-size 16px
-	+mq('bp-2')
-		font-size 17px
+	font-size 18px
 
 main
 	padding 0.75rem
@@ -16,7 +12,7 @@ a
 	border-bottom 1px dotted currentColor
 
 p
-	line-height 1.6
+	line-height 1.7
 	margin 1rem 0
 
 button
@@ -36,8 +32,8 @@ button
 	margin 3rem auto
 	&__hed
 		font-size 1.5rem
-		text-transform uppercase
-		letter-spacing 0.05em
+		// text-transform uppercase
+		// letter-spacing 0.05em
 	&__intro
 		max-width $col-width
 		margin 0 auto
@@ -79,5 +75,6 @@ table
 .outro
 	border-top 1px solid $gray-light
 	max-width $col-width
-	font-size 0.9rem
 	margin 0 auto
+	p 
+		font-size 0.8rem
