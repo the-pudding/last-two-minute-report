@@ -9,7 +9,7 @@ const shell = require('shelljs')
 const cheerio = require('cheerio')
 
 // hack, this doesn't exist
-// http://ak-static.cms.nba.com/wp-content/uploads/sites/4/2015/04/L2M-SAS-LAC-4-28-2015.pdf
+// eg. http://ak-static.cms.nba.com/wp-content/uploads/sites/4/2015/04/L2M-SAS-LAC-4-28-2015.pdf
 const singleGame = null
 
 // scrape archive and get links to each game's pdf
