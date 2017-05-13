@@ -26,7 +26,7 @@ Comment:         Hardaway Jr. (ATL) and Gortat (WAS) make incidental contact wit
      Q4           01:16.0                         Foul: Personal                                               Bradley Beal                                                 Dennis Schroder           CNC             Video
 Comment:         Beal (WAS) makes marginal contact with Schroder (ATL) that does not affect his SQBR.
      Q4           01:16.0                  Turnover: Double Dribble                                         Dennis Schroder                                                                           CNC             Video
-Comment:         Schroder (ATL) fumbles the ball, does not gather with two hands on the ball, and continues his dribble.
+Comment:         Schroder (ATL) fumbles the ball but does not gather it with two hands before continuing his dribble.
      Q4           00:55.6                         Foul: Offensive                                             Marcin Gortat                                                 Dennis Schroder           CNC             Video
 Comment:         Gortat (WAS) sets the screen on Schroder (ATL) and gives him room to avoid the contact.
      Q4           00:50.6                         Foul: Offensive                                             Marcin Gortat                                                 Tim Hardaway Jr.          CNC             Video
