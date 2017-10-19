@@ -61,7 +61,8 @@ function removePDFs() {
 }
 
 function init() {
-	const command = 'curl -o processing/archive.html http://official.nba.com/nba-last-two-minute-reports-archive/'
+	const command = 'curl -o processing/archive.html http://official.nba.com/2017-18-nba-officiating-last-two-minute-reports/'
+	// const command = 'curl -o processing/archive.html http://official.nba.com/nba-last-two-minute-reports-archive/'
 	// const command = 'curl -o processing/archive-temp.html http://official.nba.com/nba-officiating-last-two-minute-report-march-13-2017/'
 	shell.exec(command, { silent: true })
 
