@@ -1,10 +1,22 @@
 module.exports = {
 	module: {
-		loaders: [
-			{ test: /\.csv?$/, loader: 'dsv-loader' },
-			{ test: /\.json$/, loader: 'json-loader' },
-			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
-		]
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [
+							require.resolve('babel-preset-env'),
+						],
+						plugins: [
+							require.resolve('babel-plugin-transform-object-rest-spread'),
+						],
+					},
+				},
+			},
+		],
 	},
-	devtool: 'inline-source-map',
+	devtool: 'cheap-module-eval-source-map',
 }

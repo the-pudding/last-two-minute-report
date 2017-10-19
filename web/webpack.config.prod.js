@@ -1,16 +1,20 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
 
 module.exports = {
 	module: {
-		loaders: [
-			{ test: /\.csv?$/, loader: 'dsv-loader' },
-			{ test: /\.json$/, loader: 'json-loader' },
-			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
-		]
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: [require.resolve('babel-preset-env')],
+						plugins: [require.resolve('babel-plugin-transform-object-rest-spread')],
+					},
+				},
+			},
+		],
 	},
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin(),
-		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.DedupePlugin()
-	]
-}
+	plugins: [new webpack.optimize.UglifyJsPlugin()],
+};
