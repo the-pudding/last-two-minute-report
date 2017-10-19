@@ -8,8 +8,8 @@ Matt Barnes,14,2,16,1,,1,15
 Dwight Howard,19,1,20,6,,6,14
 Tyson Chandler,16,1,17,2,2,4,13
 Mason Plumlee,15,,15,2,,2,13
-James Harden,24,5,29,16,1,17,12
 Draymond Green,19,,19,4,3,7,12
+James Harden,24,5,29,17,1,18,11
 Serge Ibaka,12,,12,1,,1,11
 Russell Westbrook,20,1,21,9,1,10,11
 Kenneth Faried,16,1,17,6,,6,11
@@ -84,6 +84,7 @@ Lance Stephenson,3,,3,,,,3
 Salah Mejri,4,,4,1,,1,3
 Devin Booker,4,,4,1,,1,3
 Toney Douglas,2,1,3,,,,3
+Jaylen Brown,3,,3,,,,3
 Gary Neal,1,1,2,,,,2
 JJ Redick,4,2,6,3,1,4,2
 Austin Rivers,4,,4,2,,2,2
@@ -129,8 +130,7 @@ Justin Anderson,2,,2,,,,2
 Doug McDermott,3,,3,1,,1,2
 Richard Jefferson,2,1,3,1,,1,2
 Kevin Seraphin,3,,3,1,,1,2
-Jaylen Brown,2,,2,,,,2
-LeBron James,15,1,16,14,1,15,1
+LeBron James,16,1,17,15,1,16,1
 Dante Cunningham,3,,3,2,,2,1
 Spencer Hawes,1,,1,,,,1
 Courtney Lee,1,,1,,,,1
@@ -300,6 +300,7 @@ Marcus Smart,3,,3,2,3,5,-2
 John Wall,6,1,7,10,,10,-3
 Andrew Wiggins,6,4,10,13,,13,-3
 Jarrett Jack,2,,2,5,,5,-3
+Stephen Curry,4,,4,7,,7,-3
 Derrick Rose,2,1,3,6,,6,-3
 Garrett Temple,2,1,3,5,1,6,-3
 Isaiah Thomas,4,5,9,12,,12,-3
@@ -307,7 +308,6 @@ Otto Porter,4,,4,7,,7,-3
 Tim Hardaway Jr.,1,,1,3,1,4,-3
 Jeff Green,3,1,4,4,4,8,-4
 Kemba Walker,9,2,11,13,2,15,-4
-Stephen Curry,3,,3,7,,7,-4
 Jimmy Butler,8,2,10,11,3,14,-4
 Deron Williams,3,,3,6,1,7,-4
 Iman Shumpert,2,,2,5,1,6,-4
