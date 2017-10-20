@@ -404,9 +404,12 @@ function parse({ index, file }, cb) {
 }
 
 function init() {
+	const ms = new Date().getTime();
+	const hour = 3600000;
 	const fileInput = fs
 		.readdirSync(`${cwd}/processing/text`)
 		.filter(file => file.endsWith('pdf.txt'));
+
 	const files = DEBUG ? ['L2M-BOS-CLE-10-17-2017.pdf', 'L2M-HOU-GSW-10-17-2017.pdf'] : fileInput;
 
 	const len = files.length;
@@ -415,11 +418,18 @@ function init() {
 	const next = () => {
 		const file = files[index].replace('.txt', '');
 
-		parse({ file, index }, () => {
+		const stats = fs.statSync(`${cwd}/processing/text/${file}.txt`);
+		const diff = ms - stats.birthtimeMs;
+		if (diff < hour) {
+			parse({ file, index }, () => {
+				index += 1;
+				if (index < len) next();
+				else console.log('bad format games:', badFormatGames);
+			});
+		} else {
 			index += 1;
 			if (index < len) next();
-			else console.log('bad format games:', badFormatGames);
-		});
+		}
 	};
 
 	if (len > 0) next();
