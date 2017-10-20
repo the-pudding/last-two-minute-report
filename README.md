@@ -38,6 +38,7 @@ in web:
 
 ## Manual fixes
 * conversion of pdf to text for `L2M-BKN-ORL-12-16-16.pdf` resulted in a period + line break for the last entry
+* Waiting on Video links for [L2M-PHI-WAS-10-18-2017](http://official.nba.com/wp-content/uploads/sites/4/2017/10/L2M-PHI-WAS-10-18-2017.pdf)
 
 
 ## Resources

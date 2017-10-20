@@ -5,3 +5,4 @@ processing/html
 processing/pdf
 processing/archive.html
 .tmp
+debug.json

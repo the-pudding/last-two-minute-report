@@ -1,7 +1,7 @@
 /*
 convert text files to csv
 */
-const DEBUG = false;
+const DEBUG = true;
 
 const cwd = process.cwd();
 
@@ -141,7 +141,7 @@ function getCommittingPlayer(d) {
 	return null;
 }
 
-function getDisdvantagedPlayer(d) {
+function getDisadvantagedPlayer(d) {
 	const MAX = 7;
 	// check to see if there is a review decision
 	const joined = d.join(' ');
@@ -149,7 +149,7 @@ function getDisdvantagedPlayer(d) {
 	REVIEW_TYPES.forEach((r) => {
 		if (joined.indexOf(r) > -1) review = true;
 	});
-
+	console.log(joined);
 	if (d.length === MAX) return d[4];
 	else if (d.length === 6 && !review) return d[4];
 
@@ -216,14 +216,13 @@ function extractReviews({ lines, videoURLs }) {
 	const details = lines.filter(line => line[0].match(/Q\d/) && line[0].length === 2);
 
 	const comments = extractComments(lines);
-
 	const reviews = details.map((d, i) => ({
 		period: d[0],
 		time: d[1],
 		seconds_left: getSeconds(d[1]),
 		call_type: d[2],
 		committing_player: getCommittingPlayer(d),
-		disadvantaged_player: getDisdvantagedPlayer(d),
+		disadvantaged_player: getDisadvantagedPlayer(d),
 		review_decision: getReviewDecision(d),
 		comment: comments[i],
 		video: videoURLs[i],
@@ -397,7 +396,7 @@ function parse({ index, file }, cb) {
 
 		// write out data
 		const csvOut = d3.csvFormat(reviewsWithTeam);
-		if (DEBUG) console.log(JSON.stringify(reviewsWithTeam, null, 2));
+		if (DEBUG) fs.writeFileSync('debug.json', JSON.stringify(reviewsWithTeam, null, 2));
 		else fs.writeFileSync(`${cwd}/output/games/${info.game_id}.csv`, csvOut);
 		cb();
 	});
@@ -410,7 +409,7 @@ function init() {
 		.readdirSync(`${cwd}/processing/text`)
 		.filter(file => file.endsWith('pdf.txt'));
 
-	const files = DEBUG ? ['L2M-BOS-CLE-10-17-2017.pdf', 'L2M-HOU-GSW-10-17-2017.pdf'] : fileInput;
+	const files = DEBUG ? ['L2M-PHI-WAS-10-18-2017.pdf', 'L2M-MIL-BOS-10-18-2017.pdf'] : fileInput;
 
 	const len = files.length;
 	let index = 0;
@@ -420,7 +419,7 @@ function init() {
 
 		const stats = fs.statSync(`${cwd}/processing/text/${file}.txt`);
 		const diff = ms - stats.birthtimeMs;
-		if (diff < hour) {
+		if (diff < hour || DEBUG) {
 			parse({ file, index }, () => {
 				index += 1;
 				if (index < len) next();
