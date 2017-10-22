@@ -11,18 +11,6 @@ The code is a bit involved because the NBA doesn't stick to a consistent format!
 * Clone repo and run `npm i`
 * Run `make setup`
 
-## Usage
-
-* `make latest`
-* `make concat`
-* `make incorrect`
-* manually update custom/incorrect_call_with_ref.csv
-* `make merge-incorrect`
-* `make commit-latest`
-* `make web-data`
-* `make copy-data`
-* `make commit-web`
-
 in web:
 * `gulp prod`
 * `make live`
@@ -44,3 +32,16 @@ in web:
 ## Resources
 http://www.nbra.net/nba-officials/referee-biographies/
 http://official.nba.com/referee-assignments/
+
+## Usage
+
+* `make latest`
+* `make concat`
+* `make incorrect`
+* manually update custom/incorrect_call_with_ref.csv
+* `make merge-incorrect`
+* `make commit-latest`
+* `make web-data`
+* `make copy-data`
+* `make commit-web`
+* `cd web; gulp prod; make live`

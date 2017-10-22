@@ -1,7 +1,7 @@
 /*
 convert text files to csv
 */
-const DEBUG = true;
+const DEBUG = false;
 
 const cwd = process.cwd();
 
@@ -149,7 +149,7 @@ function getDisadvantagedPlayer(d) {
 	REVIEW_TYPES.forEach((r) => {
 		if (joined.indexOf(r) > -1) review = true;
 	});
-	console.log(joined);
+	// console.log(joined);
 	if (d.length === MAX) return d[4];
 	else if (d.length === 6 && !review) return d[4];
 
