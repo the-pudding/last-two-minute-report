@@ -1,12 +1,12 @@
 player,count_for_inc,count_for_ic,count_for,count_against_inc,count_against_ic,count_against,net
-Marcin Gortat,28,1,29,4,1,5,24
+Marcin Gortat,28,1,29,4,2,6,23
 Hassan Whiteside,19,2,21,3,,3,18
 Karl-Anthony Towns,21,1,22,5,,5,17
 Brook Lopez,23,,23,6,1,7,16
+Dwight Howard,21,1,22,6,,6,16
 Al Horford,24,,24,7,2,9,15
 Matt Barnes,14,2,16,1,,1,15
-Tyson Chandler,17,1,18,2,2,4,14
-Dwight Howard,19,1,20,6,,6,14
+Tyson Chandler,17,1,18,3,2,5,13
 Mason Plumlee,15,,15,2,,2,13
 James Harden,25,5,30,17,1,18,12
 Draymond Green,19,,19,4,3,7,12
@@ -42,12 +42,15 @@ Nene,9,,9,4,,4,5
 David Lee,6,,6,1,,1,5
 Arron Afflalo,7,1,8,3,,3,5
 Joe Johnson,7,,7,2,1,3,4
+Will Barton,5,2,7,3,,3,4
 Lou Amundson,4,,4,,,,4
 Dwyane Wade,9,5,14,8,2,10,4
 Ish Smith,6,,6,2,,2,4
 Trevor Ariza,9,,9,4,1,5,4
+Kyle Lowry,13,1,14,7,3,10,4
 Ryan Anderson,4,2,6,2,,2,4
 Julius Randle,6,,6,2,,2,4
+Willie Cauley-Stein,4,,4,,,,4
 Michael Carter-Williams,3,3,6,2,,2,4
 Nik Stauskas,2,2,4,,,,4
 Seth Curry,4,,4,,,,4
@@ -58,7 +61,6 @@ Marcus Morris,8,,8,2,3,5,3
 Roy Hibbert,5,,5,1,1,2,3
 Nikola Mirotic,3,2,5,2,,2,3
 Tim Duncan,6,1,7,4,,4,3
-Will Barton,4,2,6,3,,3,3
 Blake Griffin,8,,8,5,,5,3
 Devin Harris,5,,5,2,,2,3
 Alex Len,4,,4,1,,1,3
@@ -67,7 +69,6 @@ Dirk Nowitzki,14,1,15,10,2,12,3
 Meyers Leonard,4,1,5,1,1,2,3
 Patrick Patterson,4,,4,1,,1,3
 Thabo Sefolosha,3,1,4,1,,1,3
-Kyle Lowry,12,1,13,7,3,10,3
 Kristaps Porzingis,8,,8,5,,5,3
 Jeff Teague,6,3,9,6,,6,3
 Harrison Barnes,6,,6,3,,3,3
@@ -77,13 +78,11 @@ Paul George,10,5,15,12,,12,3
 Marcus Thornton,3,,3,,,,3
 Rajon Rondo,6,,6,2,1,3,3
 Raymond Felton,5,,5,1,1,2,3
-Willie Cauley-Stein,3,,3,,,,3
-Nikola Jokic,6,,6,2,1,3,3
+Nikola Jokic,6,1,7,3,1,4,3
 Justise Winslow,6,,6,3,,3,3
 Tony Allen,5,,5,1,1,2,3
 Lance Stephenson,3,,3,,,,3
 Salah Mejri,4,,4,1,,1,3
-Devin Booker,4,,4,1,,1,3
 Toney Douglas,2,1,3,,,,3
 Jaylen Brown,3,,3,,,,3
 Gary Neal,1,1,2,,,,2
@@ -115,6 +114,7 @@ Cory Joseph,9,,9,5,2,7,2
 Anthony Tolliver,2,,2,,,,2
 Victor Oladipo,6,,6,4,,4,2
 Chandler Parsons,2,2,4,2,,2,2
+Ian Mahinmi,5,1,6,3,1,4,2
 Jamal Crawford,3,,3,1,,1,2
 Wesley Johnson,2,,2,,,,2
 Greg Monroe,5,,5,2,1,3,2
@@ -122,6 +122,7 @@ Vince Carter,4,,4,2,,2,2
 Shaun Livingston,4,,4,1,1,2,2
 Emmanuel Mudiay,2,3,5,3,,3,2
 Gary Harris,2,,2,,,,2
+Devin Booker,4,,4,2,,2,2
 Norman Powell,2,,2,,,,2
 Kyle O'Quinn,4,,4,2,,2,2
 Boban Marjanovic,2,,2,,,,2
@@ -163,13 +164,13 @@ Joel Anthony,1,,1,,,,1
 Dennis Schroder,6,1,7,5,1,6,1
 TJ Warren,3,,3,2,,2,1
 Alexis Ajinca,3,,3,2,,2,1
-Ian Mahinmi,4,1,5,3,1,4,1
 Ramon Sessions,1,,1,,,,1
 Allen Crabbe,2,1,3,2,,2,1
 Troy Daniels,2,,2,1,,1,1
 Rodney Hood,2,2,4,3,,3,1
 Darrell Arthur,1,,1,,,,1
 D.J. Augustin,1,,1,,,,1
+Quincy Acy,2,,2,1,,1,1
 Miles Plumlee,1,,1,,,,1
 Chris McCullough,1,,1,,,,1
 Donatas Motiejunas,1,,1,,,,1
@@ -221,7 +222,6 @@ Klay Thompson,3,2,5,3,2,5,0
 Tony Parker,4,,4,2,2,4,0
 Chase Budinger,1,,1,1,,1,0
 Brandon Bass,2,,2,1,1,2,0
-Aaron Gordon,1,,1,1,,1,0
 Tyler Hansbrough,1,,1,1,,1,0
 Lance Thomas,2,,2,2,,2,0
 Rasual Butler,1,,1,1,,1,0
@@ -229,6 +229,7 @@ CJ McCollum,4,,4,4,,4,0
 Mike Muscala,2,,2,2,,2,0
 J.R. Smith,3,1,4,2,2,4,0
 LaMarcus Aldridge,7,1,8,6,2,8,0
+Paul Millsap,11,2,13,11,2,13,0
 Evan Fournier,5,1,6,6,,6,0
 Dion Waiters,6,,6,3,3,6,0
 Kevin Garnett,1,,1,1,,1,0
@@ -238,7 +239,6 @@ Mario Chalmers,1,,1,1,,1,0
 Ricky Rubio,8,,8,7,1,8,0
 Jared Dudley,1,1,2,1,1,2,0
 Hollis Thompson,3,,3,3,,3,0
-Quincy Acy,1,,1,1,,1,0
 Shelvin Mack,1,,1,1,,1,0
 Jonas Jerebko,2,,2,1,1,2,0
 Jordan Farmar,1,,1,1,,1,0
@@ -263,8 +263,7 @@ Jason Smith,1,,1,2,,2,-1
 Alexey Shved,1,,1,2,,2,-1
 Wayne Ellington,1,,1,2,,2,-1
 Trey Burke,1,,1,2,,2,-1
-Matthew Dellavedova,2,,2,3,,3,-1
-Paul Millsap,10,2,12,11,2,13,-1
+Aaron Gordon,1,,1,2,,2,-1
 Andre Roberson,3,,3,4,,4,-1
 Corey Brewer,2,,2,3,,3,-1
 Derrick Favors,4,,4,5,,5,-1
@@ -286,10 +285,10 @@ Kelly Oubre Jr.,1,,1,1,1,2,-1
 Sean Kilpatrick,1,1,2,3,,3,-1
 Avery Bradley,5,,5,7,,7,-2
 Jordan Hill,2,,2,3,1,4,-2
-Bradley Beal,5,,5,6,1,7,-2
 Nerlens Noel,7,,7,8,1,9,-2
 Al-Farouq Aminu,4,,4,5,1,6,-2
 Joe Ingles,2,,2,4,,4,-2
+Matthew Dellavedova,2,,2,4,,4,-2
 Lou Williams,2,,2,3,1,4,-2
 Pau Gasol,4,,4,5,1,6,-2
 Amir Johnson,2,,2,3,1,4,-2
@@ -303,6 +302,7 @@ Buddy Hield,1,,1,3,,3,-2
 Rondae Hollis-Jefferson,1,,1,3,,3,-2
 Marcus Smart,3,,3,2,3,5,-2
 Tim Hardaway Jr.,2,,2,3,1,4,-2
+Bradley Beal,5,,5,7,1,8,-3
 John Wall,6,1,7,10,,10,-3
 Jarrett Jack,2,,2,5,,5,-3
 Stephen Curry,4,,4,7,,7,-3
@@ -317,9 +317,9 @@ Deron Williams,3,,3,6,1,7,-4
 Garrett Temple,2,1,3,6,1,7,-4
 Iman Shumpert,2,,2,5,1,6,-4
 Langston Galloway,1,,1,3,2,5,-4
+George Hill,6,2,8,10,3,13,-5
 Marvin Williams,2,,2,7,,7,-5
 Kyrie Irving,4,1,5,9,1,10,-5
-George Hill,5,2,7,10,3,13,-6
 Andre Iguodala,3,,3,9,,9,-6
 Wesley Matthews,5,2,7,12,1,13,-6
 Kevin Durant,2,1,3,7,2,9,-6
