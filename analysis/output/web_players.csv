@@ -10,8 +10,8 @@ Draymond Green,21,,21,4,3,7,14
 Al Horford,24,,24,8,2,10,14
 James Harden,26,5,31,17,1,18,13
 Serge Ibaka,14,,14,1,,1,13
+Andre Drummond,16,1,17,2,2,4,13
 Mason Plumlee,15,,15,2,,2,13
-Andre Drummond,15,1,16,2,2,4,12
 Kenneth Faried,16,1,17,6,,6,11
 Carmelo Anthony,17,,17,4,2,6,11
 Cody Zeller,14,,14,3,,3,11
@@ -42,6 +42,7 @@ Trevor Ariza,10,,10,4,1,5,5
 Nene,9,,9,4,,4,5
 David Lee,6,,6,1,,1,5
 Arron Afflalo,7,1,8,3,,3,5
+Marc Gasol,13,,13,8,1,9,4
 Joe Johnson,7,,7,2,1,3,4
 Lou Amundson,4,,4,,,,4
 Dwyane Wade,9,5,14,8,2,10,4
@@ -56,7 +57,6 @@ Seth Curry,4,,4,,,,4
 Lucas Nogueira,4,,4,,,,4
 Jusuf Nurkic,4,1,5,1,,1,4
 Jae Crowder,5,,5,2,,2,3
-Marc Gasol,12,,12,8,1,9,3
 Austin Rivers,5,,5,2,,2,3
 Marcus Morris,8,,8,2,3,5,3
 Dewayne Dedmon,5,1,6,3,,3,3
@@ -199,7 +199,6 @@ James Ennis III,1,,1,,,,1
 Malcolm Delaney,1,,1,,,,1
 Mindaugas Kuzminskas,1,,1,,,,1
 Kris Dunn,1,,1,,,,1
-Malcolm Brogdon,1,,1,,,,1
 Maurice Harkless,4,,4,3,,3,1
 Wayne Selden,1,,1,,,,1
 James Johnson,1,1,2,1,,1,1
@@ -215,9 +214,9 @@ Mike Scott,1,,1,,,,1
 J.J. Barea,1,,1,,,,1
 Ben Simmons,1,,1,,,,1
 Terry Rozier,1,,1,,,,1
+Brandan Wright,1,,1,,,,1
 LeBron James,17,1,18,17,1,18,0
 Jeremy Lin,4,,4,2,2,4,0
-Bojan Bogdanovic,2,,2,1,1,2,0
 Giannis Antetokounmpo,14,,14,14,,14,0
 Kentavious Caldwell-Pope,3,1,4,3,1,4,0
 Tony Parker,4,,4,2,2,4,0
@@ -256,8 +255,10 @@ Kyle Anderson,1,,1,1,,1,0
 Okaro White,1,,1,1,,1,0
 Caris LeVert,1,,1,1,,1,0
 Richaun Holmes,1,,1,1,,1,0
+Malcolm Brogdon,1,,1,1,,1,0
 Jason Terry,2,,2,2,,2,0
 DeAndre Jordan,9,,9,8,2,10,-1
+Bojan Bogdanovic,2,,2,2,1,3,-1
 Khris Middleton,7,,7,7,1,8,-1
 Danny Green,1,,1,1,1,2,-1
 Klay Thompson,3,2,5,4,2,6,-1
