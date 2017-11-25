@@ -30,6 +30,7 @@ in web:
 
 
 ## Resources
+http://official.nba.com/wp-content/uploads/sites/4/2017/10/2017-18-NBA-Referee-Headshots.pdf
 http://www.nbra.net/nba-officials/referee-biographies/
 http://official.nba.com/referee-assignments/
 
