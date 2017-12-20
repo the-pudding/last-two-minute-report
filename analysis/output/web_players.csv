@@ -30,6 +30,7 @@ Nikola Vucevic,15,2,17,9,1,10,7
 Rudy Gobert,20,,20,11,2,13,7
 Chris Paul,10,2,12,4,1,5,7
 Steven Adams,14,1,15,7,1,8,7
+Dwyane Wade,11,5,16,8,2,10,6
 Bismack Biyombo,9,1,10,3,1,4,6
 Trevor Ariza,11,,11,4,1,5,6
 Kawhi Leonard,8,1,9,3,,3,6
@@ -37,7 +38,6 @@ Patrick Beverley,6,,6,,,,6
 Marc Gasol,15,,15,9,1,10,5
 Markieff Morris,9,,9,4,,4,5
 Evan Turner,7,2,9,3,1,4,5
-Dwyane Wade,10,5,15,8,2,10,5
 DeMarcus Cousins,15,3,18,12,1,13,5
 Jordan Clarkson,7,2,9,3,1,4,5
 Nene,9,,9,4,,4,5
@@ -45,6 +45,7 @@ David Lee,6,,6,1,,1,5
 Arron Afflalo,7,1,8,3,,3,5
 Julius Randle,7,,7,2,,2,5
 Lance Stephenson,5,,5,,,,5
+Jae Crowder,6,,6,2,,2,4
 Joe Johnson,7,,7,2,1,3,4
 Lou Amundson,4,,4,,,,4
 Devin Harris,6,,6,2,,2,4
@@ -62,7 +63,6 @@ Seth Curry,4,,4,,,,4
 Lucas Nogueira,4,,4,,,,4
 Jaylen Brown,4,,4,,,,4
 Jusuf Nurkic,5,1,6,2,,2,4
-Jae Crowder,5,,5,2,,2,3
 Austin Rivers,5,,5,2,,2,3
 Marcus Morris,8,,8,2,3,5,3
 Dewayne Dedmon,5,1,6,3,,3,3
@@ -151,7 +151,6 @@ JJ Redick,4,2,6,4,1,5,1
 Nicolas Batum,6,1,7,4,2,6,1
 Nikola Mirotic,3,2,5,4,,4,1
 Ersan Ilyasova,5,,5,4,,4,1
-Giannis Antetokounmpo,15,,15,14,,14,1
 Jameer Nelson,3,,3,2,,2,1
 Zaza Pachulia,8,1,9,4,4,8,1
 Tiago Splitter,1,,1,,,,1
@@ -224,6 +223,7 @@ Davis Bertans,1,,1,,,,1
 David Nwaba,1,,1,,,,1
 LeBron James,17,1,18,17,1,18,0
 Jeremy Lin,4,,4,2,2,4,0
+Giannis Antetokounmpo,15,,15,15,,15,0
 Kentavious Caldwell-Pope,3,1,4,3,1,4,0
 Tony Parker,4,,4,2,2,4,0
 Chase Budinger,1,,1,1,,1,0
