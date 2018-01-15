@@ -95,7 +95,6 @@ James Johnson,3,1,4,1,,1,3
 Otto Porter Jr.,3,,3,,,,3
 Kyle Kuzma,3,,3,,,,3
 Gary Neal,1,1,2,,,,2
-Anthony Davis,10,3,13,10,1,11,2
 Omri Casspi,2,,2,,,,2
 Kevin Martin,2,1,3,1,,1,2
 Solomon Hill,2,,2,,,,2
@@ -149,6 +148,7 @@ Spencer Hawes,1,,1,,,,1
 Hedo Turkoglu,1,,1,,,,1
 JJ Redick,5,2,7,5,1,6,1
 Nicolas Batum,6,1,7,4,2,6,1
+Anthony Davis,10,3,13,11,1,12,1
 Ersan Ilyasova,6,,6,5,,5,1
 Jameer Nelson,3,,3,2,,2,1
 Zaza Pachulia,8,1,9,4,4,8,1
@@ -293,6 +293,7 @@ Isaiah Whitehead,1,,1,2,,2,-1
 Jahlil Okafor,1,,1,2,,2,-1
 Jabari Parker,1,,1,1,1,2,-1
 Sean Kilpatrick,1,1,2,3,,3,-1
+Tim Hardaway Jr.,3,,3,3,1,4,-1
 Jerryd Bayless,2,1,3,3,1,4,-1
 Bobby Portis,1,,1,2,,2,-1
 Andrew Harrison,2,,2,3,,3,-1
@@ -316,7 +317,6 @@ Luol Deng,3,,3,5,,5,-2
 Gary Harris,2,,2,2,2,4,-2
 Brandon Knight,1,1,2,4,,4,-2
 Marcus Smart,5,1,6,5,3,8,-2
-Tim Hardaway Jr.,2,,2,3,1,4,-2
 Dennis Smith Jr.,3,,3,5,,5,-2
 Jeff Green,5,1,6,5,4,9,-3
 Derrick Rose,2,1,3,6,,6,-3
