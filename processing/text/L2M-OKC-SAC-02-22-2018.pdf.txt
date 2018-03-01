@@ -14,7 +14,7 @@ review. If you have any questions, please contact the NBA here.
 
 
      Q4            01:58.0           Foul: Shooting                                       Russell Westbrook                                     Buddy Hield               CNC       Video
-Comment:           Westbrook (OKC) makes incidental contact with Hield (SAC) that does not affect his driving shot attempt.
+Comment:           Westbrook (OKC) makes incidental contact to Hield (SAC) that does not affect his driving shot attempt.
 
      Q4            01:56.0           Foul: Loose Ball                                       Zach Randolph                                       Jerami Grant              CNC       Video
 Comment:           Randolph (SAC) makes marginal contact with Grant (OKC) that does not affect his ability to retrieve the rebound.
@@ -59,7 +59,7 @@ Comment:           Adams (OKC) briefly engages with Carter (SAC) in the lane.
 Comment:           Temple (SAC) makes contact to Westbrook's (OKC) body that affects his driving shot attempt.
 
 
-                  00:55.1                                                                 00:31.7
+                  00:55.1                                                                 00:31.7                                                                                           +1
                   00:55.1    To    00:31.7
 
 
@@ -79,7 +79,7 @@ Comment:           Adams (OKC) cleanly blocks Hield's (SAC) driving shot attempt
       Period            Time                       Call Type                                Committing Player                            Disadvantaged Player          Review Decision   Video
 
 
-                    00:31.8                                                    00:12.0
+                    00:31.8                                                    00:12.0                                                                                                           +1
                     00:31.8    To    00:12.0
 
 
