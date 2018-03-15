@@ -14,12 +14,12 @@ Russell Westbrook,24,2,26,12,1,13,13
 James Harden,26,6,32,19,1,20,12
 Taj Gibson,13,,13,1,,1,12
 Mason Plumlee,15,,15,3,,3,12
+Markieff Morris,16,1,17,5,1,6,11
 Tyreke Evans,13,1,14,3,,3,11
 Robin Lopez,19,1,20,9,,9,11
 Trevor Booker,10,1,11,,,,11
 Cody Zeller,14,,14,3,,3,11
 Aron Baynes,13,,13,2,,2,11
-Markieff Morris,15,1,16,5,1,6,10
 Kenneth Faried,16,1,17,7,,7,10
 Blake Griffin,16,,16,6,,6,10
 Carmelo Anthony,18,,18,6,2,8,10
@@ -75,6 +75,7 @@ Lucas Nogueira,4,,4,,,,4
 Jaylen Brown,4,,4,,,,4
 Denzel Valentine,4,,4,,,,4
 Jusuf Nurkic,6,1,7,3,,3,4
+Bogdan Bogdanovic,4,,4,,,,4
 Bam Adebayo,4,,4,,,,4
 Marcus Morris,8,,8,2,3,5,3
 Roy Hibbert,5,,5,1,1,2,3
@@ -101,8 +102,8 @@ Dario Saric,8,1,9,5,1,6,3
 Marquese Chriss,4,,4,1,,1,3
 James Johnson,5,1,6,2,1,3,3
 Otto Porter Jr.,3,,3,,,,3
+Terry Rozier,3,,3,,,,3
 Kyle Kuzma,3,,3,,,,3
-Bogdan Bogdanovic,3,,3,,,,3
 Gary Neal,1,1,2,,,,2
 JJ Redick,6,2,8,5,1,6,2
 Nicolas Batum,8,1,9,5,2,7,2
@@ -143,7 +144,6 @@ Kelly Oubre Jr.,6,,6,3,1,4,2
 Willie Reed,2,,2,,,,2
 Kevin Seraphin,3,,3,1,,1,2
 Kris Dunn,5,1,6,3,1,4,2
-Terry Rozier,2,,2,,,,2
 Tyler Ulis,2,,2,,,,2
 Timothe Luwawu-Cabarrot,2,,2,,,,2
 Dante Cunningham,3,,3,2,,2,1
@@ -182,7 +182,6 @@ Alexis Ajinca,3,,3,2,,2,1
 Ramon Sessions,1,,1,,,,1
 Troy Daniels,2,,2,1,,1,1
 Darrell Arthur,1,,1,,,,1
-Goran Dragic,9,1,10,9,,9,1
 D.J. Augustin,1,,1,,,,1
 Quincy Acy,3,,3,2,,2,1
 Miles Plumlee,1,,1,,,,1
@@ -250,6 +249,7 @@ Wesley Matthews,9,4,13,12,1,13,0
 Mario Chalmers,1,,1,1,,1,0
 Jared Dudley,1,1,2,1,1,2,0
 Nikola Jokic,7,1,8,4,4,8,0
+Goran Dragic,9,1,10,10,,10,0
 Hollis Thompson,3,,3,3,,3,0
 Shelvin Mack,1,,1,1,,1,0
 Jonas Jerebko,2,,2,1,1,2,0
@@ -275,6 +275,7 @@ Jarrett Allen,1,1,2,2,,2,0
 Maxi Kleber,1,,1,1,,1,0
 Jerian Grant,1,,1,1,,1,0
 Reggie Bullock,1,,1,1,,1,0
+De'Aaron Fox,1,,1,1,,1,0
 Avery Bradley,7,,7,8,,8,-1
 Bojan Bogdanovic,3,,3,3,1,4,-1
 Anthony Davis,11,3,14,14,1,15,-1
