@@ -286,7 +286,7 @@ function getBoxscoreInfo(info, cb) {
 	// cache bball reference page
 	const url = `https://www.basketball-reference.com/boxscores/${info.boxscore_url}`;
 	if (!local) {
-		const command = `curl -o processing/boxscore/${info.boxscore_url} ${url}`;
+		const command = `curl -H 'Cache-Control: no-cache' -o processing/boxscore/${info.boxscore_url} ${url}`;
 		shell.exec(command, { silent: true });
 	}
 
