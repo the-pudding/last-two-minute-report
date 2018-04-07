@@ -1,5 +1,5 @@
 player,count_for_inc,count_for_ic,count_for,count_against_inc,count_against_ic,count_against,net
-Marcin Gortat,40,1,41,4,2,6,35
+Marcin Gortat,41,1,42,4,2,6,36
 Hassan Whiteside,25,2,27,4,,4,23
 Andre Drummond,22,1,23,2,2,4,19
 Karl-Anthony Towns,25,1,26,5,2,7,19
@@ -152,6 +152,7 @@ Kyle Kuzma,3,,3,1,,1,2
 David Nwaba,2,,2,,,,2
 Timothe Luwawu-Cabarrot,2,,2,,,,2
 Damion Lee,2,,2,,,,2
+Dorian Finney-Smith,2,,2,,,,2
 Dante Cunningham,3,,3,2,,2,1
 Spencer Hawes,1,,1,,,,1
 Hedo Turkoglu,1,,1,,,,1
@@ -221,7 +222,6 @@ Stephen Zimmerman,1,,1,,,,1
 Noah Vonleh,1,,1,,,,1
 Channing Frye,1,,1,,,,1
 Dwight Powell,3,,3,2,,2,1
-Taurean Prince,1,,1,,,,1
 Mike Scott,1,,1,,,,1
 Brandan Wright,1,,1,,,,1
 Dejounte Murray,2,,2,1,,1,1
@@ -237,7 +237,6 @@ Mario Hezonja,1,,1,,,,1
 Frank Kaminsky,1,,1,,,,1
 Xavier Rathan-Mayes,1,,1,,,,1
 De'Aaron Fox,2,,2,1,,1,1
-Dorian Finney-Smith,1,,1,,,,1
 Malik Monk,1,,1,,,,1
 Danuel House,1,,1,,,,1
 Georgios Papagiannis,1,,1,,,,1
@@ -262,6 +261,7 @@ Goran Dragic,9,1,10,10,,10,0
 Hollis Thompson,3,,3,3,,3,0
 Shelvin Mack,1,,1,1,,1,0
 Jonas Jerebko,2,,2,1,1,2,0
+Robert Covington,6,1,7,7,,7,0
 Jordan Farmar,1,,1,1,,1,0
 Sam Dekker,1,,1,1,,1,0
 Tim Frazier,1,,1,1,,1,0
@@ -272,6 +272,7 @@ Okaro White,1,,1,1,,1,0
 Richaun Holmes,1,,1,1,,1,0
 Malcolm Brogdon,1,,1,1,,1,0
 Maurice Harkless,4,,4,4,,4,0
+Taurean Prince,1,,1,1,,1,0
 Ben Simmons,2,,2,1,1,2,0
 Bobby Portis,2,,2,2,,2,0
 Jayson Tatum,1,,1,1,,1,0
@@ -302,7 +303,6 @@ Ricky Rubio,9,,9,9,1,10,-1
 Kyle Korver,3,,3,3,1,4,-1
 Rodney Stuckey,1,,1,2,,2,-1
 Gerald Henderson,1,,1,2,,2,-1
-Robert Covington,5,1,6,7,,7,-1
 Kent Bazemore,7,1,8,9,,9,-1
 Buddy Hield,3,,3,4,,4,-1
 Isaiah Whitehead,1,,1,2,,2,-1
@@ -335,7 +335,6 @@ Nemanja Bjelica,1,1,2,4,,4,-2
 Rondae Hollis-Jefferson,2,,2,4,,4,-2
 Sean Kilpatrick,1,1,2,4,,4,-2
 Tim Hardaway Jr.,4,,4,5,1,6,-2
-LeBron James,18,1,19,21,1,22,-3
 Khris Middleton,8,,8,10,1,11,-3
 Jeff Green,5,1,6,5,4,9,-3
 Thaddeus Young,3,,3,5,1,6,-3
@@ -346,6 +345,7 @@ Isaiah Canaan,1,1,2,5,,5,-3
 Patty Mills,1,,1,4,,4,-3
 Otto Porter,4,,4,7,,7,-3
 Brandon Ingram,2,,2,5,,5,-3
+LeBron James,18,1,19,22,1,23,-4
 Bradley Beal,8,,8,10,2,12,-4
 John Wall,6,1,7,11,,11,-4
 Deron Williams,3,,3,6,1,7,-4
