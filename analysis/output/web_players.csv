@@ -24,11 +24,11 @@ Cody Zeller,14,,14,3,,3,11
 Aron Baynes,13,,13,2,,2,11
 Kenneth Faried,16,1,17,7,,7,10
 Zach LaVine,10,2,12,3,,3,9
+Rudy Gobert,24,,24,13,2,15,9
 Chris Paul,12,2,14,4,1,5,9
 Darren Collison,11,1,12,2,1,3,9
 Zach Randolph,11,,11,3,,3,8
 Monta Ellis,7,2,9,1,,1,8
-Rudy Gobert,23,,23,13,2,15,8
 Dwyane Wade,13,6,19,8,3,11,8
 Joakim Noah,11,,11,2,1,3,8
 Steven Adams,17,1,18,9,1,10,8
@@ -63,7 +63,6 @@ Trevor Ariza,11,,11,6,1,7,4
 Dirk Nowitzki,15,1,16,10,2,12,4
 John Henson,6,,6,1,1,2,4
 Patrick Patterson,5,,5,1,,1,4
-Paul George,14,5,19,15,,15,4
 Anthony Tolliver,4,,4,,,,4
 Willie Cauley-Stein,6,,6,1,1,2,4
 Michael Carter-Williams,3,3,6,2,,2,4
@@ -87,11 +86,13 @@ Mike Muscala,5,,5,2,,2,3
 Thabo Sefolosha,3,1,4,1,,1,3
 Chris Bosh,2,1,3,,,,3
 Boris Diaw,2,1,3,,,,3
+Paul George,14,5,19,16,,16,3
 Marcus Thornton,3,,3,,,,3
 Ryan Anderson,4,2,6,3,,3,3
 Raymond Felton,5,,5,1,1,2,3
 TJ Warren,5,1,6,3,,3,3
 Ian Mahinmi,7,1,8,4,1,5,3
+Quincy Acy,4,,4,1,,1,3
 Tony Allen,5,,5,1,1,2,3
 Michael Beasley,6,,6,3,,3,3
 JaMychal Green,8,,8,4,1,5,3
@@ -184,13 +185,11 @@ Dion Waiters,6,1,7,3,3,6,1
 Ed Davis,3,,3,2,,2,1
 D'Angelo Russell,2,,2,1,,1,1
 Joel Anthony,1,,1,,,,1
-Victor Oladipo,10,,10,8,1,9,1
 Alexis Ajinca,3,,3,2,,2,1
 Ramon Sessions,1,,1,,,,1
 Troy Daniels,2,,2,1,,1,1
 Darrell Arthur,1,,1,,,,1
 D.J. Augustin,1,,1,,,,1
-Quincy Acy,3,,3,2,,2,1
 Miles Plumlee,1,,1,,,,1
 Chris McCullough,1,,1,,,,1
 Donatas Motiejunas,1,,1,,,,1
@@ -313,6 +312,7 @@ Andrew Harrison,2,,2,3,,3,-1
 Tyler Johnson,1,,1,2,,2,-1
 John Collins,1,,1,2,,2,-1
 Shane Larkin,1,,1,2,,2,-1
+LeBron James,19,2,21,22,1,23,-2
 Jordan Hill,2,,2,3,1,4,-2
 Bojan Bogdanovic,3,,3,4,1,5,-2
 Khris Middleton,9,,9,10,1,11,-2
@@ -326,6 +326,7 @@ Amir Johnson,2,,2,3,1,4,-2
 Paul Millsap,12,2,14,13,3,16,-2
 Andre Roberson,5,,5,6,1,7,-2
 Corey Brewer,2,,2,4,,4,-2
+Victor Oladipo,9,,9,10,1,11,-2
 JaKarr Sampson,1,,1,3,,3,-2
 Elfrid Payton,1,1,2,4,,4,-2
 Michael Kidd-Gilchrist,2,,2,3,1,4,-2
@@ -339,7 +340,6 @@ Josh Richardson,8,1,9,10,1,11,-2
 Sean Kilpatrick,1,1,2,4,,4,-2
 Tim Hardaway Jr.,4,,4,5,1,6,-2
 John Wall,7,1,8,11,,11,-3
-Thaddeus Young,3,,3,5,1,6,-3
 Derrick Rose,2,1,3,6,,6,-3
 Jimmy Butler,12,2,14,14,3,17,-3
 Isaiah Thomas,4,5,9,12,,12,-3
@@ -347,8 +347,8 @@ Isaiah Canaan,1,1,2,5,,5,-3
 Patty Mills,1,,1,4,,4,-3
 Otto Porter,4,,4,7,,7,-3
 Brandon Ingram,2,,2,5,,5,-3
-LeBron James,18,1,19,22,1,23,-4
 Bradley Beal,8,,8,10,2,12,-4
+Thaddeus Young,3,,3,5,2,7,-4
 Deron Williams,3,,3,6,1,7,-4
 Garrett Temple,2,1,3,6,1,7,-4
 Iman Shumpert,2,,2,5,1,6,-4
