@@ -2,8 +2,11 @@ setup:
 	mkdir processing
 	cd processing; mkdir pdf text boxscore html csv output
 
+ref4: 
+	npm run remove-ref4
+
 concat: 
-	csvstack output/games/* > .tmp/concat.csv
+	csvstack .tmp/games/* > .tmp/concat.csv
 
 convert:
 	cd analysis; jupyter nbconvert --to python explore.ipynb;

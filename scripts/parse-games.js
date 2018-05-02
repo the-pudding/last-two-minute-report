@@ -253,7 +253,7 @@ function extractRefs($) {
 				$(el)
 					.nextAll()
 					.each((i2, el2) => {
-						if (i2 < 3) {
+						if (i2 < 4) {
 							refs.push(
 								$(el2)
 									.text()
@@ -378,6 +378,7 @@ function parse({ index, file }, cb) {
 			ref_1: refs[0],
 			ref_2: refs[1],
 			ref_3: refs[2],
+			ref_4: refs[3],
 			score_away: score[0],
 			score_home: score[1],
 			original_pdf: `${file}`,
