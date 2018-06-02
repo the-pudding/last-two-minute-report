@@ -7,11 +7,11 @@ Dwight Howard,25,2,27,9,,9,18
 Serge Ibaka,19,,19,2,1,3,16
 Brook Lopez,23,,23,6,1,7,16
 Tyson Chandler,19,1,20,3,2,5,15
+Draymond Green,23,,23,5,3,8,15
 Al Horford,27,,27,10,2,12,15
 Matt Barnes,14,2,16,1,,1,15
 James Harden,28,7,35,20,1,21,14
 Russell Westbrook,25,2,27,12,1,13,14
-Draymond Green,22,,22,5,3,8,14
 Taj Gibson,14,1,15,1,,1,14
 Markieff Morris,17,1,18,5,1,6,12
 Carmelo Anthony,20,,20,6,2,8,12
@@ -312,7 +312,6 @@ Andrew Harrison,2,,2,3,,3,-1
 Tyler Johnson,1,,1,2,,2,-1
 John Collins,1,,1,2,,2,-1
 Shane Larkin,1,,1,2,,2,-1
-LeBron James,19,2,21,22,1,23,-2
 Jordan Hill,2,,2,3,1,4,-2
 Bojan Bogdanovic,3,,3,4,1,5,-2
 Khris Middleton,9,,9,10,1,11,-2
@@ -339,6 +338,7 @@ Rondae Hollis-Jefferson,2,,2,4,,4,-2
 Josh Richardson,8,1,9,10,1,11,-2
 Sean Kilpatrick,1,1,2,4,,4,-2
 Tim Hardaway Jr.,4,,4,5,1,6,-2
+LeBron James,19,2,21,23,1,24,-3
 John Wall,7,1,8,11,,11,-3
 Derrick Rose,2,1,3,6,,6,-3
 Jimmy Butler,12,2,14,14,3,17,-3
